@@ -1,0 +1,151 @@
+0
+Solving the current team problem!
+
+Planning time: 00:00:00.1860936
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        move-agent_a1_room1_room2
+                move-agent_a3_room2_room3
+                        move-agent_a1_room2_room3
+                                observe-table_a3_table1_room3
+                                        (f))goal
+                                        (t)observe-table_a1_table1_room3
+                                        (t)     (t)joint-lift-table_a1_a3_table1_room3
+                                        (t)     (t)     joint-move-table_a1_a3_table1_room3_room4
+                                        (t)     (t)             joint-drop-table_a1_a3_table1_room4
+                                        (t)     (t)                     )goal
+
+Team plan width = 2
+Team plan height = 9
+time 00:00:00.2358001
+
+A refined projected plan tree for a1:
+observe-table_a3_table1_room3
+        (f))goal
+        (t)joint-lift-table_a1_a3_table1_room3
+        (t)     joint-move-table_a1_a3_table1_room3_room4
+        (t)             joint-drop-table_a1_a3_table1_room4
+        (t)                     )goal
+
+
+The compressed plan tree for a1:
+cvu_observe-table_a3_table1_room3
+        (f))goal
+        (t)nrr_joint-lift-table_a1_a3_table1_room3
+        (t)     d10_joint-move-table_a1_a3_table1_room3_room4
+        (t)             0ok_joint-drop-table_a1_a3_table1_room4
+        (t)                     )goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.1379088
+
+Plan tree for a1
+act-dummy-cvu_observe-table_a3_table1_room3_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        act-cvu_observe-table_a3_table1_room3_a1
+                                (f)dummy-left-cvu_observe-table_a3_table1_room3_a1
+                                (f)     goal-achieve-left-cvu_observe-table_a3_table1_room3_a1
+                                (f)             )goal
+                                (t)dummy-right-cvu_observe-table_a3_table1_room3_a1
+                                (t)     act-nrr_joint-lift-table_a1_a3_table1_room3_a1
+                                (t)             act-d10_joint-move-table_a1_a3_table1_room3_room4_a1
+                                (t)                     act-0ok_joint-drop-table_a1_a3_table1_room4_a1
+                                (t)                             goal-achieve-0ok_joint-drop-table_a1_a3_table1_room4_a1
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+A refined projected plan tree for a2:
+observe-table_a3_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+)goal
+An empty plan for a2
+
+A refined projected plan tree for a3:
+observe-table_a3_table1_room3
+        (f))goal
+        (t)joint-lift-table_a1_a3_table1_room3
+        (t)     joint-move-table_a1_a3_table1_room3_room4
+        (t)             joint-drop-table_a1_a3_table1_room4
+        (t)                     )goal
+
+
+The compressed plan tree for a3:
+ykr_observe-table_a3_table1_room3
+        (f))goal
+        (t)xfg_joint-lift-table_a1_a3_table1_room3
+        (t)     wwm_joint-move-table_a1_a3_table1_room3_room4
+        (t)             p35_joint-drop-table_a1_a3_table1_room4
+        (t)                     )goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.1697986
+
+Plan tree for a3
+act-dummy-ykr_observe-table_a3_table1_room3_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        act-ykr_observe-table_a3_table1_room3_a3
+                                (f)dummy-left-ykr_observe-table_a3_table1_room3_a3
+                                (f)     goal-achieve-left-ykr_observe-table_a3_table1_room3_a3
+                                (f)             )goal
+                                (t)dummy-right-ykr_observe-table_a3_table1_room3_a3
+                                (t)     act-xfg_joint-lift-table_a1_a3_table1_room3_a3
+                                (t)             act-wwm_joint-move-table_a1_a3_table1_room3_room4_a3
+                                (t)                     act-p35_joint-drop-table_a1_a3_table1_room4_a3
+                                (t)                             goal-achieve-p35_joint-drop-table_a1_a3_table1_room4_a3
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+Overall time taken (for the last execution): 750.4771
+The last backtrack was: 0
+
+
+Maximum width = 2
+Maximum height = 6
+
+
+Now transforming projected trees to solution trees!
+
+
+Executable Plan Tree for a1
+move-agent_a1_room1_room2
+        move-agent_a1_room2_room3
+                observe-table_a3_table1_room3_a1
+                        (f))goal
+                        (t)joint-lift-table_a1_a3_table1_room3_a1
+                        (t)     joint-move-table_a1_a3_table1_room3_room4_a1
+                        (t)             joint-drop-table_a1_a3_table1_room4_a1
+                        (t)                     )goal
+
+Executable Plan Tree for a3
+move-agent_a3_room1_room2
+        move-agent_a3_room2_room3
+                observe-table_a3_table1_room3_a3
+                        (f))goal
+                        (t)joint-lift-table_a1_a3_table1_room3_a3
+                        (t)     joint-move-table_a1_a3_table1_room3_room4_a3
+                        (t)             joint-drop-table_a1_a3_table1_room4_a3
+                        (t)                     )goal
+
+
+Overall Maximum Tree Width: 2
+Overall Maximum Tree Height: 6
+
+Total number of backtracks: 0
+
+Overall time taken (including all the backtracks): 908.8123

@@ -1,0 +1,834 @@
+(define (domain Krover-agent3)
+(:requirements :strips :typing)
+(:types agent waypoint store camera mode lander objective dummy dummy TAG_TYPE VALUE_TYPE)
+(:constants
+ agent3 - agent
+ general - lander
+ colour - mode
+ high-res - mode
+ low-res - mode
+ agent3 - agent
+ a0store - store
+ a1store - store
+ waypoint0 - waypoint
+ waypoint1 - waypoint
+ waypoint2 - waypoint
+ waypoint3 - waypoint
+ waypoint4 - waypoint
+ waypoint5 - waypoint
+ camera0 - camera
+ camera1 - camera
+ objective1 - objective
+ dd - dummy
+ dd - dummy
+ tag0 - TAG_TYPE ; (visible-from objective1 waypoint0)
+ tag1 - TAG_TYPE ; (visible-from objective1 waypoint5)
+ V_TRUE - VALUE_TYPE
+ V_FALSE - VALUE_TYPE
+)
+
+(:predicates
+(at ?x - agent ?y - waypoint)
+(at-lander ?x - lander ?y - waypoint)
+(can-traverse ?r - agent ?x - waypoint ?y - waypoint)
+(equipped-for-imaging ?r - agent)
+(equipped-for-soil-analysis ?r - agent)
+(equipped-for-rock-analysis ?r - agent)
+(empty ?s - store ?a - agent)
+(have-rock-analysis ?r - agent)
+(have-soil-analysis ?r - agent)
+(full ?s - store ?a - agent)
+(calibrated ?c - camera ?r - agent ?w - waypoint ?o - objective)
+(supports ?c - camera ?m - mode)
+(available ?r - agent)
+(visible ?w - waypoint ?p - waypoint)
+(have-image ?r - agent ?o - objective ?m - mode)
+(communicated-image-data ?o - objective ?m - mode)
+(communicated-soil-data)
+(communicated-rock-data)
+(at-soil-sample ?w - waypoint)
+(Kat-soil-sample ?w - waypoint ?V_PARAM - VALUE_TYPE)
+(KGivenat-soil-sample ?w - waypoint ?TAG_PARAM - TAG_TYPE ?V_PARAM - VALUE_TYPE)
+(at-rock-sample ?w - waypoint)
+(Kat-rock-sample ?w - waypoint ?V_PARAM - VALUE_TYPE)
+(KGivenat-rock-sample ?w - waypoint ?TAG_PARAM - TAG_TYPE ?V_PARAM - VALUE_TYPE)
+(visible-from ?o - objective ?w - waypoint)
+(Kvisible-from ?o - objective ?w - waypoint ?V_PARAM - VALUE_TYPE)
+(KGivenvisible-from ?o - objective ?w - waypoint ?TAG_PARAM - TAG_TYPE ?V_PARAM - VALUE_TYPE)
+(store-of ?s - store ?r - agent)
+(calibration-target ?i - camera ?o - objective)
+(on-board ?i - camera ?r - agent)
+(channel-free ?l - lander)
+(can-sample-rock ?x - agent)
+(can-sample-soil ?x - agent)
+(dummy-pred-needed ?dd - dummy)
+(init-rvc_observe-soil_agent0_waypoint5 ?dd - dummy)
+(immediate-dummy-rvc_observe-soil_agent0_waypoint5 ?dd - dummy)
+(dummy-left-rvc_observe-soil_agent0_waypoint5 ?dd - dummy)
+(immediate-dummy-cpo_observe-rock_agent2_waypoint4 ?dd - dummy)
+(dummy-left-cpo_observe-rock_agent2_waypoint4 ?dd - dummy)
+(immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(dummy-left-wq0_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(pre-sdx_sample-soil_agent3_a1store_waypoint4 ?dd - dummy)
+(pre-q1n_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd ?dd - dummy)
+(immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 ?dd - dummy)
+(dummy-left-d7q_observe-vis_agent3_objective1_waypoint0 ?dd - dummy)
+(done-goal ?dd - dummy)
+(dummy-right-d7q_observe-vis_agent3_objective1_waypoint0 ?dd - dummy)
+(pre-qnw_take-image_agent3_waypoint0_objective1_camera1_high-res ?dd - dummy)
+(pre-jum_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd ?dd - dummy)
+(dummy-right-wq0_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(pre-ch8_take-image_agent3_waypoint4_objective1_camera1_high-res ?dd - dummy)
+(pre-2fb_sample-soil_agent3_a1store_waypoint4 ?dd - dummy)
+(pre-4w8_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd ?dd - dummy)
+(pre-31w_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd ?dd - dummy)
+(dummy-right-cpo_observe-rock_agent2_waypoint4 ?dd - dummy)
+(immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(dummy-left-eus_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(pre-izw_sample-soil_agent3_a1store_waypoint4 ?dd - dummy)
+(pre-887_sample-rock_agent2_agent3_a1store_waypoint4 ?dd - dummy)
+(pre-ub5_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd ?dd - dummy)
+(dummy-right-eus_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(pre-3g6_take-image_agent3_waypoint4_objective1_camera1_high-res ?dd - dummy)
+(pre-vxy_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd ?dd - dummy)
+(pre-hib_sample-soil_agent3_a1store_waypoint4 ?dd - dummy)
+(pre-zah_sample-rock_agent2_agent3_a1store_waypoint4 ?dd - dummy)
+(pre-p3k_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd ?dd - dummy)
+(dummy-right-rvc_observe-soil_agent0_waypoint5 ?dd - dummy)
+(immediate-dummy-yxq_observe-rock_agent2_waypoint4 ?dd - dummy)
+(dummy-left-yxq_observe-rock_agent2_waypoint4 ?dd - dummy)
+(immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 ?dd - dummy)
+(dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 ?dd - dummy)
+(immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 ?dd - dummy)
+(dummy-left-18n_observe-vis_agent2_objective1_waypoint5 ?dd - dummy)
+(pre-7ix_take-image_agent3_waypoint0_objective1_camera1_high-res ?dd - dummy)
+(pre-9kv_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd ?dd - dummy)
+(dummy-right-18n_observe-vis_agent2_objective1_waypoint5 ?dd - dummy)
+(dummy-right-zwa_observe-vis_agent0_objective1_waypoint4 ?dd - dummy)
+(dummy-right-yxq_observe-rock_agent2_waypoint4 ?dd - dummy)
+(immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(dummy-left-osg_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(pre-d88_sample-rock_agent3_agent2_a1store_waypoint4 ?dd - dummy)
+(pre-ei8_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd ?dd - dummy)
+(immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 ?dd - dummy)
+(dummy-left-jws_observe-vis_agent3_objective1_waypoint0 ?dd - dummy)
+(dummy-right-jws_observe-vis_agent3_objective1_waypoint0 ?dd - dummy)
+(pre-vou_take-image_agent3_waypoint0_objective1_camera1_high-res ?dd - dummy)
+(pre-l25_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd ?dd - dummy)
+(dummy-right-osg_observe-vis_agent3_objective1_waypoint4 ?dd - dummy)
+(pre-lkk_take-image_agent3_waypoint4_objective1_camera1_high-res ?dd - dummy)
+(pre-r4o_sample-rock_agent3_agent2_a1store_waypoint4 ?dd - dummy)
+(pre-4ch_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd ?dd - dummy)
+(pre-typ_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd ?dd - dummy)
+(KNot ?TAG_PARAM - TAG_TYPE)
+)
+
+(:action navigate
+:parameters ( ?x - agent ?y - waypoint ?z - waypoint ?c - camera ?p - objective)
+:precondition 
+(and (can-traverse ?x ?y ?z) (available ?x) (at ?x ?y) (visible ?y ?z))
+:effect 
+(and (not (at ?x ?y)) (at ?x ?z) (not (calibrated ?c ?x ?z ?p)))
+)
+(:action calibrate
+:parameters ( ?r - agent ?i - camera ?t - objective ?w - waypoint)
+:precondition 
+(and (equipped-for-imaging ?r) (calibration-target ?i ?t) (at ?r ?w) (visible-from ?t ?w) (on-board ?i ?r) (Kvisible-from ?t ?w V_TRUE))
+:effect 
+(and (calibrated ?i ?r ?w ?t))
+)
+(:action drop
+:parameters ( ?x - agent ?y - store)
+:precondition 
+(and (store-of ?y ?x))
+:effect 
+(and (not (full ?y ?x)) (empty ?y ?x))
+)
+(:action act-rvc_observe-soil_agent0_waypoint5-T
+:parameters ( ?a - agent)
+:precondition 
+(and (init-rvc_observe-soil_agent0_waypoint5 dd) (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd) (at agent3 waypoint5) (at-soil-sample waypoint5) (not (Kat-soil-sample waypoint5 V_TRUE)) (not (Kat-soil-sample waypoint5 V_FALSE)))
+:effect 
+(and (Kat-soil-sample waypoint5 V_TRUE))
+)
+(:action act-rvc_observe-soil_agent0_waypoint5-F
+:parameters ( ?a - agent)
+:precondition 
+(and (init-rvc_observe-soil_agent0_waypoint5 dd) (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd) (at agent3 waypoint5) (not (at-soil-sample waypoint5)) (not (Kat-soil-sample waypoint5 V_TRUE)) (not (Kat-soil-sample waypoint5 V_FALSE)))
+:effect 
+(and (Kat-soil-sample waypoint5 V_FALSE))
+)
+(:action act-dummy-rvc_observe-soil_agent0_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (init-rvc_observe-soil_agent0_waypoint5 dd) (not (dummy-left-rvc_observe-soil_agent0_waypoint5 dd)) (not (dummy-right-rvc_observe-soil_agent0_waypoint5 dd)))
+:effect 
+(and (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd))
+)
+(:action dummy-left-rvc_observe-soil_agent0_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (init-rvc_observe-soil_agent0_waypoint5 dd) (at agent3 waypoint5) (not (at-soil-sample waypoint5)) (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (not (init-rvc_observe-soil_agent0_waypoint5 dd)) (not (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd)) (dummy-left-rvc_observe-soil_agent0_waypoint5 dd))
+)
+(:action dummy-right-rvc_observe-soil_agent0_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (init-rvc_observe-soil_agent0_waypoint5 dd) (at agent3 waypoint5) (at-soil-sample waypoint5) (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (not (init-rvc_observe-soil_agent0_waypoint5 dd)) (not (immediate-dummy-rvc_observe-soil_agent0_waypoint5 dd)) (dummy-right-rvc_observe-soil_agent0_waypoint5 dd))
+)
+(:action act-cpo_observe-rock_agent2_waypoint4-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-rvc_observe-soil_agent0_waypoint5 dd) (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (Kat-soil-sample waypoint5 V_FALSE) (at-rock-sample waypoint4) (not (Kat-rock-sample waypoint4 V_TRUE)) (not (Kat-rock-sample waypoint4 V_FALSE)))
+:effect 
+(and (Kat-rock-sample waypoint4 V_TRUE))
+)
+(:action act-cpo_observe-rock_agent2_waypoint4-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-rvc_observe-soil_agent0_waypoint5 dd) (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (Kat-soil-sample waypoint5 V_FALSE) (not (at-rock-sample waypoint4)) (not (Kat-rock-sample waypoint4 V_TRUE)) (not (Kat-rock-sample waypoint4 V_FALSE)))
+:effect 
+(and (Kat-rock-sample waypoint4 V_FALSE))
+)
+(:action act-dummy-cpo_observe-rock_agent2_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-rvc_observe-soil_agent0_waypoint5 dd) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (not (dummy-left-cpo_observe-rock_agent2_waypoint4 dd)) (not (dummy-right-cpo_observe-rock_agent2_waypoint4 dd)) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd))
+)
+(:action dummy-left-cpo_observe-rock_agent2_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-rvc_observe-soil_agent0_waypoint5 dd) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (not (at-rock-sample waypoint4)) (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd) (Kat-soil-sample waypoint5 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE))
+:effect 
+(and (not (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd)) (dummy-left-cpo_observe-rock_agent2_waypoint4 dd))
+)
+(:action dummy-right-cpo_observe-rock_agent2_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-rvc_observe-soil_agent0_waypoint5 dd) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (at-rock-sample waypoint4) (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd) (Kat-soil-sample waypoint5 V_FALSE) (Kat-rock-sample waypoint4 V_TRUE))
+:effect 
+(and (not (immediate-dummy-cpo_observe-rock_agent2_waypoint4 dd)) (dummy-right-cpo_observe-rock_agent2_waypoint4 dd))
+)
+(:action act-wq0_observe-vis_agent3_objective1_waypoint4-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-cpo_observe-rock_agent2_waypoint4 dd) (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE) (visible-from objective1 waypoint4) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_TRUE))
+)
+(:action act-wq0_observe-vis_agent3_objective1_waypoint4-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-cpo_observe-rock_agent2_waypoint4 dd) (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE) (not (visible-from objective1 waypoint4)) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_FALSE))
+)
+(:action act-dummy-wq0_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-cpo_observe-rock_agent2_waypoint4 dd) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (not (dummy-left-wq0_observe-vis_agent3_objective1_waypoint4 dd)) (not (dummy-right-wq0_observe-vis_agent3_objective1_waypoint4 dd)) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action dummy-left-wq0_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-cpo_observe-rock_agent2_waypoint4 dd) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (not (visible-from objective1 waypoint4)) (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE) (Kvisible-from objective1 waypoint4 V_FALSE))
+:effect 
+(and (not (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd)) (dummy-left-wq0_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action dummy-right-wq0_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-cpo_observe-rock_agent2_waypoint4 dd) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (visible-from objective1 waypoint4) (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE) (Kvisible-from objective1 waypoint4 V_TRUE))
+:effect 
+(and (not (immediate-dummy-wq0_observe-vis_agent3_objective1_waypoint4 dd)) (dummy-right-wq0_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action act-sdx_sample-soil_agent3_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-wq0_observe-vis_agent3_objective1_waypoint4 dd) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (empty a1store agent3) (not (full a1store agent3)) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (pre-sdx_sample-soil_agent3_a1store_waypoint4 dd) (not (empty a1store agent3)) (full a1store agent3) (have-soil-analysis agent3))
+)
+(:action act-q1n_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-sdx_sample-soil_agent3_a1store_waypoint4 dd) (at agent3 waypoint1) (have-soil-analysis agent3))
+:effect 
+(and (pre-q1n_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (not (pre-sdx_sample-soil_agent3_a1store_waypoint4 dd)) (communicated-soil-data ))
+)
+(:action act-d7q_observe-vis_agent3_objective1_waypoint0-T
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-q1n_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd) (at agent3 waypoint0) (visible-from objective1 waypoint0) (not (Kvisible-from objective1 waypoint0 V_TRUE)) (not (Kvisible-from objective1 waypoint0 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint0 V_TRUE))
+)
+(:action act-d7q_observe-vis_agent3_objective1_waypoint0-F
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-q1n_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd) (at agent3 waypoint0) (not (visible-from objective1 waypoint0)) (not (Kvisible-from objective1 waypoint0 V_TRUE)) (not (Kvisible-from objective1 waypoint0 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint0 V_FALSE))
+)
+(:action act-dummy-d7q_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-q1n_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (at agent3 waypoint0) (not (dummy-left-d7q_observe-vis_agent3_objective1_waypoint0 dd)) (not (dummy-right-d7q_observe-vis_agent3_objective1_waypoint0 dd)))
+:effect 
+(and (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd))
+)
+(:action dummy-left-d7q_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (at agent3 waypoint0) (not (visible-from objective1 waypoint0)) (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd) (Kvisible-from objective1 waypoint0 V_FALSE))
+:effect 
+(and (not (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd)) (dummy-left-d7q_observe-vis_agent3_objective1_waypoint0 dd))
+)
+(:action dummy-right-d7q_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (at agent3 waypoint0) (visible-from objective1 waypoint0) (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd) (Kvisible-from objective1 waypoint0 V_TRUE))
+:effect 
+(and (not (immediate-dummy-d7q_observe-vis_agent3_objective1_waypoint0 dd)) (dummy-right-d7q_observe-vis_agent3_objective1_waypoint0 dd))
+)
+(:action goal-achieve-left-d7q_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-d7q_observe-vis_agent3_objective1_waypoint0 dd) (not (visible-from objective1 waypoint0)) (Kvisible-from objective1 waypoint0 V_FALSE))
+:effect 
+(and (done-goal dd) (not (dummy-left-d7q_observe-vis_agent3_objective1_waypoint0 dd)))
+)
+(:action act-qnw_take-image_agent3_waypoint0_objective1_camera1_high-res
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-d7q_observe-vis_agent3_objective1_waypoint0 dd) (visible-from objective1 waypoint0) (calibrated camera1 agent3 waypoint0 objective1) (at agent3 waypoint0) (Kvisible-from objective1 waypoint0 V_TRUE))
+:effect 
+(and (pre-qnw_take-image_agent3_waypoint0_objective1_camera1_high-res dd) (have-image agent3 objective1 high-res) (not (calibrated camera1 agent3 waypoint0 objective1)))
+)
+(:action act-jum_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-qnw_take-image_agent3_waypoint0_objective1_camera1_high-res dd) (at agent3 waypoint3) (have-image agent3 objective1 high-res))
+:effect 
+(and (pre-jum_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd) (not (pre-qnw_take-image_agent3_waypoint0_objective1_camera1_high-res dd)))
+)
+(:action goal-achieve-jum_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-jum_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-jum_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd)))
+)
+(:action act-ch8_take-image_agent3_waypoint4_objective1_camera1_high-res
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-wq0_observe-vis_agent3_objective1_waypoint4 dd) (visible-from objective1 waypoint4) (not (at-rock-sample waypoint4)) (not (at-soil-sample waypoint5)) (calibrated camera1 agent3 waypoint4 objective1) (at agent3 waypoint4) (Kvisible-from objective1 waypoint4 V_TRUE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (pre-ch8_take-image_agent3_waypoint4_objective1_camera1_high-res dd) (have-image agent3 objective1 high-res) (not (calibrated camera1 agent3 waypoint4 objective1)))
+)
+(:action act-2fb_sample-soil_agent3_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-ch8_take-image_agent3_waypoint4_objective1_camera1_high-res dd) (at agent3 waypoint4) (empty a1store agent3) (not (full a1store agent3)))
+:effect 
+(and (pre-2fb_sample-soil_agent3_a1store_waypoint4 dd) (not (pre-ch8_take-image_agent3_waypoint4_objective1_camera1_high-res dd)) (not (empty a1store agent3)) (full a1store agent3) (have-soil-analysis agent3))
+)
+(:action act-4w8_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-2fb_sample-soil_agent3_a1store_waypoint4 dd) (at agent3 waypoint1) (have-soil-analysis agent3))
+:effect 
+(and (pre-4w8_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (not (pre-2fb_sample-soil_agent3_a1store_waypoint4 dd)) (communicated-soil-data ))
+)
+(:action act-31w_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-4w8_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (at agent3 waypoint1) (have-image agent3 objective1 high-res))
+:effect 
+(and (pre-31w_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd) (not (pre-4w8_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd)))
+)
+(:action goal-achieve-31w_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-31w_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-31w_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd)))
+)
+(:action act-eus_observe-vis_agent3_objective1_waypoint4-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-cpo_observe-rock_agent2_waypoint4 dd) (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE) (visible-from objective1 waypoint4) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_TRUE))
+)
+(:action act-eus_observe-vis_agent3_objective1_waypoint4-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-cpo_observe-rock_agent2_waypoint4 dd) (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE) (not (visible-from objective1 waypoint4)) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_FALSE))
+)
+(:action act-dummy-eus_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-cpo_observe-rock_agent2_waypoint4 dd) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (not (dummy-left-eus_observe-vis_agent3_objective1_waypoint4 dd)) (not (dummy-right-eus_observe-vis_agent3_objective1_waypoint4 dd)) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action dummy-left-eus_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-cpo_observe-rock_agent2_waypoint4 dd) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (not (visible-from objective1 waypoint4)) (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE) (Kvisible-from objective1 waypoint4 V_FALSE))
+:effect 
+(and (not (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd)) (dummy-left-eus_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action dummy-right-eus_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-cpo_observe-rock_agent2_waypoint4 dd) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (visible-from objective1 waypoint4) (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE) (Kvisible-from objective1 waypoint4 V_TRUE))
+:effect 
+(and (not (immediate-dummy-eus_observe-vis_agent3_objective1_waypoint4 dd)) (dummy-right-eus_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action act-izw_sample-soil_agent3_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-eus_observe-vis_agent3_objective1_waypoint4 dd) (not (visible-from objective1 waypoint4)) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (at agent3 waypoint4) (empty a1store agent3) (not (full a1store agent3)) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (pre-izw_sample-soil_agent3_a1store_waypoint4 dd) (not (empty a1store agent3)) (full a1store agent3) (have-soil-analysis agent3))
+)
+(:action act-887_sample-rock_agent2_agent3_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-izw_sample-soil_agent3_a1store_waypoint4 dd) (at agent3 waypoint4))
+:effect 
+(and (pre-887_sample-rock_agent2_agent3_a1store_waypoint4 dd) (not (pre-izw_sample-soil_agent3_a1store_waypoint4 dd)))
+)
+(:action act-ub5_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-887_sample-rock_agent2_agent3_a1store_waypoint4 dd) (at agent3 waypoint1) (have-soil-analysis agent3))
+:effect 
+(and (pre-ub5_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (not (pre-887_sample-rock_agent2_agent3_a1store_waypoint4 dd)) (communicated-soil-data ))
+)
+(:action goal-achieve-ub5_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-ub5_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-ub5_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd)))
+)
+(:action act-3g6_take-image_agent3_waypoint4_objective1_camera1_high-res
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-eus_observe-vis_agent3_objective1_waypoint4 dd) (visible-from objective1 waypoint4) (at-rock-sample waypoint4) (not (at-soil-sample waypoint5)) (calibrated camera1 agent3 waypoint4 objective1) (at agent3 waypoint4) (Kvisible-from objective1 waypoint4 V_TRUE) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_FALSE))
+:effect 
+(and (pre-3g6_take-image_agent3_waypoint4_objective1_camera1_high-res dd) (have-image agent3 objective1 high-res) (not (calibrated camera1 agent3 waypoint4 objective1)))
+)
+(:action act-vxy_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-3g6_take-image_agent3_waypoint4_objective1_camera1_high-res dd) (at agent3 waypoint1) (have-image agent3 objective1 high-res))
+:effect 
+(and (pre-vxy_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd) (not (pre-3g6_take-image_agent3_waypoint4_objective1_camera1_high-res dd)))
+)
+(:action act-hib_sample-soil_agent3_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-vxy_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd) (at agent3 waypoint4) (empty a1store agent3) (not (full a1store agent3)))
+:effect 
+(and (pre-hib_sample-soil_agent3_a1store_waypoint4 dd) (not (pre-vxy_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd)) (not (empty a1store agent3)) (full a1store agent3) (have-soil-analysis agent3))
+)
+(:action act-zah_sample-rock_agent2_agent3_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-hib_sample-soil_agent3_a1store_waypoint4 dd) (at agent3 waypoint4))
+:effect 
+(and (pre-zah_sample-rock_agent2_agent3_a1store_waypoint4 dd) (not (pre-hib_sample-soil_agent3_a1store_waypoint4 dd)))
+)
+(:action act-p3k_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-zah_sample-rock_agent2_agent3_a1store_waypoint4 dd) (at agent3 waypoint1) (have-soil-analysis agent3))
+:effect 
+(and (pre-p3k_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd) (not (pre-zah_sample-rock_agent2_agent3_a1store_waypoint4 dd)) (communicated-soil-data ))
+)
+(:action goal-achieve-p3k_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-p3k_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-p3k_communicate-soil-data_agent3_general_waypoint1_waypoint0_dd dd)))
+)
+(:action act-yxq_observe-rock_agent2_waypoint4-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-rvc_observe-soil_agent0_waypoint5 dd) (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd) (at-soil-sample waypoint5) (at agent3 waypoint4) (Kat-soil-sample waypoint5 V_TRUE) (at-rock-sample waypoint4) (not (Kat-rock-sample waypoint4 V_TRUE)) (not (Kat-rock-sample waypoint4 V_FALSE)))
+:effect 
+(and (Kat-rock-sample waypoint4 V_TRUE))
+)
+(:action act-yxq_observe-rock_agent2_waypoint4-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-rvc_observe-soil_agent0_waypoint5 dd) (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd) (at-soil-sample waypoint5) (at agent3 waypoint4) (Kat-soil-sample waypoint5 V_TRUE) (not (at-rock-sample waypoint4)) (not (Kat-rock-sample waypoint4 V_TRUE)) (not (Kat-rock-sample waypoint4 V_FALSE)))
+:effect 
+(and (Kat-rock-sample waypoint4 V_FALSE))
+)
+(:action act-dummy-yxq_observe-rock_agent2_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-rvc_observe-soil_agent0_waypoint5 dd) (at-soil-sample waypoint5) (at agent3 waypoint4) (not (dummy-left-yxq_observe-rock_agent2_waypoint4 dd)) (not (dummy-right-yxq_observe-rock_agent2_waypoint4 dd)) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd))
+)
+(:action dummy-left-yxq_observe-rock_agent2_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-rvc_observe-soil_agent0_waypoint5 dd) (at-soil-sample waypoint5) (at agent3 waypoint4) (not (at-rock-sample waypoint4)) (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd) (Kat-soil-sample waypoint5 V_TRUE) (Kat-rock-sample waypoint4 V_FALSE))
+:effect 
+(and (not (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd)) (dummy-left-yxq_observe-rock_agent2_waypoint4 dd))
+)
+(:action dummy-right-yxq_observe-rock_agent2_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-rvc_observe-soil_agent0_waypoint5 dd) (at-soil-sample waypoint5) (at agent3 waypoint4) (at-rock-sample waypoint4) (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd) (Kat-soil-sample waypoint5 V_TRUE) (Kat-rock-sample waypoint4 V_TRUE))
+:effect 
+(and (not (immediate-dummy-yxq_observe-rock_agent2_waypoint4 dd)) (dummy-right-yxq_observe-rock_agent2_waypoint4 dd))
+)
+(:action act-zwa_observe-vis_agent0_objective1_waypoint4-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-yxq_observe-rock_agent2_waypoint4 dd) (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (visible-from objective1 waypoint4) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_TRUE))
+)
+(:action act-zwa_observe-vis_agent0_objective1_waypoint4-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-yxq_observe-rock_agent2_waypoint4 dd) (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (not (visible-from objective1 waypoint4)) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_FALSE))
+)
+(:action act-dummy-zwa_observe-vis_agent0_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-yxq_observe-rock_agent2_waypoint4 dd) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint4) (not (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd)) (not (dummy-right-zwa_observe-vis_agent0_objective1_waypoint4 dd)) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd))
+)
+(:action dummy-left-zwa_observe-vis_agent0_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-yxq_observe-rock_agent2_waypoint4 dd) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint4) (not (visible-from objective1 waypoint4)) (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (Kvisible-from objective1 waypoint4 V_FALSE))
+:effect 
+(and (not (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd)) (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd))
+)
+(:action dummy-right-zwa_observe-vis_agent0_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-yxq_observe-rock_agent2_waypoint4 dd) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint4) (visible-from objective1 waypoint4) (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (Kvisible-from objective1 waypoint4 V_TRUE))
+:effect 
+(and (not (immediate-dummy-zwa_observe-vis_agent0_objective1_waypoint4 dd)) (dummy-right-zwa_observe-vis_agent0_objective1_waypoint4 dd))
+)
+(:action act-18n_observe-vis_agent2_objective1_waypoint5-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd) (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint5) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (visible-from objective1 waypoint5) (not (Kvisible-from objective1 waypoint5 V_TRUE)) (not (Kvisible-from objective1 waypoint5 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint5 V_TRUE))
+)
+(:action act-18n_observe-vis_agent2_objective1_waypoint5-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd) (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint5) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (not (visible-from objective1 waypoint5)) (not (Kvisible-from objective1 waypoint5 V_TRUE)) (not (Kvisible-from objective1 waypoint5 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint5 V_FALSE))
+)
+(:action act-dummy-18n_observe-vis_agent2_objective1_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint5) (not (dummy-left-18n_observe-vis_agent2_objective1_waypoint5 dd)) (not (dummy-right-18n_observe-vis_agent2_objective1_waypoint5 dd)) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd))
+)
+(:action dummy-left-18n_observe-vis_agent2_objective1_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint5) (not (visible-from objective1 waypoint5)) (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (Kvisible-from objective1 waypoint5 V_FALSE))
+:effect 
+(and (not (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd)) (dummy-left-18n_observe-vis_agent2_objective1_waypoint5 dd))
+)
+(:action dummy-right-18n_observe-vis_agent2_objective1_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-zwa_observe-vis_agent0_objective1_waypoint4 dd) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (at agent3 waypoint5) (visible-from objective1 waypoint5) (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE) (Kvisible-from objective1 waypoint5 V_TRUE))
+:effect 
+(and (not (immediate-dummy-18n_observe-vis_agent2_objective1_waypoint5 dd)) (dummy-right-18n_observe-vis_agent2_objective1_waypoint5 dd))
+)
+(:action act-7ix_take-image_agent3_waypoint0_objective1_camera1_high-res
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-18n_observe-vis_agent2_objective1_waypoint5 dd) (not (visible-from objective1 waypoint5)) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (calibrated camera1 agent3 waypoint0 objective1) (at agent3 waypoint0) (Kvisible-from objective1 waypoint5 V_FALSE) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (pre-7ix_take-image_agent3_waypoint0_objective1_camera1_high-res dd) (have-image agent3 objective1 high-res) (not (calibrated camera1 agent3 waypoint0 objective1)))
+)
+(:action act-9kv_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-7ix_take-image_agent3_waypoint0_objective1_camera1_high-res dd) (at agent3 waypoint3) (have-image agent3 objective1 high-res))
+:effect 
+(and (pre-9kv_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd) (not (pre-7ix_take-image_agent3_waypoint0_objective1_camera1_high-res dd)))
+)
+(:action goal-achieve-9kv_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-9kv_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-9kv_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd)))
+)
+(:action goal-achieve-right-18n_observe-vis_agent2_objective1_waypoint5
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-18n_observe-vis_agent2_objective1_waypoint5 dd) (visible-from objective1 waypoint5) (not (visible-from objective1 waypoint4)) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (Kvisible-from objective1 waypoint5 V_TRUE) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (done-goal dd) (not (dummy-right-18n_observe-vis_agent2_objective1_waypoint5 dd)))
+)
+(:action goal-achieve-right-zwa_observe-vis_agent0_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-zwa_observe-vis_agent0_objective1_waypoint4 dd) (visible-from objective1 waypoint4) (not (at-rock-sample waypoint4)) (at-soil-sample waypoint5) (Kvisible-from objective1 waypoint4 V_TRUE) (Kat-rock-sample waypoint4 V_FALSE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (done-goal dd) (not (dummy-right-zwa_observe-vis_agent0_objective1_waypoint4 dd)))
+)
+(:action act-osg_observe-vis_agent3_objective1_waypoint4-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-yxq_observe-rock_agent2_waypoint4 dd) (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE) (visible-from objective1 waypoint4) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_TRUE))
+)
+(:action act-osg_observe-vis_agent3_objective1_waypoint4-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-yxq_observe-rock_agent2_waypoint4 dd) (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (at agent3 waypoint4) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE) (not (visible-from objective1 waypoint4)) (not (Kvisible-from objective1 waypoint4 V_TRUE)) (not (Kvisible-from objective1 waypoint4 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint4 V_FALSE))
+)
+(:action act-dummy-osg_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-yxq_observe-rock_agent2_waypoint4 dd) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (at agent3 waypoint4) (not (dummy-left-osg_observe-vis_agent3_objective1_waypoint4 dd)) (not (dummy-right-osg_observe-vis_agent3_objective1_waypoint4 dd)) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action dummy-left-osg_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-yxq_observe-rock_agent2_waypoint4 dd) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (at agent3 waypoint4) (not (visible-from objective1 waypoint4)) (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE) (Kvisible-from objective1 waypoint4 V_FALSE))
+:effect 
+(and (not (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd)) (dummy-left-osg_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action dummy-right-osg_observe-vis_agent3_objective1_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-yxq_observe-rock_agent2_waypoint4 dd) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (at agent3 waypoint4) (visible-from objective1 waypoint4) (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE) (Kvisible-from objective1 waypoint4 V_TRUE))
+:effect 
+(and (not (immediate-dummy-osg_observe-vis_agent3_objective1_waypoint4 dd)) (dummy-right-osg_observe-vis_agent3_objective1_waypoint4 dd))
+)
+(:action act-d88_sample-rock_agent3_agent2_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-osg_observe-vis_agent3_objective1_waypoint4 dd) (not (visible-from objective1 waypoint4)) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (at agent3 waypoint4) (empty a1store agent3) (Kvisible-from objective1 waypoint4 V_FALSE) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (pre-d88_sample-rock_agent3_agent2_a1store_waypoint4 dd) (not (empty a1store agent3)) (full a1store agent3) (have-rock-analysis agent3))
+)
+(:action act-ei8_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-d88_sample-rock_agent3_agent2_a1store_waypoint4 dd) (at agent3 waypoint1) (have-rock-analysis agent3))
+:effect 
+(and (pre-ei8_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd) (not (pre-d88_sample-rock_agent3_agent2_a1store_waypoint4 dd)) (communicated-rock-data ))
+)
+(:action act-jws_observe-vis_agent3_objective1_waypoint0-T
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-ei8_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd) (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd) (at agent3 waypoint0) (visible-from objective1 waypoint0) (not (Kvisible-from objective1 waypoint0 V_TRUE)) (not (Kvisible-from objective1 waypoint0 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint0 V_TRUE))
+)
+(:action act-jws_observe-vis_agent3_objective1_waypoint0-F
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-ei8_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd) (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd) (at agent3 waypoint0) (not (visible-from objective1 waypoint0)) (not (Kvisible-from objective1 waypoint0 V_TRUE)) (not (Kvisible-from objective1 waypoint0 V_FALSE)))
+:effect 
+(and (Kvisible-from objective1 waypoint0 V_FALSE))
+)
+(:action act-dummy-jws_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-ei8_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd) (at agent3 waypoint0) (not (dummy-left-jws_observe-vis_agent3_objective1_waypoint0 dd)) (not (dummy-right-jws_observe-vis_agent3_objective1_waypoint0 dd)))
+:effect 
+(and (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd))
+)
+(:action dummy-left-jws_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (at agent3 waypoint0) (not (visible-from objective1 waypoint0)) (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd) (Kvisible-from objective1 waypoint0 V_FALSE))
+:effect 
+(and (not (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd)) (dummy-left-jws_observe-vis_agent3_objective1_waypoint0 dd))
+)
+(:action dummy-right-jws_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (at agent3 waypoint0) (visible-from objective1 waypoint0) (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd) (Kvisible-from objective1 waypoint0 V_TRUE))
+:effect 
+(and (not (immediate-dummy-jws_observe-vis_agent3_objective1_waypoint0 dd)) (dummy-right-jws_observe-vis_agent3_objective1_waypoint0 dd))
+)
+(:action goal-achieve-left-jws_observe-vis_agent3_objective1_waypoint0
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-jws_observe-vis_agent3_objective1_waypoint0 dd) (not (visible-from objective1 waypoint0)) (Kvisible-from objective1 waypoint0 V_FALSE))
+:effect 
+(and (done-goal dd) (not (dummy-left-jws_observe-vis_agent3_objective1_waypoint0 dd)))
+)
+(:action act-vou_take-image_agent3_waypoint0_objective1_camera1_high-res
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-jws_observe-vis_agent3_objective1_waypoint0 dd) (visible-from objective1 waypoint0) (calibrated camera1 agent3 waypoint0 objective1) (at agent3 waypoint0) (Kvisible-from objective1 waypoint0 V_TRUE))
+:effect 
+(and (pre-vou_take-image_agent3_waypoint0_objective1_camera1_high-res dd) (have-image agent3 objective1 high-res) (not (calibrated camera1 agent3 waypoint0 objective1)))
+)
+(:action act-l25_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-vou_take-image_agent3_waypoint0_objective1_camera1_high-res dd) (at agent3 waypoint3) (have-image agent3 objective1 high-res))
+:effect 
+(and (pre-l25_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd) (not (pre-vou_take-image_agent3_waypoint0_objective1_camera1_high-res dd)))
+)
+(:action goal-achieve-l25_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-l25_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-l25_communicate-image-data_agent3_general_objective1_high-res_waypoint3_waypoint0_dd dd)))
+)
+(:action act-lkk_take-image_agent3_waypoint4_objective1_camera1_high-res
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-osg_observe-vis_agent3_objective1_waypoint4 dd) (visible-from objective1 waypoint4) (at-rock-sample waypoint4) (at-soil-sample waypoint5) (calibrated camera1 agent3 waypoint4 objective1) (at agent3 waypoint4) (Kvisible-from objective1 waypoint4 V_TRUE) (Kat-rock-sample waypoint4 V_TRUE) (Kat-soil-sample waypoint5 V_TRUE))
+:effect 
+(and (pre-lkk_take-image_agent3_waypoint4_objective1_camera1_high-res dd) (have-image agent3 objective1 high-res) (not (calibrated camera1 agent3 waypoint4 objective1)))
+)
+(:action act-r4o_sample-rock_agent3_agent2_a1store_waypoint4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-lkk_take-image_agent3_waypoint4_objective1_camera1_high-res dd) (at agent3 waypoint4) (empty a1store agent3))
+:effect 
+(and (pre-r4o_sample-rock_agent3_agent2_a1store_waypoint4 dd) (not (pre-lkk_take-image_agent3_waypoint4_objective1_camera1_high-res dd)) (not (empty a1store agent3)) (full a1store agent3) (have-rock-analysis agent3))
+)
+(:action act-4ch_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-r4o_sample-rock_agent3_agent2_a1store_waypoint4 dd) (at agent3 waypoint1) (have-rock-analysis agent3))
+:effect 
+(and (pre-4ch_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd) (not (pre-r4o_sample-rock_agent3_agent2_a1store_waypoint4 dd)) (communicated-rock-data ))
+)
+(:action act-typ_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-4ch_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd) (at agent3 waypoint1) (have-image agent3 objective1 high-res))
+:effect 
+(and (pre-typ_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd) (not (pre-4ch_communicate-rock-data_agent3_general_waypoint1_waypoint0_dd dd)))
+)
+(:action goal-achieve-typ_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-typ_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd))
+:effect 
+(and (done-goal dd) (not (pre-typ_communicate-image-data_agent3_general_objective1_high-res_waypoint1_waypoint0_dd dd)))
+)
+(:action Merge-at-soil-sample
+:parameters ( ?w - waypoint ?V_PARAM - VALUE_TYPE)
+:precondition 
+(and (not (Kat-soil-sample ?w ?V_PARAM)) 
+	(or (KGivenat-soil-sample ?w tag0 ?V_PARAM) (KNot tag0))
+	(or (KGivenat-soil-sample ?w tag1 ?V_PARAM) (KNot tag1)))
+:effect 
+(and (Kat-soil-sample ?w ?V_PARAM))
+)
+
+(:action RefuteT-at-soil-sample
+:parameters ( ?w - waypoint ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGivenat-soil-sample ?w ?TAG_PARAM V_TRUE) (Kat-soil-sample ?w V_TRUE) (not (at-soil-sample ?w)))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+(:action RefuteF-at-soil-sample
+:parameters ( ?w - waypoint ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGivenat-soil-sample ?w ?TAG_PARAM V_FALSE) (Kat-soil-sample ?w V_TRUE) (at-soil-sample ?w))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+(:action Merge-at-rock-sample
+:parameters ( ?w - waypoint ?V_PARAM - VALUE_TYPE)
+:precondition 
+(and (not (Kat-rock-sample ?w ?V_PARAM)) 
+	(or (KGivenat-rock-sample ?w tag0 ?V_PARAM) (KNot tag0))
+	(or (KGivenat-rock-sample ?w tag1 ?V_PARAM) (KNot tag1)))
+:effect 
+(and (Kat-rock-sample ?w ?V_PARAM))
+)
+
+(:action RefuteT-at-rock-sample
+:parameters ( ?w - waypoint ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGivenat-rock-sample ?w ?TAG_PARAM V_TRUE) (Kat-rock-sample ?w V_TRUE) (not (at-rock-sample ?w)))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+(:action RefuteF-at-rock-sample
+:parameters ( ?w - waypoint ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGivenat-rock-sample ?w ?TAG_PARAM V_FALSE) (Kat-rock-sample ?w V_TRUE) (at-rock-sample ?w))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+(:action Merge-visible-from
+:parameters ( ?o - objective ?w - waypoint ?V_PARAM - VALUE_TYPE)
+:precondition 
+(and (not (Kvisible-from ?o ?w ?V_PARAM)) 
+	(or (KGivenvisible-from ?o ?w tag0 ?V_PARAM) (KNot tag0))
+	(or (KGivenvisible-from ?o ?w tag1 ?V_PARAM) (KNot tag1)))
+:effect 
+(and (Kvisible-from ?o ?w ?V_PARAM))
+)
+
+(:action RefuteT-visible-from
+:parameters ( ?o - objective ?w - waypoint ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGivenvisible-from ?o ?w ?TAG_PARAM V_TRUE) (Kvisible-from ?o ?w V_TRUE) (not (visible-from ?o ?w)))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+(:action RefuteF-visible-from
+:parameters ( ?o - objective ?w - waypoint ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGivenvisible-from ?o ?w ?TAG_PARAM V_FALSE) (Kvisible-from ?o ?w V_TRUE) (visible-from ?o ?w))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+)

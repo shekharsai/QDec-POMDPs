@@ -1,0 +1,1506 @@
+0
+Solving the current team problem!
+*
+Planning time: 00:00:01.4830165
+
+The original plan tree!
+
+move-agent_a4_room3_room4
+        move-agent_a5_room4_room5
+                move-agent_a5_room5_room6
+                        observe-table_a5_table3_room6
+                                (f)move-agent_a5_room6_room7
+                                (f)     observe-table_a4_table1_room4
+                                (f)             (f)observe-table_a1_table2_room1
+                                (f)             (f)     (f)move-agent_a4_room4_room5
+                                (f)             (f)     (f)     move-agent_a4_room5_room6
+                                (f)             (f)     (f)             observe-table_a4_table4_room6
+                                (f)             (f)     (f)                     (f)move-agent_a3_room1_room2
+                                (f)             (f)     (f)                     (f)     move-agent_a3_room2_room3
+                                (f)             (f)     (f)                     (f)             joint-lift-table_a2_a3_table1_room3
+                                (f)             (f)     (f)                     (f)                     joint-move-table_a2_a3_table1_room3_room2
+                                (f)             (f)     (f)                     (f)                             joint-drop-table_a2_a3_table1_room2
+                                (f)             (f)     (f)                     (f)                                     joint-lift-table_a2_a3_table2_room2
+                                (f)             (f)     (f)                     (f)                                             joint-move-table_a2_a3_table2_room2_room1
+                                (f)             (f)     (f)                     (f)                                                     move-agent_a1_room1_room2
+                                (f)             (f)     (f)                     (f)                                                             joint-drop-table_a2_a3_table2_room1
+                                (f)             (f)     (f)                     (f)                                                                     move-agent_a3_room1_room2
+                                (f)             (f)     (f)                     (f)                                                                             joint-lift-table_a1_a3_table1_room2
+                                (f)             (f)     (f)                     (f)                                                                                     joint-move-table_a1_a3_table1_room2_room3
+                                (f)             (f)     (f)                     (f)                                                                                             joint-move-table_a1_a3_table1_room3_room4
+                                (f)             (f)     (f)                     (f)                                                                                                     joint-drop-table_a1_a3_table1_room4
+                                (f)             (f)     (f)                     (f)                                                                                                             )goal
+                                (f)             (f)     (f)                     (t)move-agent_a5_room7_room6
+                                (f)             (f)     (f)                     (t)     joint-lift-table_a4_a5_table4_room6
+                                (f)             (f)     (f)                     (t)             joint-move-table_a4_a5_table4_room6_room7
+                                (f)             (f)     (f)                     (t)                     joint-drop-table_a4_a5_table4_room7
+                                (f)             (f)     (f)                     (t)                             move-agent_a3_room1_room2
+                                (f)             (f)     (f)                     (t)                                     move-agent_a3_room2_room3
+                                (f)             (f)     (f)                     (t)                                             joint-lift-table_a2_a3_table1_room3
+                                (f)             (f)     (f)                     (t)                                                     joint-move-table_a2_a3_table1_room3_room2
+                                (f)             (f)     (f)                     (t)                                                             joint-drop-table_a2_a3_table1_room2
+                                (f)             (f)     (f)                     (t)                                                                     joint-lift-table_a2_a3_table2_room2
+                                (f)             (f)     (f)                     (t)                                                                             joint-move-table_a2_a3_table2_room2_room1
+                                (f)             (f)     (f)                     (t)                                                                                     move-agent_a1_room1_room2
+                                (f)             (f)     (f)                     (t)                                                                                             joint-drop-table_a2_a3_table2_room1
+                                (f)             (f)     (f)                     (t)                                                                                                     move-agent_a3_room1_room2
+                                (f)             (f)     (f)                     (t)                                                                                                             joint-lift-table_a1_a3_table1_room2
+                                (f)             (f)     (f)                     (t)                                                                                                                     joint-move-table_a1_a3_table1_room2_room3
+                                (f)             (f)     (f)                     (t)                                                                                                                             joint-move-table_a1_a3_table1_room3_room4
+                                (f)             (f)     (f)                     (t)                                                                                                                                     joint-drop-table_a1_a3_table1_room4
+                                (f)             (f)     (f)                     (t)                                                                                                                                             )goal
+                                (f)             (f)     (t)observe-table_a5_table4_room7
+                                (f)             (f)     (t)     (f)move-agent_a4_room4_room3
+                                (f)             (f)     (t)     (f)     joint-lift-table_a2_a4_table1_room3
+                                (f)             (f)     (t)     (f)             joint-move-table_a2_a4_table1_room3_room4
+                                (f)             (f)     (t)     (f)                     joint-drop-table_a2_a4_table1_room4
+                                (f)             (f)     (t)     (f)                             move-agent_a4_room4_room5
+                                (f)             (f)     (t)     (f)                                     move-agent_a4_room5_room6
+                                (f)             (f)     (t)     (f)                                             move-agent_a5_room7_room6
+                                (f)             (f)     (t)     (f)                                                     joint-lift-table_a4_a5_table4_room6
+                                (f)             (f)     (t)     (f)                                                             joint-move-table_a4_a5_table4_room6_room7
+                                (f)             (f)     (t)     (f)                                                                     joint-drop-table_a4_a5_table4_room7
+                                (f)             (f)     (t)     (f)                                                                             )goal
+                                (f)             (f)     (t)     (t)move-agent_a4_room4_room3
+                                (f)             (f)     (t)     (t)     joint-lift-table_a2_a4_table1_room3
+                                (f)             (f)     (t)     (t)             joint-move-table_a2_a4_table1_room3_room4
+                                (f)             (f)     (t)     (t)                     joint-drop-table_a2_a4_table1_room4
+                                (f)             (f)     (t)     (t)                             )goal
+                                (f)             (t)move-agent_a4_room4_room5
+                                (f)             (t)     move-agent_a3_room1_room2
+                                (f)             (t)             move-agent_a4_room5_room6
+                                (f)             (t)                     observe-table_a3_table2_room2
+                                (f)             (t)                             (f)observe-table_a4_table4_room6
+                                (f)             (t)                             (f)     (f))goal
+                                (f)             (t)                             (f)     (t)move-agent_a5_room7_room6
+                                (f)             (t)                             (f)     (t)     joint-lift-table_a4_a5_table4_room6
+                                (f)             (t)                             (f)     (t)             joint-move-table_a4_a5_table4_room6_room7
+                                (f)             (t)                             (f)     (t)                     joint-drop-table_a4_a5_table4_room7
+                                (f)             (t)                             (f)     (t)                             )goal
+                                (f)             (t)                             (t)observe-table_a4_table4_room6
+                                (f)             (t)                             (t)     (f)move-agent_a1_room1_room2
+                                (f)             (t)                             (t)     (f)     joint-lift-table_a1_a3_table2_room2
+                                (f)             (t)                             (t)     (f)             joint-move-table_a1_a3_table2_room2_room1
+                                (f)             (t)                             (t)     (f)                     joint-drop-table_a1_a3_table2_room1
+                                (f)             (t)                             (t)     (f)                             )goal
+                                (f)             (t)                             (t)     (t)move-agent_a1_room1_room2
+                                (f)             (t)                             (t)     (t)     joint-lift-table_a1_a3_table2_room2
+                                (f)             (t)                             (t)     (t)             joint-move-table_a1_a3_table2_room2_room1
+                                (f)             (t)                             (t)     (t)                     joint-drop-table_a1_a3_table2_room1
+                                (f)             (t)                             (t)     (t)                             move-agent_a5_room7_room6
+                                (f)             (t)                             (t)     (t)                                     joint-lift-table_a4_a5_table4_room6
+                                (f)             (t)                             (t)     (t)                                             joint-move-table_a4_a5_table4_room6_room7
+                                (f)             (t)                             (t)     (t)                                                     joint-drop-table_a4_a5_table4_room7
+                                (f)             (t)                             (t)     (t)                                                             )goal
+                                (t)move-agent_a3_room1_room2
+                                (t)     observe-table_a2_table1_room3
+                                (t)             (f)observe-table_a5_table4_room6
+                                (t)             (f)     (f)move-agent_a4_room4_room5
+                                (t)             (f)     (f)     observe-table_a1_table2_room1
+                                (t)             (f)     (f)             (f)move-agent_a1_room1_room2
+                                (t)             (f)     (f)             (f)     joint-lift-table_a1_a3_table2_room2
+                                (t)             (f)     (f)             (f)             joint-move-table_a1_a3_table2_room2_room1
+                                (t)             (f)     (f)             (f)                     joint-drop-table_a1_a3_table2_room1
+                                (t)             (f)     (f)             (f)                             move-agent_a4_room5_room6
+                                (t)             (f)     (f)             (f)                                     joint-lift-table_a4_a5_table3_room6
+                                (t)             (f)     (f)             (f)                                             joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (f)     (f)             (f)                                                     joint-drop-table_a4_a5_table3_room5
+                                (t)             (f)     (f)             (f)                                                             )goal
+                                (t)             (f)     (f)             (t)move-agent_a4_room5_room6
+                                (t)             (f)     (f)             (t)     joint-lift-table_a4_a5_table3_room6
+                                (t)             (f)     (f)             (t)             joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (f)     (f)             (t)                     joint-drop-table_a4_a5_table3_room5
+                                (t)             (f)     (f)             (t)                             )goal
+                                (t)             (f)     (t)observe-table_a3_table2_room2
+                                (t)             (f)     (t)     (f)move-agent_a4_room4_room5
+                                (t)             (f)     (t)     (f)     move-agent_a4_room5_room6
+                                (t)             (f)     (t)     (f)             joint-lift-table_a4_a5_table3_room6
+                                (t)             (f)     (t)     (f)                     joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (f)     (t)     (f)                             joint-drop-table_a4_a5_table3_room5
+                                (t)             (f)     (t)     (f)                                     move-agent_a5_room5_room6
+                                (t)             (f)     (t)     (f)                                             move-agent_a4_room5_room6
+                                (t)             (f)     (t)     (f)                                                     joint-lift-table_a4_a5_table4_room6
+                                (t)             (f)     (t)     (f)                                                             joint-move-table_a4_a5_table4_room6_room7
+                                (t)             (f)     (t)     (f)                                                                     joint-drop-table_a4_a5_table4_room7
+                                (t)             (f)     (t)     (f)                                                                             )goal
+                                (t)             (f)     (t)     (t)move-agent_a4_room4_room5
+                                (t)             (f)     (t)     (t)     move-agent_a1_room1_room2
+                                (t)             (f)     (t)     (t)             joint-lift-table_a1_a3_table2_room2
+                                (t)             (f)     (t)     (t)                     joint-move-table_a1_a3_table2_room2_room1
+                                (t)             (f)     (t)     (t)                             joint-drop-table_a1_a3_table2_room1
+                                (t)             (f)     (t)     (t)                                     move-agent_a4_room5_room6
+                                (t)             (f)     (t)     (t)                                             joint-lift-table_a4_a5_table3_room6
+                                (t)             (f)     (t)     (t)                                                     joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (f)     (t)     (t)                                                             joint-drop-table_a4_a5_table3_room5
+                                (t)             (f)     (t)     (t)                                                                     move-agent_a5_room5_room6
+                                (t)             (f)     (t)     (t)                                                                             move-agent_a4_room5_room6
+                                (t)             (f)     (t)     (t)                                                                                     joint-lift-table_a4_a5_table4_room6
+                                (t)             (f)     (t)     (t)                                                                                             joint-move-table_a4_a5_table4_room6_room7
+                                (t)             (f)     (t)     (t)                                                                                                     joint-drop-table_a4_a5_table4_room7
+                                (t)             (f)     (t)     (t)                                                                                                             )goal
+                                (t)             (t)observe-table_a1_table2_room1
+                                (t)             (t)     (f)observe-table_a5_table4_room6
+                                (t)             (t)     (f)     (f)move-agent_a4_room4_room3
+                                (t)             (t)     (f)     (f)     joint-lift-table_a2_a4_table1_room3
+                                (t)             (t)     (f)     (f)             joint-move-table_a2_a4_table1_room3_room4
+                                (t)             (t)     (f)     (f)                     joint-drop-table_a2_a4_table1_room4
+                                (t)             (t)     (f)     (f)                             move-agent_a4_room4_room5
+                                (t)             (t)     (f)     (f)                                     move-agent_a1_room1_room2
+                                (t)             (t)     (f)     (f)                                             joint-lift-table_a1_a3_table2_room2
+                                (t)             (t)     (f)     (f)                                                     joint-move-table_a1_a3_table2_room2_room1
+                                (t)             (t)     (f)     (f)                                                             joint-drop-table_a1_a3_table2_room1
+                                (t)             (t)     (f)     (f)                                                                     move-agent_a4_room5_room6
+                                (t)             (t)     (f)     (f)                                                                             joint-lift-table_a4_a5_table3_room6
+                                (t)             (t)     (f)     (f)                                                                                     joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (t)     (f)     (f)                                                                                             joint-drop-table_a4_a5_table3_room5
+                                (t)             (t)     (f)     (f)                                                                                                     )goal
+                                (t)             (t)     (f)     (t)move-agent_a4_room4_room3
+                                (t)             (t)     (f)     (t)     joint-lift-table_a2_a4_table1_room3
+                                (t)             (t)     (f)     (t)             joint-move-table_a2_a4_table1_room3_room4
+                                (t)             (t)     (f)     (t)                     joint-drop-table_a2_a4_table1_room4
+                                (t)             (t)     (f)     (t)                             move-agent_a4_room4_room5
+                                (t)             (t)     (f)     (t)                                     move-agent_a1_room1_room2
+                                (t)             (t)     (f)     (t)                                             joint-lift-table_a1_a3_table2_room2
+                                (t)             (t)     (f)     (t)                                                     joint-move-table_a1_a3_table2_room2_room1
+                                (t)             (t)     (f)     (t)                                                             joint-drop-table_a1_a3_table2_room1
+                                (t)             (t)     (f)     (t)                                                                     move-agent_a4_room5_room6
+                                (t)             (t)     (f)     (t)                                                                             joint-lift-table_a4_a5_table3_room6
+                                (t)             (t)     (f)     (t)                                                                                     joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (t)     (f)     (t)                                                                                             joint-drop-table_a4_a5_table3_room5
+                                (t)             (t)     (f)     (t)                                                                                                     move-agent_a5_room5_room6
+                                (t)             (t)     (f)     (t)                                                                                                             move-agent_a4_room5_room6
+                                (t)             (t)     (f)     (t)                                                                                                                     joint-lift-table_a4_a5_table4_room6
+                                (t)             (t)     (f)     (t)                                                                                                                             joint-move-table_a4_a5_table4_room6_room7
+                                (t)             (t)     (f)     (t)                                                                                                                                     joint-drop-table_a4_a5_table4_room7
+                                (t)             (t)     (f)     (t)                                                                                                                                             )goal
+                                (t)             (t)     (t)move-agent_a4_room4_room3
+                                (t)             (t)     (t)     joint-lift-table_a2_a4_table1_room3
+                                (t)             (t)     (t)             joint-move-table_a2_a4_table1_room3_room4
+                                (t)             (t)     (t)                     joint-drop-table_a2_a4_table1_room4
+                                (t)             (t)     (t)                             move-agent_a4_room4_room5
+                                (t)             (t)     (t)                                     move-agent_a4_room5_room6
+                                (t)             (t)     (t)                                             joint-lift-table_a4_a5_table3_room6
+                                (t)             (t)     (t)                                                     joint-move-table_a4_a5_table3_room6_room5
+                                (t)             (t)     (t)                                                             joint-drop-table_a4_a5_table3_room5
+                                (t)             (t)     (t)                                                                     move-agent_a5_room5_room6
+                                (t)             (t)     (t)                                                                             move-agent_a5_room6_room7
+                                (t)             (t)     (t)                                                                                     observe-table_a5_table4_room7
+                                (t)             (t)     (t)                                                                                             (f)move-agent_a4_room5_room6
+                                (t)             (t)     (t)                                                                                             (f)     move-agent_a5_room7_room6
+                                (t)             (t)     (t)                                                                                             (f)             joint-lift-table_a4_a5_table4_room6
+                                (t)             (t)     (t)                                                                                             (f)                     joint-move-table_a4_a5_table4_room6_room7
+                                (t)             (t)     (t)                                                                                             (f)                             joint-drop-table_a4_a5_table4_room7
+                                (t)             (t)     (t)                                                                                             (f)                                     )goal
+                                (t)             (t)     (t)                                                                                             (t))goal
+
+Team plan width = 16
+Team plan height = 28
+*
+A refined projected plan tree for a1:
+observe-table_a5_table3_room6
+        (f)observe-table_a4_table1_room4
+        (f)     (f)observe-table_a1_table2_room1
+        (f)     (f)     (f)observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f)joint-lift-table_a1_a3_table1_room2
+        (f)     (f)     (f)     (f)     joint-move-table_a1_a3_table1_room2_room3
+        (f)     (f)     (f)     (f)             joint-move-table_a1_a3_table1_room3_room4
+        (f)     (f)     (f)     (f)                     joint-drop-table_a1_a3_table1_room4
+        (f)     (f)     (f)     (f)                             )goal
+        (f)     (f)     (f)     (t)joint-lift-table_a1_a3_table1_room2
+        (f)     (f)     (f)     (t)     joint-move-table_a1_a3_table1_room2_room3
+        (f)     (f)     (f)     (t)             joint-move-table_a1_a3_table1_room3_room4
+        (f)     (f)     (f)     (t)                     joint-drop-table_a1_a3_table1_room4
+        (f)     (f)     (f)     (t)                             )goal
+        (f)     (f)     (t))goal
+        (f)     (t)observe-table_a3_table2_room2
+        (f)     (t)     (f))goal
+        (f)     (t)     (t)observe-table_a4_table4_room6
+        (f)     (t)     (t)     (f)joint-lift-table_a1_a3_table2_room2
+        (f)     (t)     (t)     (f)     joint-move-table_a1_a3_table2_room2_room1
+        (f)     (t)     (t)     (f)             joint-drop-table_a1_a3_table2_room1
+        (f)     (t)     (t)     (f)                     )goal
+        (f)     (t)     (t)     (t)joint-lift-table_a1_a3_table2_room2
+        (f)     (t)     (t)     (t)     joint-move-table_a1_a3_table2_room2_room1
+        (f)     (t)     (t)     (t)             joint-drop-table_a1_a3_table2_room1
+        (f)     (t)     (t)     (t)                     )goal
+        (t)observe-table_a2_table1_room3
+        (t)     (f)observe-table_a5_table4_room6
+        (t)     (f)     (f)observe-table_a1_table2_room1
+        (t)     (f)     (f)     (f)joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (f)     (f)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (f)     (f)             joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (f)     (f)                     )goal
+        (t)     (f)     (f)     (t))goal
+        (t)     (f)     (t)observe-table_a3_table2_room2
+        (t)     (f)     (t)     (f))goal
+        (t)     (f)     (t)     (t)joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (t)     (t)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (t)     (t)             joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (t)     (t)                     )goal
+        (t)     (t)observe-table_a1_table2_room1
+        (t)     (t)     (f)observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)joint-lift-table_a1_a3_table2_room2
+        (t)     (t)     (f)     (f)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (t)     (f)     (f)             joint-drop-table_a1_a3_table2_room1
+        (t)     (t)     (f)     (f)                     )goal
+        (t)     (t)     (f)     (t)joint-lift-table_a1_a3_table2_room2
+        (t)     (t)     (f)     (t)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (t)     (f)     (t)             joint-drop-table_a1_a3_table2_room1
+        (t)     (t)     (f)     (t)                     )goal
+        (t)     (t)     (t))goal
+
+
+The compressed plan tree for a1:
+2hw_observe-table_a5_table3_room6
+        (f)qqx_observe-table_a4_table1_room4
+        (f)     (f)hp1_observe-table_a1_table2_room1
+        (f)     (f)     (f)bw2_joint-lift-table_a1_a3_table1_room2
+        (f)     (f)     (f)     z8l_joint-move-table_a1_a3_table1_room2_room3
+        (f)     (f)     (f)             1ho_joint-move-table_a1_a3_table1_room3_room4
+        (f)     (f)     (f)                     zfa_joint-drop-table_a1_a3_table1_room4
+        (f)     (f)     (f)                             )goal
+        (f)     (f)     (t))goal
+        (f)     (t)0o6_observe-table_a3_table2_room2
+        (f)     (t)     (f))goal
+        (f)     (t)     (t)5lg_joint-lift-table_a1_a3_table2_room2
+        (f)     (t)     (t)     lwh_joint-move-table_a1_a3_table2_room2_room1
+        (f)     (t)     (t)             n4r_joint-drop-table_a1_a3_table2_room1
+        (f)     (t)     (t)                     )goal
+        (t)j61_observe-table_a2_table1_room3
+        (t)     (f)6i6_observe-table_a5_table4_room6
+        (t)     (f)     (f)1cn_observe-table_a1_table2_room1
+        (t)     (f)     (f)     (f)g90_joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (f)     (f)     eqk_joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (f)     (f)             mse_joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (f)     (f)                     )goal
+        (t)     (f)     (f)     (t))goal
+        (t)     (f)     (t)c3h_observe-table_a3_table2_room2
+        (t)     (f)     (t)     (f))goal
+        (t)     (f)     (t)     (t)4c2_joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (t)     (t)     zue_joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (t)     (t)             r52_joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (t)     (t)                     )goal
+        (t)     (t)uy2_observe-table_a1_table2_room1
+        (t)     (t)     (f)kqc_joint-lift-table_a1_a3_table2_room2
+        (t)     (t)     (f)     t48_joint-move-table_a1_a3_table2_room2_room1
+        (t)     (t)     (f)             s8c_joint-drop-table_a1_a3_table2_room1
+        (t)     (t)     (f)                     )goal
+        (t)     (t)     (t))goal
+
+ Child solution         a1
+waiting!
+*
+Planning time: 00:00:01.2409381
+
+Plan tree for a1
+act-dummy-2hw_observe-table_a5_table3_room6_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        move-agent_a1_room3_room4
+                                move-agent_a1_room4_room5
+                                        move-agent_a1_room5_room6
+                                                act-2hw_observe-table_a5_table3_room6_a1
+                                                        (f)dummy-left-2hw_observe-table_a5_table3_room6_a1
+                                                        (f)     move-agent_a1_room6_room5
+                                                        (f)             move-agent_a1_room5_room4
+                                                        (f)                     act-dummy-qqx_observe-table_a4_table1_room4_a1
+                                                        (f)                             act-qqx_observe-table_a4_table1_room4_a1
+                                                        (f)                                     (f)dummy-left-qqx_observe-table_a4_table1_room4_a1
+                                                        (f)                                     (f)     move-agent_a1_room4_room3
+                                                        (f)                                     (f)             move-agent_a1_room3_room2
+                                                        (f)                                     (f)                     move-agent_a1_room2_room1
+                                                        (f)                                     (f)                             act-dummy-hp1_observe-table_a1_table2_room1_a1
+                                                        (f)                                     (f)                                     act-hp1_observe-table_a1_table2_room1_a1
+                                                        (f)                                     (f)                                             (f)dummy-left-hp1_observe-table_a1_table2_room1_a1
+                                                        (f)                                     (f)                                             (f)     move-agent_a1_room1_room2
+                                                        (f)                                     (f)                                             (f)             act-bw2_joint-lift-table_a1_a3_table1_room2_a1
+                                                        (f)                                     (f)                                             (f)                     act-z8l_joint-move-table_a1_a3_table1_room2_room3_a1
+                                                        (f)                                     (f)                                             (f)                             act-1ho_joint-move-table_a1_a3_table1_room3_room4_a1
+                                                        (f)                                     (f)                                             (f)                                     act-zfa_joint-drop-table_a1_a3_table1_room4_a1
+                                                        (f)                                     (f)                                             (f)                                             goal-achieve-zfa_joint-drop-table_a1_a3_table1_room4_a1
+                                                        (f)                                     (f)                                             (f)                                                     )goal
+                                                        (f)                                     (f)                                             (t)dummy-right-hp1_observe-table_a1_table2_room1_a1
+                                                        (f)                                     (f)                                             (t)     goal-achieve-right-hp1_observe-table_a1_table2_room1_a1
+                                                        (f)                                     (f)                                             (t)             )goal
+                                                        (f)                                     (t)dummy-right-qqx_observe-table_a4_table1_room4_a1
+                                                        (f)                                     (t)     move-agent_a1_room4_room3
+                                                        (f)                                     (t)             move-agent_a1_room3_room2
+                                                        (f)                                     (t)                     act-dummy-0o6_observe-table_a3_table2_room2_a1
+                                                        (f)                                     (t)                             act-0o6_observe-table_a3_table2_room2_a1
+                                                        (f)                                     (t)                                     (f)dummy-left-0o6_observe-table_a3_table2_room2_a1
+                                                        (f)                                     (t)                                     (f)     goal-achieve-left-0o6_observe-table_a3_table2_room2_a1
+                                                        (f)                                     (t)                                     (f)             )goal
+                                                        (f)                                     (t)                                     (t)dummy-right-0o6_observe-table_a3_table2_room2_a1
+                                                        (f)                                     (t)                                     (t)     act-5lg_joint-lift-table_a1_a3_table2_room2_a1
+                                                        (f)                                     (t)                                     (t)             act-lwh_joint-move-table_a1_a3_table2_room2_room1_a1
+                                                        (f)                                     (t)                                     (t)                     act-n4r_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (f)                                     (t)                                     (t)                             goal-achieve-n4r_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (f)                                     (t)                                     (t)                                     )goal
+                                                        (t)dummy-right-2hw_observe-table_a5_table3_room6_a1
+                                                        (t)     move-agent_a1_room6_room5
+                                                        (t)             move-agent_a1_room5_room4
+                                                        (t)                     move-agent_a1_room4_room3
+                                                        (t)                             act-dummy-j61_observe-table_a2_table1_room3_a1
+                                                        (t)                                     act-j61_observe-table_a2_table1_room3_a1
+                                                        (t)                                             (f)dummy-left-j61_observe-table_a2_table1_room3_a1
+                                                        (t)                                             (f)     move-agent_a1_room3_room4
+                                                        (t)                                             (f)             move-agent_a1_room4_room5
+                                                        (t)                                             (f)                     move-agent_a1_room5_room6
+                                                        (t)                                             (f)                             act-dummy-6i6_observe-table_a5_table4_room6_a1
+                                                        (t)                                             (f)                                     act-6i6_observe-table_a5_table4_room6_a1
+                                                        (t)                                             (f)                                             (f)dummy-left-6i6_observe-table_a5_table4_room6_a1
+                                                        (t)                                             (f)                                             (f)     move-agent_a1_room6_room5
+                                                        (t)                                             (f)                                             (f)             move-agent_a1_room5_room4
+                                                        (t)                                             (f)                                             (f)                     move-agent_a1_room4_room3
+                                                        (t)                                             (f)                                             (f)                             move-agent_a1_room3_room2
+                                                        (t)                                             (f)                                             (f)                                     move-agent_a1_room2_room1
+                                                        (t)                                             (f)                                             (f)                                             act-dummy-1cn_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                     act-1cn_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (f)dummy-left-1cn_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (f)     move-agent_a1_room1_room2
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+        act-g90_joint-lift-table_a1_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                act-eqk_joint-move-table_a1_a3_table2_room2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                        act-mse_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                                goal-achieve-mse_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                                        )goal
+                                                        (t)                                             (f)                                             (f)                                                             (t)dummy-right-1cn_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (t)     goal-achieve-right-1cn_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (f)                                             (f)                                                             (t)
+        )goal
+                                                        (t)                                             (f)                                             (t)dummy-right-6i6_observe-table_a5_table4_room6_a1
+                                                        (t)                                             (f)                                             (t)     move-agent_a1_room6_room5
+                                                        (t)                                             (f)                                             (t)             move-agent_a1_room5_room4
+                                                        (t)                                             (f)                                             (t)                     move-agent_a1_room4_room3
+                                                        (t)                                             (f)                                             (t)                             move-agent_a1_room3_room2
+                                                        (t)                                             (f)                                             (t)                                     act-dummy-c3h_observe-table_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (t)                                             act-c3h_observe-table_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (t)                                                     (f)dummy-left-c3h_observe-table_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (t)                                                     (f)     goal-achieve-left-c3h_observe-table_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (t)                                                     (f)             )goal
+                                                        (t)                                             (f)                                             (t)                                                     (t)dummy-right-c3h_observe-table_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (t)                                                     (t)     act-4c2_joint-lift-table_a1_a3_table2_room2_a1
+                                                        (t)                                             (f)                                             (t)                                                     (t)             act-zue_joint-move-table_a1_a3_table2_room2_room1_a1
+                                                        (t)                                             (f)                                             (t)                                                     (t)
+        act-r52_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (t)                                             (f)                                             (t)                                                     (t)
+                goal-achieve-r52_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (t)                                             (f)                                             (t)                                                     (t)
+                        )goal
+                                                        (t)                                             (t)dummy-right-j61_observe-table_a2_table1_room3_a1
+                                                        (t)                                             (t)     move-agent_a1_room3_room2
+                                                        (t)                                             (t)             move-agent_a1_room2_room1
+                                                        (t)                                             (t)                     act-dummy-uy2_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (t)                             act-uy2_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (t)                                     (f)dummy-left-uy2_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (t)                                     (f)     move-agent_a1_room1_room2
+                                                        (t)                                             (t)                                     (f)             act-kqc_joint-lift-table_a1_a3_table2_room2_a1
+                                                        (t)                                             (t)                                     (f)                     act-t48_joint-move-table_a1_a3_table2_room2_room1_a1
+                                                        (t)                                             (t)                                     (f)                             act-s8c_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (t)                                             (t)                                     (f)                                     goal-achieve-s8c_joint-drop-table_a1_a3_table2_room1_a1
+                                                        (t)                                             (t)                                     (f)                                             )goal
+                                                        (t)                                             (t)                                     (t)dummy-right-uy2_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (t)                                     (t)     goal-achieve-right-uy2_observe-table_a1_table2_room1_a1
+                                                        (t)                                             (t)                                     (t)             )goal
+
+Width: 10
+Height (before balancing): 24
+
+A refined projected plan tree for a2:
+observe-table_a5_table3_room6
+        (f)observe-table_a4_table1_room4
+        (f)     (f)observe-table_a1_table2_room1
+        (f)     (f)     (f)observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f)joint-lift-table_a2_a3_table1_room3
+        (f)     (f)     (f)     (f)     joint-move-table_a2_a3_table1_room3_room2
+        (f)     (f)     (f)     (f)             joint-drop-table_a2_a3_table1_room2
+        (f)     (f)     (f)     (f)                     joint-lift-table_a2_a3_table2_room2
+        (f)     (f)     (f)     (f)                             joint-move-table_a2_a3_table2_room2_room1
+        (f)     (f)     (f)     (f)                                     joint-drop-table_a2_a3_table2_room1
+        (f)     (f)     (f)     (f)                                             )goal
+        (f)     (f)     (f)     (t)joint-lift-table_a2_a3_table1_room3
+        (f)     (f)     (f)     (t)     joint-move-table_a2_a3_table1_room3_room2
+        (f)     (f)     (f)     (t)             joint-drop-table_a2_a3_table1_room2
+        (f)     (f)     (f)     (t)                     joint-lift-table_a2_a3_table2_room2
+        (f)     (f)     (f)     (t)                             joint-move-table_a2_a3_table2_room2_room1
+        (f)     (f)     (f)     (t)                                     joint-drop-table_a2_a3_table2_room1
+        (f)     (f)     (f)     (t)                                             )goal
+        (f)     (f)     (t)observe-table_a5_table4_room7
+        (f)     (f)     (t)     (f)joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     (f)     joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)     (f)             joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)     (f)                     )goal
+        (f)     (f)     (t)     (t)joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     (t)     joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)     (t)             joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)     (t)                     )goal
+        (f)     (t))goal
+        (t)observe-table_a2_table1_room3
+        (t)     (f))goal
+        (t)     (t)observe-table_a1_table2_room1
+        (t)     (t)     (f)observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (f)     (f)     joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (f)     (f)             joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (f)     (f)                     )goal
+        (t)     (t)     (f)     (t)joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (f)     (t)     joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (f)     (t)             joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (f)     (t)                     )goal
+        (t)     (t)     (t)joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (t)     joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (t)             joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (t)                     )goal
+
+
+The compressed plan tree for a2:
+xuo_observe-table_a5_table3_room6
+        (f)g05_observe-table_a4_table1_room4
+        (f)     (f)58e_observe-table_a1_table2_room1
+        (f)     (f)     (f)cka_joint-lift-table_a2_a3_table1_room3
+        (f)     (f)     (f)     jo4_joint-move-table_a2_a3_table1_room3_room2
+        (f)     (f)     (f)             9gy_joint-drop-table_a2_a3_table1_room2
+        (f)     (f)     (f)                     1kh_joint-lift-table_a2_a3_table2_room2
+        (f)     (f)     (f)                             uvl_joint-move-table_a2_a3_table2_room2_room1
+        (f)     (f)     (f)                                     84a_joint-drop-table_a2_a3_table2_room1
+        (f)     (f)     (f)                                             )goal
+        (f)     (f)     (t)i3x_joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     gu5_joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)             fgs_joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)                     )goal
+        (f)     (t))goal
+        (t)nt4_observe-table_a2_table1_room3
+        (t)     (f))goal
+        (t)     (t)jv6_joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     yrn_joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)             1ab_joint-drop-table_a2_a4_table1_room4
+        (t)     (t)                     )goal
+
+ Child solution         a2
+waiting!
+
+Planning time: 00:00:00.5838190
+
+Plan tree for a2
+act-dummy-xuo_observe-table_a5_table3_room6_a2
+        move-agent_a2_room3_room4
+                move-agent_a2_room4_room5
+                        move-agent_a2_room5_room6
+                                act-xuo_observe-table_a5_table3_room6_a2
+                                        (f)dummy-left-xuo_observe-table_a5_table3_room6_a2
+                                        (f)     move-agent_a2_room6_room5
+                                        (f)             move-agent_a2_room5_room4
+                                        (f)                     act-dummy-g05_observe-table_a4_table1_room4_a2
+                                        (f)                             act-g05_observe-table_a4_table1_room4_a2
+                                        (f)                                     (f)dummy-left-g05_observe-table_a4_table1_room4_a2
+                                        (f)                                     (f)     move-agent_a2_room4_room3
+                                        (f)                                     (f)             move-agent_a2_room3_room2
+                                        (f)                                     (f)                     move-agent_a2_room2_room1
+                                        (f)                                     (f)                             act-dummy-58e_observe-table_a1_table2_room1_a2
+                                        (f)                                     (f)                                     act-58e_observe-table_a1_table2_room1_a2
+                                        (f)                                     (f)                                             (f)dummy-left-58e_observe-table_a1_table2_room1_a2
+                                        (f)                                     (f)                                             (f)     move-agent_a2_room1_room2
+                                        (f)                                     (f)                                             (f)             move-agent_a2_room2_room3
+                                        (f)                                     (f)                                             (f)                     act-cka_joint-lift-table_a2_a3_table1_room3_a2
+                                        (f)                                     (f)                                             (f)                             act-jo4_joint-move-table_a2_a3_table1_room3_room2_a2
+                                        (f)                                     (f)                                             (f)                                     act-9gy_joint-drop-table_a2_a3_table1_room2_a2
+                                        (f)                                     (f)                                             (f)                                             act-1kh_joint-lift-table_a2_a3_table2_room2_a2
+                                        (f)                                     (f)                                             (f)                                                     act-uvl_joint-move-table_a2_a3_table2_room2_room1_a2
+                                        (f)                                     (f)                                             (f)                                                             act-84a_joint-drop-table_a2_a3_table2_room1_a2
+                                        (f)                                     (f)                                             (f)                                                                     goal-achieve-84a_joint-drop-table_a2_a3_table2_room1_a2
+                                        (f)                                     (f)                                             (f)                                                                             )goal
+                                        (f)                                     (f)                                             (t)dummy-right-58e_observe-table_a1_table2_room1_a2
+                                        (f)                                     (f)                                             (t)     move-agent_a2_room1_room2
+                                        (f)                                     (f)                                             (t)             move-agent_a2_room2_room3
+                                        (f)                                     (f)                                             (t)                     act-i3x_joint-lift-table_a2_a4_table1_room3_a2
+                                        (f)                                     (f)                                             (t)                             act-gu5_joint-move-table_a2_a4_table1_room3_room4_a2
+                                        (f)                                     (f)                                             (t)                                     act-fgs_joint-drop-table_a2_a4_table1_room4_a2
+                                        (f)                                     (f)                                             (t)                                             goal-achieve-fgs_joint-drop-table_a2_a4_table1_room4_a2
+                                        (f)                                     (f)                                             (t)                                                     )goal
+                                        (f)                                     (t)dummy-right-g05_observe-table_a4_table1_room4_a2
+                                        (f)                                     (t)     goal-achieve-right-g05_observe-table_a4_table1_room4_a2
+                                        (f)                                     (t)             )goal
+                                        (t)dummy-right-xuo_observe-table_a5_table3_room6_a2
+                                        (t)     move-agent_a2_room6_room5
+                                        (t)             move-agent_a2_room5_room4
+                                        (t)                     move-agent_a2_room4_room3
+                                        (t)                             act-dummy-nt4_observe-table_a2_table1_room3_a2
+                                        (t)                                     act-nt4_observe-table_a2_table1_room3_a2
+                                        (t)                                             (f)dummy-left-nt4_observe-table_a2_table1_room3_a2
+                                        (t)                                             (f)     goal-achieve-left-nt4_observe-table_a2_table1_room3_a2
+                                        (t)                                             (f)             )goal
+                                        (t)                                             (t)dummy-right-nt4_observe-table_a2_table1_room3_a2
+                                        (t)                                             (t)     act-jv6_joint-lift-table_a2_a4_table1_room3_a2
+                                        (t)                                             (t)             act-yrn_joint-move-table_a2_a4_table1_room3_room4_a2
+                                        (t)                                             (t)                     act-1ab_joint-drop-table_a2_a4_table1_room4_a2
+                                        (t)                                             (t)                             goal-achieve-1ab_joint-drop-table_a2_a4_table1_room4_a2
+                                        (t)                                             (t)                                     )goal
+
+Width: 5
+Height (before balancing): 19
+
+A refined projected plan tree for a3:
+observe-table_a5_table3_room6
+        (f)observe-table_a4_table1_room4
+        (f)     (f)observe-table_a1_table2_room1
+        (f)     (f)     (f)observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f)joint-lift-table_a2_a3_table1_room3
+        (f)     (f)     (f)     (f)     joint-move-table_a2_a3_table1_room3_room2
+        (f)     (f)     (f)     (f)             joint-drop-table_a2_a3_table1_room2
+        (f)     (f)     (f)     (f)                     joint-lift-table_a2_a3_table2_room2
+        (f)     (f)     (f)     (f)                             joint-move-table_a2_a3_table2_room2_room1
+        (f)     (f)     (f)     (f)                                     joint-drop-table_a2_a3_table2_room1
+        (f)     (f)     (f)     (f)                                             joint-lift-table_a1_a3_table1_room2
+        (f)     (f)     (f)     (f)                                                     joint-move-table_a1_a3_table1_room2_room3
+        (f)     (f)     (f)     (f)                                                             joint-move-table_a1_a3_table1_room3_room4
+        (f)     (f)     (f)     (f)                                                                     joint-drop-table_a1_a3_table1_room4
+        (f)     (f)     (f)     (f)                                                                             )goal
+        (f)     (f)     (f)     (t)joint-lift-table_a2_a3_table1_room3
+        (f)     (f)     (f)     (t)     joint-move-table_a2_a3_table1_room3_room2
+        (f)     (f)     (f)     (t)             joint-drop-table_a2_a3_table1_room2
+        (f)     (f)     (f)     (t)                     joint-lift-table_a2_a3_table2_room2
+        (f)     (f)     (f)     (t)                             joint-move-table_a2_a3_table2_room2_room1
+        (f)     (f)     (f)     (t)                                     joint-drop-table_a2_a3_table2_room1
+        (f)     (f)     (f)     (t)                                             joint-lift-table_a1_a3_table1_room2
+        (f)     (f)     (f)     (t)                                                     joint-move-table_a1_a3_table1_room2_room3
+        (f)     (f)     (f)     (t)                                                             joint-move-table_a1_a3_table1_room3_room4
+        (f)     (f)     (f)     (t)                                                                     joint-drop-table_a1_a3_table1_room4
+        (f)     (f)     (f)     (t)                                                                             )goal
+        (f)     (f)     (t))goal
+        (f)     (t)observe-table_a3_table2_room2
+        (f)     (t)     (f))goal
+        (f)     (t)     (t)observe-table_a4_table4_room6
+        (f)     (t)     (t)     (f)joint-lift-table_a1_a3_table2_room2
+        (f)     (t)     (t)     (f)     joint-move-table_a1_a3_table2_room2_room1
+        (f)     (t)     (t)     (f)             joint-drop-table_a1_a3_table2_room1
+        (f)     (t)     (t)     (f)                     )goal
+        (f)     (t)     (t)     (t)joint-lift-table_a1_a3_table2_room2
+        (f)     (t)     (t)     (t)     joint-move-table_a1_a3_table2_room2_room1
+        (f)     (t)     (t)     (t)             joint-drop-table_a1_a3_table2_room1
+        (f)     (t)     (t)     (t)                     )goal
+        (t)observe-table_a2_table1_room3
+        (t)     (f)observe-table_a5_table4_room6
+        (t)     (f)     (f)observe-table_a1_table2_room1
+        (t)     (f)     (f)     (f)joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (f)     (f)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (f)     (f)             joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (f)     (f)                     )goal
+        (t)     (f)     (f)     (t))goal
+        (t)     (f)     (t)observe-table_a3_table2_room2
+        (t)     (f)     (t)     (f))goal
+        (t)     (f)     (t)     (t)joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (t)     (t)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (t)     (t)             joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (t)     (t)                     )goal
+        (t)     (t)observe-table_a1_table2_room1
+        (t)     (t)     (f)observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)joint-lift-table_a1_a3_table2_room2
+        (t)     (t)     (f)     (f)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (t)     (f)     (f)             joint-drop-table_a1_a3_table2_room1
+        (t)     (t)     (f)     (f)                     )goal
+        (t)     (t)     (f)     (t)joint-lift-table_a1_a3_table2_room2
+        (t)     (t)     (f)     (t)     joint-move-table_a1_a3_table2_room2_room1
+        (t)     (t)     (f)     (t)             joint-drop-table_a1_a3_table2_room1
+        (t)     (t)     (f)     (t)                     )goal
+        (t)     (t)     (t))goal
+
+
+The compressed plan tree for a3:
+huy_observe-table_a5_table3_room6
+        (f)k0y_observe-table_a4_table1_room4
+        (f)     (f)5c8_observe-table_a1_table2_room1
+        (f)     (f)     (f)dh6_joint-lift-table_a2_a3_table1_room3
+        (f)     (f)     (f)     4xf_joint-move-table_a2_a3_table1_room3_room2
+        (f)     (f)     (f)             q60_joint-drop-table_a2_a3_table1_room2
+        (f)     (f)     (f)                     fei_joint-lift-table_a2_a3_table2_room2
+        (f)     (f)     (f)                             mvx_joint-move-table_a2_a3_table2_room2_room1
+        (f)     (f)     (f)                                     3sy_joint-drop-table_a2_a3_table2_room1
+        (f)     (f)     (f)                                             k6e_joint-lift-table_a1_a3_table1_room2
+        (f)     (f)     (f)                                                     7g3_joint-move-table_a1_a3_table1_room2_room3
+        (f)     (f)     (f)                                                             8aj_joint-move-table_a1_a3_table1_room3_room4
+        (f)     (f)     (f)                                                                     954_joint-drop-table_a1_a3_table1_room4
+        (f)     (f)     (f)                                                                             )goal
+        (f)     (f)     (t))goal
+        (f)     (t)hke_observe-table_a3_table2_room2
+        (f)     (t)     (f))goal
+        (f)     (t)     (t)tkl_joint-lift-table_a1_a3_table2_room2
+        (f)     (t)     (t)     8o8_joint-move-table_a1_a3_table2_room2_room1
+        (f)     (t)     (t)             1hu_joint-drop-table_a1_a3_table2_room1
+        (f)     (t)     (t)                     )goal
+        (t)xw6_observe-table_a2_table1_room3
+        (t)     (f)358_observe-table_a5_table4_room6
+        (t)     (f)     (f)bqi_observe-table_a1_table2_room1
+        (t)     (f)     (f)     (f)9vg_joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (f)     (f)     3fb_joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (f)     (f)             c6w_joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (f)     (f)                     )goal
+        (t)     (f)     (f)     (t))goal
+        (t)     (f)     (t)6ra_observe-table_a3_table2_room2
+        (t)     (f)     (t)     (f))goal
+        (t)     (f)     (t)     (t)674_joint-lift-table_a1_a3_table2_room2
+        (t)     (f)     (t)     (t)     d2l_joint-move-table_a1_a3_table2_room2_room1
+        (t)     (f)     (t)     (t)             l5d_joint-drop-table_a1_a3_table2_room1
+        (t)     (f)     (t)     (t)                     )goal
+        (t)     (t)zsy_observe-table_a1_table2_room1
+        (t)     (t)     (f)tku_joint-lift-table_a1_a3_table2_room2
+        (t)     (t)     (f)     7fe_joint-move-table_a1_a3_table2_room2_room1
+        (t)     (t)     (f)             k8o_joint-drop-table_a1_a3_table2_room1
+        (t)     (t)     (f)                     )goal
+        (t)     (t)     (t))goal
+
+ Child solution         a3
+waiting!
+*
+Planning time: 00:00:01.2860886
+
+Plan tree for a3
+act-dummy-huy_observe-table_a5_table3_room6_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        move-agent_a3_room3_room4
+                                move-agent_a3_room4_room5
+                                        move-agent_a3_room5_room6
+                                                act-huy_observe-table_a5_table3_room6_a3
+                                                        (f)dummy-left-huy_observe-table_a5_table3_room6_a3
+                                                        (f)     move-agent_a3_room6_room5
+                                                        (f)             move-agent_a3_room5_room4
+                                                        (f)                     act-dummy-k0y_observe-table_a4_table1_room4_a3
+                                                        (f)                             act-k0y_observe-table_a4_table1_room4_a3
+                                                        (f)                                     (f)dummy-left-k0y_observe-table_a4_table1_room4_a3
+                                                        (f)                                     (f)     move-agent_a3_room4_room3
+                                                        (f)                                     (f)             move-agent_a3_room3_room2
+                                                        (f)                                     (f)                     move-agent_a3_room2_room1
+                                                        (f)                                     (f)                             act-dummy-5c8_observe-table_a1_table2_room1_a3
+                                                        (f)                                     (f)                                     act-5c8_observe-table_a1_table2_room1_a3
+                                                        (f)                                     (f)                                             (f)dummy-left-5c8_observe-table_a1_table2_room1_a3
+                                                        (f)                                     (f)                                             (f)     move-agent_a3_room1_room2
+                                                        (f)                                     (f)                                             (f)             move-agent_a3_room2_room3
+                                                        (f)                                     (f)                                             (f)                     act-dh6_joint-lift-table_a2_a3_table1_room3_a3
+                                                        (f)                                     (f)                                             (f)                             act-4xf_joint-move-table_a2_a3_table1_room3_room2_a3
+                                                        (f)                                     (f)                                             (f)                                     act-q60_joint-drop-table_a2_a3_table1_room2_a3
+                                                        (f)                                     (f)                                             (f)                                             act-fei_joint-lift-table_a2_a3_table2_room2_a3
+                                                        (f)                                     (f)                                             (f)                                                     act-mvx_joint-move-table_a2_a3_table2_room2_room1_a3
+                                                        (f)                                     (f)                                             (f)                                                             act-3sy_joint-drop-table_a2_a3_table2_room1_a3
+                                                        (f)                                     (f)                                             (f)                                                                     move-agent_a3_room1_room2
+                                                        (f)                                     (f)                                             (f)                                                                             act-k6e_joint-lift-table_a1_a3_table1_room2_a3
+                                                        (f)                                     (f)                                             (f)
+        act-7g3_joint-move-table_a1_a3_table1_room2_room3_a3
+                                                        (f)                                     (f)                                             (f)
+                act-8aj_joint-move-table_a1_a3_table1_room3_room4_a3
+                                                        (f)                                     (f)                                             (f)
+                        act-954_joint-drop-table_a1_a3_table1_room4_a3
+                                                        (f)                                     (f)                                             (f)
+                                goal-achieve-954_joint-drop-table_a1_a3_table1_room4_a3
+                                                        (f)                                     (f)                                             (f)
+                                        )goal
+                                                        (f)                                     (f)                                             (t)dummy-right-5c8_observe-table_a1_table2_room1_a3
+                                                        (f)                                     (f)                                             (t)     goal-achieve-right-5c8_observe-table_a1_table2_room1_a3
+                                                        (f)                                     (f)                                             (t)             )goal
+                                                        (f)                                     (t)dummy-right-k0y_observe-table_a4_table1_room4_a3
+                                                        (f)                                     (t)     move-agent_a3_room4_room3
+                                                        (f)                                     (t)             move-agent_a3_room3_room2
+                                                        (f)                                     (t)                     act-dummy-hke_observe-table_a3_table2_room2_a3
+                                                        (f)                                     (t)                             act-hke_observe-table_a3_table2_room2_a3
+                                                        (f)                                     (t)                                     (f)dummy-left-hke_observe-table_a3_table2_room2_a3
+                                                        (f)                                     (t)                                     (f)     goal-achieve-left-hke_observe-table_a3_table2_room2_a3
+                                                        (f)                                     (t)                                     (f)             )goal
+                                                        (f)                                     (t)                                     (t)dummy-right-hke_observe-table_a3_table2_room2_a3
+                                                        (f)                                     (t)                                     (t)     act-tkl_joint-lift-table_a1_a3_table2_room2_a3
+                                                        (f)                                     (t)                                     (t)             act-8o8_joint-move-table_a1_a3_table2_room2_room1_a3
+                                                        (f)                                     (t)                                     (t)                     act-1hu_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (f)                                     (t)                                     (t)                             goal-achieve-1hu_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (f)                                     (t)                                     (t)                                     )goal
+                                                        (t)dummy-right-huy_observe-table_a5_table3_room6_a3
+                                                        (t)     move-agent_a3_room6_room5
+                                                        (t)             move-agent_a3_room5_room4
+                                                        (t)                     move-agent_a3_room4_room3
+                                                        (t)                             act-dummy-xw6_observe-table_a2_table1_room3_a3
+                                                        (t)                                     act-xw6_observe-table_a2_table1_room3_a3
+                                                        (t)                                             (f)dummy-left-xw6_observe-table_a2_table1_room3_a3
+                                                        (t)                                             (f)     move-agent_a3_room3_room4
+                                                        (t)                                             (f)             move-agent_a3_room4_room5
+                                                        (t)                                             (f)                     move-agent_a3_room5_room6
+                                                        (t)                                             (f)                             act-dummy-358_observe-table_a5_table4_room6_a3
+                                                        (t)                                             (f)                                     act-358_observe-table_a5_table4_room6_a3
+                                                        (t)                                             (f)                                             (f)dummy-left-358_observe-table_a5_table4_room6_a3
+                                                        (t)                                             (f)                                             (f)     move-agent_a3_room6_room5
+                                                        (t)                                             (f)                                             (f)             move-agent_a3_room5_room4
+                                                        (t)                                             (f)                                             (f)                     move-agent_a3_room4_room3
+                                                        (t)                                             (f)                                             (f)                             move-agent_a3_room3_room2
+                                                        (t)                                             (f)                                             (f)                                     move-agent_a3_room2_room1
+                                                        (t)                                             (f)                                             (f)                                             act-dummy-bqi_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                     act-bqi_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (f)dummy-left-bqi_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (f)     move-agent_a3_room1_room2
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+        act-9vg_joint-lift-table_a1_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                act-3fb_joint-move-table_a1_a3_table2_room2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                        act-c6w_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                                goal-achieve-c6w_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (f)
+                                        )goal
+                                                        (t)                                             (f)                                             (f)                                                             (t)dummy-right-bqi_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (t)     goal-achieve-right-bqi_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (f)                                             (f)                                                             (t)
+        )goal
+                                                        (t)                                             (f)                                             (t)dummy-right-358_observe-table_a5_table4_room6_a3
+                                                        (t)                                             (f)                                             (t)     move-agent_a3_room6_room5
+                                                        (t)                                             (f)                                             (t)             move-agent_a3_room5_room4
+                                                        (t)                                             (f)                                             (t)                     move-agent_a3_room4_room3
+                                                        (t)                                             (f)                                             (t)                             move-agent_a3_room3_room2
+                                                        (t)                                             (f)                                             (t)                                     act-dummy-6ra_observe-table_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (t)                                             act-6ra_observe-table_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (t)                                                     (f)dummy-left-6ra_observe-table_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (t)                                                     (f)     goal-achieve-left-6ra_observe-table_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (t)                                                     (f)             )goal
+                                                        (t)                                             (f)                                             (t)                                                     (t)dummy-right-6ra_observe-table_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (t)                                                     (t)     act-674_joint-lift-table_a1_a3_table2_room2_a3
+                                                        (t)                                             (f)                                             (t)                                                     (t)             act-d2l_joint-move-table_a1_a3_table2_room2_room1_a3
+                                                        (t)                                             (f)                                             (t)                                                     (t)
+        act-l5d_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (t)                                             (f)                                             (t)                                                     (t)
+                goal-achieve-l5d_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (t)                                             (f)                                             (t)                                                     (t)
+                        )goal
+                                                        (t)                                             (t)dummy-right-xw6_observe-table_a2_table1_room3_a3
+                                                        (t)                                             (t)     move-agent_a3_room3_room2
+                                                        (t)                                             (t)             move-agent_a3_room2_room1
+                                                        (t)                                             (t)                     act-dummy-zsy_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (t)                             act-zsy_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (t)                                     (f)dummy-left-zsy_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (t)                                     (f)     move-agent_a3_room1_room2
+                                                        (t)                                             (t)                                     (f)             act-tku_joint-lift-table_a1_a3_table2_room2_a3
+                                                        (t)                                             (t)                                     (f)                     act-7fe_joint-move-table_a1_a3_table2_room2_room1_a3
+                                                        (t)                                             (t)                                     (f)                             act-k8o_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (t)                                             (t)                                     (f)                                     goal-achieve-k8o_joint-drop-table_a1_a3_table2_room1_a3
+                                                        (t)                                             (t)                                     (f)                                             )goal
+                                                        (t)                                             (t)                                     (t)dummy-right-zsy_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (t)                                     (t)     goal-achieve-right-zsy_observe-table_a1_table2_room1_a3
+                                                        (t)                                             (t)                                     (t)             )goal
+
+Width: 10
+Height (before balancing): 26
+
+A refined projected plan tree for a4:
+observe-table_a5_table3_room6
+        (f)observe-table_a4_table1_room4
+        (f)     (f)observe-table_a1_table2_room1
+        (f)     (f)     (f)observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (f)     (t)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (f)     (t)             joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (f)     (t)                     )goal
+        (f)     (f)     (t)observe-table_a5_table4_room7
+        (f)     (f)     (t)     (f)joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     (f)     joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)     (f)             joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)     (f)                     joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (t)     (f)                             joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (t)     (f)                                     joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (t)     (f)                                             )goal
+        (f)     (f)     (t)     (t)joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     (t)     joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)     (t)             joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)     (t)                     )goal
+        (f)     (t)observe-table_a3_table2_room2
+        (f)     (t)     (f)observe-table_a4_table4_room6
+        (f)     (t)     (f)     (f))goal
+        (f)     (t)     (f)     (t)joint-lift-table_a4_a5_table4_room6
+        (f)     (t)     (f)     (t)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (t)     (f)     (t)             joint-drop-table_a4_a5_table4_room7
+        (f)     (t)     (f)     (t)                     )goal
+        (f)     (t)     (t)observe-table_a4_table4_room6
+        (f)     (t)     (t)     (f))goal
+        (f)     (t)     (t)     (t)joint-lift-table_a4_a5_table4_room6
+        (f)     (t)     (t)     (t)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (t)     (t)     (t)             joint-drop-table_a4_a5_table4_room7
+        (f)     (t)     (t)     (t)                     )goal
+        (t)observe-table_a2_table1_room3
+        (t)     (f)observe-table_a5_table4_room6
+        (t)     (f)     (f)observe-table_a1_table2_room1
+        (t)     (f)     (f)     (f)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (f)     (f)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (f)     (f)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (f)     (f)                     )goal
+        (t)     (f)     (f)     (t)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (f)     (t)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (f)     (t)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (f)     (t)                     )goal
+        (t)     (f)     (t)observe-table_a3_table2_room2
+        (t)     (f)     (t)     (f)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (t)     (f)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (t)     (f)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (t)     (f)                     joint-lift-table_a4_a5_table4_room6
+        (t)     (f)     (t)     (f)                             joint-move-table_a4_a5_table4_room6_room7
+        (t)     (f)     (t)     (f)                                     joint-drop-table_a4_a5_table4_room7
+        (t)     (f)     (t)     (f)                                             )goal
+        (t)     (f)     (t)     (t)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (t)     (t)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (t)     (t)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (t)     (t)                     joint-lift-table_a4_a5_table4_room6
+        (t)     (f)     (t)     (t)                             joint-move-table_a4_a5_table4_room6_room7
+        (t)     (f)     (t)     (t)                                     joint-drop-table_a4_a5_table4_room7
+        (t)     (f)     (t)     (t)                                             )goal
+        (t)     (t)observe-table_a1_table2_room1
+        (t)     (t)     (f)observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (f)     (f)     joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (f)     (f)             joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (f)     (f)                     joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (f)                             joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (f)                                     joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (f)                                             )goal
+        (t)     (t)     (f)     (t)joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (f)     (t)     joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (f)     (t)             joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (f)     (t)                     joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (t)                             joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (t)                                     joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (t)                                             joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (f)     (t)                                                     joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (f)     (t)                                                             joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (f)     (t)                                                                     )goal
+        (t)     (t)     (t)joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (t)     joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (t)             joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (t)                     joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (t)                             joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (t)                                     joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (t)                                             observe-table_a5_table4_room7
+        (t)     (t)     (t)                                                     (f)joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (t)                                                     (f)     joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (t)                                                     (f)             joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (t)                                                     (f)                     )goal
+        (t)     (t)     (t)                                                     (t))goal
+
+
+The compressed plan tree for a4:
+vhy_observe-table_a5_table3_room6
+        (f)80e_observe-table_a4_table1_room4
+        (f)     (f)k5s_observe-table_a1_table2_room1
+        (f)     (f)     (f)l50_observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)t1y_joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (f)     (t)     czd_joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (f)     (t)             xzv_joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (f)     (t)                     )goal
+        (f)     (f)     (t)fjc_observe-table_a5_table4_room7
+        (f)     (f)     (t)     (f)rk5_joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     (f)     qf0_joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)     (f)             rvs_joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)     (f)                     wkz_joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (t)     (f)                             ffc_joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (t)     (f)                                     ga9_joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (t)     (f)                                             )goal
+        (f)     (f)     (t)     (t)uox_joint-lift-table_a2_a4_table1_room3
+        (f)     (f)     (t)     (t)     79t_joint-move-table_a2_a4_table1_room3_room4
+        (f)     (f)     (t)     (t)             55p_joint-drop-table_a2_a4_table1_room4
+        (f)     (f)     (t)     (t)                     )goal
+        (f)     (t)bwi_observe-table_a4_table4_room6
+        (f)     (t)     (f))goal
+        (f)     (t)     (t)3q8_joint-lift-table_a4_a5_table4_room6
+        (f)     (t)     (t)     wqp_joint-move-table_a4_a5_table4_room6_room7
+        (f)     (t)     (t)             i30_joint-drop-table_a4_a5_table4_room7
+        (f)     (t)     (t)                     )goal
+        (t)13j_observe-table_a2_table1_room3
+        (t)     (f)h7q_observe-table_a5_table4_room6
+        (t)     (f)     (f)97u_joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (f)     ary_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (f)             vu5_joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (f)                     )goal
+        (t)     (f)     (t)ptk_joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (t)     mvj_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (t)             kq9_joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (t)                     j24_joint-lift-table_a4_a5_table4_room6
+        (t)     (f)     (t)                             1sy_joint-move-table_a4_a5_table4_room6_room7
+        (t)     (f)     (t)                                     w7h_joint-drop-table_a4_a5_table4_room7
+        (t)     (f)     (t)                                             )goal
+        (t)     (t)j2u_observe-table_a1_table2_room1
+        (t)     (t)     (f)nzc_observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)c67_joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (f)     (f)     4bf_joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (f)     (f)             ti6_joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (f)     (f)                     cg7_joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (f)                             f6i_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (f)                                     qqn_joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (f)                                             )goal
+        (t)     (t)     (f)     (t)k7f_joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (f)     (t)     who_joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (f)     (t)             6ot_joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (f)     (t)                     rm1_joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (t)                             kc3_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (t)                                     ijy_joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (t)                                             lqo_joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (f)     (t)                                                     3zu_joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (f)     (t)                                                             8yl_joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (f)     (t)                                                                     )goal
+        (t)     (t)     (t)1qa_joint-lift-table_a2_a4_table1_room3
+        (t)     (t)     (t)     82l_joint-move-table_a2_a4_table1_room3_room4
+        (t)     (t)     (t)             gc1_joint-drop-table_a2_a4_table1_room4
+        (t)     (t)     (t)                     6qz_joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (t)                             t8w_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (t)                                     wc5_joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (t)                                             e1e_observe-table_a5_table4_room7
+        (t)     (t)     (t)                                                     (f)d7x_joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (t)                                                     (f)     tfa_joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (t)                                                     (f)             8ri_joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (t)                                                     (f)                     )goal
+        (t)     (t)     (t)                                                     (t))goal
+
+ Child solution         a4
+waiting!
+*
+Planning time: 00:00:01.5445002
+
+Plan tree for a4
+act-dummy-vhy_observe-table_a5_table3_room6_a4
+        move-agent_a4_room3_room4
+                move-agent_a4_room4_room5
+                        move-agent_a4_room5_room6
+                                act-vhy_observe-table_a5_table3_room6_a4
+                                        (f)dummy-left-vhy_observe-table_a5_table3_room6_a4
+                                        (f)     move-agent_a4_room6_room5
+                                        (f)             move-agent_a4_room5_room4
+                                        (f)                     act-dummy-80e_observe-table_a4_table1_room4_a4
+                                        (f)                             act-80e_observe-table_a4_table1_room4_a4
+                                        (f)                                     (f)dummy-left-80e_observe-table_a4_table1_room4_a4
+                                        (f)                                     (f)     move-agent_a4_room4_room3
+                                        (f)                                     (f)             move-agent_a4_room3_room2
+                                        (f)                                     (f)                     move-agent_a4_room2_room1
+                                        (f)                                     (f)                             act-dummy-k5s_observe-table_a1_table2_room1_a4
+                                        (f)                                     (f)                                     act-k5s_observe-table_a1_table2_room1_a4
+                                        (f)                                     (f)                                             (f)dummy-left-k5s_observe-table_a1_table2_room1_a4
+                                        (f)                                     (f)                                             (f)     move-agent_a4_room1_room2
+                                        (f)                                     (f)                                             (f)             move-agent_a4_room2_room3
+                                        (f)                                     (f)                                             (f)                     move-agent_a4_room3_room4
+                                        (f)                                     (f)                                             (f)                             move-agent_a4_room4_room5
+                                        (f)                                     (f)                                             (f)                                     move-agent_a4_room5_room6
+                                        (f)                                     (f)                                             (f)                                             act-dummy-l50_observe-table_a4_table4_room6_a4
+                                        (f)                                     (f)                                             (f)                                                     act-l50_observe-table_a4_table4_room6_a4
+                                        (f)                                     (f)                                             (f)                                                             (f)dummy-left-l50_observe-table_a4_table4_room6_a4
+                                        (f)                                     (f)                                             (f)                                                             (f)     goal-achieve-left-l50_observe-table_a4_table4_room6_a4
+                                        (f)                                     (f)                                             (f)                                                             (f)             )goal
+                                        (f)                                     (f)                                             (f)                                                             (t)dummy-right-l50_observe-table_a4_table4_room6_a4
+                                        (f)                                     (f)                                             (f)                                                             (t)     act-t1y_joint-lift-table_a4_a5_table4_room6_a4
+                                        (f)                                     (f)                                             (f)                                                             (t)             act-czd_joint-move-table_a4_a5_table4_room6_room7_a4
+                                        (f)                                     (f)                                             (f)                                                             (t)                     act-xzv_joint-drop-table_a4_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (f)                                                             (t)                             goal-achieve-xzv_joint-drop-table_a4_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (f)                                                             (t)
+        )goal
+                                        (f)                                     (f)                                             (t)dummy-right-k5s_observe-table_a1_table2_room1_a4
+                                        (f)                                     (f)                                             (t)     move-agent_a4_room1_room2
+                                        (f)                                     (f)                                             (t)             move-agent_a4_room2_room3
+                                        (f)                                     (f)                                             (t)                     move-agent_a4_room3_room4
+                                        (f)                                     (f)                                             (t)                             move-agent_a4_room4_room5
+                                        (f)                                     (f)                                             (t)                                     move-agent_a4_room5_room6
+                                        (f)                                     (f)                                             (t)                                             move-agent_a4_room6_room7
+                                        (f)                                     (f)                                             (t)                                                     act-dummy-fjc_observe-table_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (t)                                                             act-fjc_observe-table_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)dummy-left-fjc_observe-table_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)     move-agent_a4_room7_room6
+                                        (f)                                     (f)                                             (t)                                                                     (f)             move-agent_a4_room6_room5
+                                        (f)                                     (f)                                             (t)                                                                     (f)                     move-agent_a4_room5_room4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+        move-agent_a4_room4_room3
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                act-rk5_joint-lift-table_a2_a4_table1_room3_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                        act-qf0_joint-move-table_a2_a4_table1_room3_room4_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                act-rvs_joint-drop-table_a2_a4_table1_room4_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                        move-agent_a4_room4_room5
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                                move-agent_a4_room5_room6
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                                        act-wkz_joint-lift-table_a4_a5_table4_room6_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                                                act-ffc_joint-move-table_a4_a5_table4_room6_room7_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                                                        act-ga9_joint-drop-table_a4_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                                                                goal-achieve-ga9_joint-drop-table_a4_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (t)                                                                     (f)
+                                                                                        )goal
+                                        (f)                                     (f)                                             (t)                                                                     (t)dummy-right-fjc_observe-table_a5_table4_room7_a4
+                                        (f)                                     (f)                                             (t)                                                                     (t)     move-agent_a4_room7_room6
+                                        (f)                                     (f)                                             (t)                                                                     (t)             move-agent_a4_room6_room5
+                                        (f)                                     (f)                                             (t)                                                                     (t)                     move-agent_a4_room5_room4
+                                        (f)                                     (f)                                             (t)                                                                     (t)
+        move-agent_a4_room4_room3
+                                        (f)                                     (f)                                             (t)                                                                     (t)
+                act-uox_joint-lift-table_a2_a4_table1_room3_a4
+                                        (f)                                     (f)                                             (t)                                                                     (t)
+                        act-79t_joint-move-table_a2_a4_table1_room3_room4_a4
+                                        (f)                                     (f)                                             (t)                                                                     (t)
+                                act-55p_joint-drop-table_a2_a4_table1_room4_a4
+                                        (f)                                     (f)                                             (t)                                                                     (t)
+                                        goal-achieve-55p_joint-drop-table_a2_a4_table1_room4_a4
+                                        (f)                                     (f)                                             (t)                                                                     (t)
+                                                )goal
+                                        (f)                                     (t)dummy-right-80e_observe-table_a4_table1_room4_a4
+                                        (f)                                     (t)     move-agent_a4_room4_room5
+                                        (f)                                     (t)             move-agent_a4_room5_room6
+                                        (f)                                     (t)                     act-dummy-bwi_observe-table_a4_table4_room6_a4
+                                        (f)                                     (t)                             act-bwi_observe-table_a4_table4_room6_a4
+                                        (f)                                     (t)                                     (f)dummy-left-bwi_observe-table_a4_table4_room6_a4
+                                        (f)                                     (t)                                     (f)     goal-achieve-left-bwi_observe-table_a4_table4_room6_a4
+                                        (f)                                     (t)                                     (f)             )goal
+                                        (f)                                     (t)                                     (t)dummy-right-bwi_observe-table_a4_table4_room6_a4
+                                        (f)                                     (t)                                     (t)     act-3q8_joint-lift-table_a4_a5_table4_room6_a4
+                                        (f)                                     (t)                                     (t)             act-wqp_joint-move-table_a4_a5_table4_room6_room7_a4
+                                        (f)                                     (t)                                     (t)                     act-i30_joint-drop-table_a4_a5_table4_room7_a4
+                                        (f)                                     (t)                                     (t)                             goal-achieve-i30_joint-drop-table_a4_a5_table4_room7_a4
+                                        (f)                                     (t)                                     (t)                                     )goal
+                                        (t)dummy-right-vhy_observe-table_a5_table3_room6_a4
+                                        (t)     move-agent_a4_room6_room5
+                                        (t)             move-agent_a4_room5_room4
+                                        (t)                     move-agent_a4_room4_room3
+                                        (t)                             act-dummy-13j_observe-table_a2_table1_room3_a4
+                                        (t)                                     act-13j_observe-table_a2_table1_room3_a4
+                                        (t)                                             (f)dummy-left-13j_observe-table_a2_table1_room3_a4
+                                        (t)                                             (f)     move-agent_a4_room3_room4
+                                        (t)                                             (f)             move-agent_a4_room4_room5
+                                        (t)                                             (f)                     move-agent_a4_room5_room6
+                                        (t)                                             (f)                             act-dummy-h7q_observe-table_a5_table4_room6_a4
+                                        (t)                                             (f)                                     act-h7q_observe-table_a5_table4_room6_a4
+                                        (t)                                             (f)                                             (f)dummy-left-h7q_observe-table_a5_table4_room6_a4
+                                        (t)                                             (f)                                             (f)     act-97u_joint-lift-table_a4_a5_table3_room6_a4
+                                        (t)                                             (f)                                             (f)             act-ary_joint-move-table_a4_a5_table3_room6_room5_a4
+                                        (t)                                             (f)                                             (f)                     act-vu5_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (f)                                             (f)                             goal-achieve-vu5_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (f)                                             (f)                                     )goal
+                                        (t)                                             (f)                                             (t)dummy-right-h7q_observe-table_a5_table4_room6_a4
+                                        (t)                                             (f)                                             (t)     act-ptk_joint-lift-table_a4_a5_table3_room6_a4
+                                        (t)                                             (f)                                             (t)             act-mvj_joint-move-table_a4_a5_table3_room6_room5_a4
+                                        (t)                                             (f)                                             (t)                     act-kq9_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (f)                                             (t)                             move-agent_a4_room5_room6
+                                        (t)                                             (f)                                             (t)                                     act-j24_joint-lift-table_a4_a5_table4_room6_a4
+                                        (t)                                             (f)                                             (t)                                             act-1sy_joint-move-table_a4_a5_table4_room6_room7_a4
+                                        (t)                                             (f)                                             (t)                                                     act-w7h_joint-drop-table_a4_a5_table4_room7_a4
+                                        (t)                                             (f)                                             (t)                                                             goal-achieve-w7h_joint-drop-table_a4_a5_table4_room7_a4
+                                        (t)                                             (f)                                             (t)                                                                     )goal
+                                        (t)                                             (t)dummy-right-13j_observe-table_a2_table1_room3_a4
+                                        (t)                                             (t)     move-agent_a4_room3_room2
+                                        (t)                                             (t)             move-agent_a4_room2_room1
+                                        (t)                                             (t)                     act-dummy-j2u_observe-table_a1_table2_room1_a4
+                                        (t)                                             (t)                             act-j2u_observe-table_a1_table2_room1_a4
+                                        (t)                                             (t)                                     (f)dummy-left-j2u_observe-table_a1_table2_room1_a4
+                                        (t)                                             (t)                                     (f)     move-agent_a4_room1_room2
+                                        (t)                                             (t)                                     (f)             move-agent_a4_room2_room3
+                                        (t)                                             (t)                                     (f)                     move-agent_a4_room3_room4
+                                        (t)                                             (t)                                     (f)                             move-agent_a4_room4_room5
+                                        (t)                                             (t)                                     (f)                                     move-agent_a4_room5_room6
+                                        (t)                                             (t)                                     (f)                                             act-dummy-nzc_observe-table_a5_table4_room6_a4
+                                        (t)                                             (t)                                     (f)                                                     act-nzc_observe-table_a5_table4_room6_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)dummy-left-nzc_observe-table_a5_table4_room6_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)     move-agent_a4_room6_room5
+                                        (t)                                             (t)                                     (f)                                                             (f)             move-agent_a4_room5_room4
+                                        (t)                                             (t)                                     (f)                                                             (f)                     move-agent_a4_room4_room3
+                                        (t)                                             (t)                                     (f)                                                             (f)                             act-c67_joint-lift-table_a2_a4_table1_room3_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+        act-4bf_joint-move-table_a2_a4_table1_room3_room4_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                act-ti6_joint-drop-table_a2_a4_table1_room4_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                        move-agent_a4_room4_room5
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                                move-agent_a4_room5_room6
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                                        act-cg7_joint-lift-table_a4_a5_table3_room6_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                                                act-f6i_joint-move-table_a4_a5_table3_room6_room5_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                                                        act-qqn_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                                                                goal-achieve-qqn_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (t)                                     (f)                                                             (f)
+                                                                        )goal
+                                        (t)                                             (t)                                     (f)                                                             (t)dummy-right-nzc_observe-table_a5_table4_room6_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)     move-agent_a4_room6_room5
+                                        (t)                                             (t)                                     (f)                                                             (t)             move-agent_a4_room5_room4
+                                        (t)                                             (t)                                     (f)                                                             (t)                     move-agent_a4_room4_room3
+                                        (t)                                             (t)                                     (f)                                                             (t)                             act-k7f_joint-lift-table_a2_a4_table1_room3_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+        act-who_joint-move-table_a2_a4_table1_room3_room4_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                act-6ot_joint-drop-table_a2_a4_table1_room4_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                        move-agent_a4_room4_room5
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                move-agent_a4_room5_room6
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                        act-rm1_joint-lift-table_a4_a5_table3_room6_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                act-kc3_joint-move-table_a4_a5_table3_room6_room5_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                        act-ijy_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                                move-agent_a4_room5_room6
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                                        act-lqo_joint-lift-table_a4_a5_table4_room6_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                                                act-3zu_joint-move-table_a4_a5_table4_room6_room7_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                                                        act-8yl_joint-drop-table_a4_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                                                                goal-achieve-8yl_joint-drop-table_a4_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (f)                                                             (t)
+                                                                                                        )goal
+                                        (t)                                             (t)                                     (t)dummy-right-j2u_observe-table_a1_table2_room1_a4
+                                        (t)                                             (t)                                     (t)     move-agent_a4_room1_room2
+                                        (t)                                             (t)                                     (t)             move-agent_a4_room2_room3
+                                        (t)                                             (t)                                     (t)                     act-1qa_joint-lift-table_a2_a4_table1_room3_a4
+                                        (t)                                             (t)                                     (t)                             act-82l_joint-move-table_a2_a4_table1_room3_room4_a4
+                                        (t)                                             (t)                                     (t)                                     act-gc1_joint-drop-table_a2_a4_table1_room4_a4
+                                        (t)                                             (t)                                     (t)                                             move-agent_a4_room4_room5
+                                        (t)                                             (t)                                     (t)                                                     move-agent_a4_room5_room6
+                                        (t)                                             (t)                                     (t)                                                             act-6qz_joint-lift-table_a4_a5_table3_room6_a4
+                                        (t)                                             (t)                                     (t)                                                                     act-t8w_joint-move-table_a4_a5_table3_room6_room5_a4
+                                        (t)                                             (t)                                     (t)                                                                             act-wc5_joint-drop-table_a4_a5_table3_room5_a4
+                                        (t)                                             (t)                                     (t)                                                                                     move-agent_a4_room5_room6
+                                        (t)                                             (t)                                     (t)                                                                                             move-agent_a4_room6_room7
+                                        (t)                                             (t)                                     (t)
+        act-dummy-e1e_observe-table_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                act-e1e_observe-table_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (f)dummy-left-e1e_observe-table_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (f)     move-agent_a4_room7_room6
+                                        (t)                                             (t)                                     (t)
+                        (f)             act-d7x_joint-lift-table_a4_a5_table4_room6_a4
+                                        (t)                                             (t)                                     (t)
+                        (f)                     act-tfa_joint-move-table_a4_a5_table4_room6_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (f)                             act-8ri_joint-drop-table_a4_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (f)                                     goal-achieve-8ri_joint-drop-table_a4_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (f)                                             )goal
+                                        (t)                                             (t)                                     (t)
+                        (t)dummy-right-e1e_observe-table_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (t)     goal-achieve-right-e1e_observe-table_a5_table4_room7_a4
+                                        (t)                                             (t)                                     (t)
+                        (t)             )goal
+
+Width: 12
+Height (before balancing): 32
+
+A refined projected plan tree for a5:
+observe-table_a5_table3_room6
+        (f)observe-table_a4_table1_room4
+        (f)     (f)observe-table_a1_table2_room1
+        (f)     (f)     (f)observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (f)     (t)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (f)     (t)             joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (f)     (t)                     )goal
+        (f)     (f)     (t)observe-table_a5_table4_room7
+        (f)     (f)     (t)     (f)joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (t)     (f)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (t)     (f)             joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (t)     (f)                     )goal
+        (f)     (f)     (t)     (t))goal
+        (f)     (t)observe-table_a3_table2_room2
+        (f)     (t)     (f)observe-table_a4_table4_room6
+        (f)     (t)     (f)     (f))goal
+        (f)     (t)     (f)     (t)joint-lift-table_a4_a5_table4_room6
+        (f)     (t)     (f)     (t)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (t)     (f)     (t)             joint-drop-table_a4_a5_table4_room7
+        (f)     (t)     (f)     (t)                     )goal
+        (f)     (t)     (t)observe-table_a4_table4_room6
+        (f)     (t)     (t)     (f))goal
+        (f)     (t)     (t)     (t)joint-lift-table_a4_a5_table4_room6
+        (f)     (t)     (t)     (t)     joint-move-table_a4_a5_table4_room6_room7
+        (f)     (t)     (t)     (t)             joint-drop-table_a4_a5_table4_room7
+        (f)     (t)     (t)     (t)                     )goal
+        (t)observe-table_a2_table1_room3
+        (t)     (f)observe-table_a5_table4_room6
+        (t)     (f)     (f)observe-table_a1_table2_room1
+        (t)     (f)     (f)     (f)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (f)     (f)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (f)     (f)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (f)     (f)                     )goal
+        (t)     (f)     (f)     (t)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (f)     (t)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (f)     (t)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (f)     (t)                     )goal
+        (t)     (f)     (t)observe-table_a3_table2_room2
+        (t)     (f)     (t)     (f)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (t)     (f)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (t)     (f)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (t)     (f)                     joint-lift-table_a4_a5_table4_room6
+        (t)     (f)     (t)     (f)                             joint-move-table_a4_a5_table4_room6_room7
+        (t)     (f)     (t)     (f)                                     joint-drop-table_a4_a5_table4_room7
+        (t)     (f)     (t)     (f)                                             )goal
+        (t)     (f)     (t)     (t)joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (t)     (t)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (t)     (t)             joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (t)     (t)                     joint-lift-table_a4_a5_table4_room6
+        (t)     (f)     (t)     (t)                             joint-move-table_a4_a5_table4_room6_room7
+        (t)     (f)     (t)     (t)                                     joint-drop-table_a4_a5_table4_room7
+        (t)     (f)     (t)     (t)                                             )goal
+        (t)     (t)observe-table_a1_table2_room1
+        (t)     (t)     (f)observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (f)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (f)             joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (f)                     )goal
+        (t)     (t)     (f)     (t)joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (t)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (t)             joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (t)                     joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (f)     (t)                             joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (f)     (t)                                     joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (f)     (t)                                             )goal
+        (t)     (t)     (t)joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (t)     joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (t)             joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (t)                     observe-table_a5_table4_room7
+        (t)     (t)     (t)                             (f)joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (t)                             (f)     joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (t)                             (f)             joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (t)                             (f)                     )goal
+        (t)     (t)     (t)                             (t))goal
+
+
+The compressed plan tree for a5:
+vys_observe-table_a5_table3_room6
+        (f)cf7_observe-table_a4_table1_room4
+        (f)     (f)ssu_observe-table_a1_table2_room1
+        (f)     (f)     (f)pd9_observe-table_a4_table4_room6
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)bl2_joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (f)     (t)     92r_joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (f)     (t)             1hx_joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (f)     (t)                     )goal
+        (f)     (f)     (t)y37_observe-table_a5_table4_room7
+        (f)     (f)     (t)     (f)hys_joint-lift-table_a4_a5_table4_room6
+        (f)     (f)     (t)     (f)     npx_joint-move-table_a4_a5_table4_room6_room7
+        (f)     (f)     (t)     (f)             liv_joint-drop-table_a4_a5_table4_room7
+        (f)     (f)     (t)     (f)                     )goal
+        (f)     (f)     (t)     (t))goal
+        (f)     (t)tl2_observe-table_a4_table4_room6
+        (f)     (t)     (f))goal
+        (f)     (t)     (t)gr3_joint-lift-table_a4_a5_table4_room6
+        (f)     (t)     (t)     zdt_joint-move-table_a4_a5_table4_room6_room7
+        (f)     (t)     (t)             lzx_joint-drop-table_a4_a5_table4_room7
+        (f)     (t)     (t)                     )goal
+        (t)fbw_observe-table_a2_table1_room3
+        (t)     (f)5tm_observe-table_a5_table4_room6
+        (t)     (f)     (f)tgk_joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (f)     u65_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (f)             v5r_joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (f)                     )goal
+        (t)     (f)     (t)ofd_joint-lift-table_a4_a5_table3_room6
+        (t)     (f)     (t)     7e5_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (f)     (t)             ns9_joint-drop-table_a4_a5_table3_room5
+        (t)     (f)     (t)                     a3l_joint-lift-table_a4_a5_table4_room6
+        (t)     (f)     (t)                             ycd_joint-move-table_a4_a5_table4_room6_room7
+        (t)     (f)     (t)                                     ene_joint-drop-table_a4_a5_table4_room7
+        (t)     (f)     (t)                                             )goal
+        (t)     (t)jbw_observe-table_a1_table2_room1
+        (t)     (t)     (f)6s5_observe-table_a5_table4_room6
+        (t)     (t)     (f)     (f)k1b_joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (f)     l9o_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (f)             7vv_joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (f)                     )goal
+        (t)     (t)     (f)     (t)mk8_joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (f)     (t)     pnu_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (f)     (t)             11t_joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (f)     (t)                     w40_joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (f)     (t)                             b4e_joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (f)     (t)                                     gpt_joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (f)     (t)                                             )goal
+        (t)     (t)     (t)1l3_joint-lift-table_a4_a5_table3_room6
+        (t)     (t)     (t)     4sx_joint-move-table_a4_a5_table3_room6_room5
+        (t)     (t)     (t)             ixm_joint-drop-table_a4_a5_table3_room5
+        (t)     (t)     (t)                     4cs_observe-table_a5_table4_room7
+        (t)     (t)     (t)                             (f)vdi_joint-lift-table_a4_a5_table4_room6
+        (t)     (t)     (t)                             (f)     zm1_joint-move-table_a4_a5_table4_room6_room7
+        (t)     (t)     (t)                             (f)             ez9_joint-drop-table_a4_a5_table4_room7
+        (t)     (t)     (t)                             (f)                     )goal
+        (t)     (t)     (t)                             (t))goal
+
+ Child solution         a5
+waiting!
+*
+Planning time: 00:00:01.4216198
+
+Plan tree for a5
+act-dummy-vys_observe-table_a5_table3_room6_a5
+        move-agent_a5_room4_room5
+                move-agent_a5_room5_room6
+                        act-vys_observe-table_a5_table3_room6_a5
+                                (f)dummy-left-vys_observe-table_a5_table3_room6_a5
+                                (f)     move-agent_a5_room6_room5
+                                (f)             move-agent_a5_room5_room4
+                                (f)                     act-dummy-cf7_observe-table_a4_table1_room4_a5
+                                (f)                             act-cf7_observe-table_a4_table1_room4_a5
+                                (f)                                     (f)dummy-left-cf7_observe-table_a4_table1_room4_a5
+                                (f)                                     (f)     move-agent_a5_room4_room3
+                                (f)                                     (f)             move-agent_a5_room3_room2
+                                (f)                                     (f)                     move-agent_a5_room2_room1
+                                (f)                                     (f)                             act-dummy-ssu_observe-table_a1_table2_room1_a5
+                                (f)                                     (f)                                     act-ssu_observe-table_a1_table2_room1_a5
+                                (f)                                     (f)                                             (f)dummy-left-ssu_observe-table_a1_table2_room1_a5
+                                (f)                                     (f)                                             (f)     move-agent_a5_room1_room2
+                                (f)                                     (f)                                             (f)             move-agent_a5_room2_room3
+                                (f)                                     (f)                                             (f)                     move-agent_a5_room3_room4
+                                (f)                                     (f)                                             (f)                             move-agent_a5_room4_room5
+                                (f)                                     (f)                                             (f)                                     move-agent_a5_room5_room6
+                                (f)                                     (f)                                             (f)                                             act-dummy-pd9_observe-table_a4_table4_room6_a5
+                                (f)                                     (f)                                             (f)                                                     act-pd9_observe-table_a4_table4_room6_a5
+                                (f)                                     (f)                                             (f)                                                             (f)dummy-left-pd9_observe-table_a4_table4_room6_a5
+                                (f)                                     (f)                                             (f)                                                             (f)     goal-achieve-left-pd9_observe-table_a4_table4_room6_a5
+                                (f)                                     (f)                                             (f)                                                             (f)             )goal
+                                (f)                                     (f)                                             (f)                                                             (t)dummy-right-pd9_observe-table_a4_table4_room6_a5
+                                (f)                                     (f)                                             (f)                                                             (t)     act-bl2_joint-lift-table_a4_a5_table4_room6_a5
+                                (f)                                     (f)                                             (f)                                                             (t)             act-92r_joint-move-table_a4_a5_table4_room6_room7_a5
+                                (f)                                     (f)                                             (f)                                                             (t)                     act-1hx_joint-drop-table_a4_a5_table4_room7_a5
+                                (f)                                     (f)                                             (f)                                                             (t)                             goal-achieve-1hx_joint-drop-table_a4_a5_table4_room7_a5
+                                (f)                                     (f)                                             (f)                                                             (t)                                     )goal
+                                (f)                                     (f)                                             (t)dummy-right-ssu_observe-table_a1_table2_room1_a5
+                                (f)                                     (f)                                             (t)     move-agent_a5_room1_room2
+                                (f)                                     (f)                                             (t)             move-agent_a5_room2_room3
+                                (f)                                     (f)                                             (t)                     move-agent_a5_room3_room4
+                                (f)                                     (f)                                             (t)                             move-agent_a5_room4_room5
+                                (f)                                     (f)                                             (t)                                     move-agent_a5_room5_room6
+                                (f)                                     (f)                                             (t)                                             move-agent_a5_room6_room7
+                                (f)                                     (f)                                             (t)                                                     act-dummy-y37_observe-table_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                             act-y37_observe-table_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (f)dummy-left-y37_observe-table_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (f)     move-agent_a5_room7_room6
+                                (f)                                     (f)                                             (t)                                                                     (f)             act-hys_joint-lift-table_a4_a5_table4_room6_a5
+                                (f)                                     (f)                                             (t)                                                                     (f)                     act-npx_joint-move-table_a4_a5_table4_room6_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (f)                             act-liv_joint-drop-table_a4_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (f)
+        goal-achieve-liv_joint-drop-table_a4_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (f)
+                )goal
+                                (f)                                     (f)                                             (t)                                                                     (t)dummy-right-y37_observe-table_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (t)     goal-achieve-right-y37_observe-table_a5_table4_room7_a5
+                                (f)                                     (f)                                             (t)                                                                     (t)             )goal
+                                (f)                                     (t)dummy-right-cf7_observe-table_a4_table1_room4_a5
+                                (f)                                     (t)     move-agent_a5_room4_room5
+                                (f)                                     (t)             move-agent_a5_room5_room6
+                                (f)                                     (t)                     act-dummy-tl2_observe-table_a4_table4_room6_a5
+                                (f)                                     (t)                             act-tl2_observe-table_a4_table4_room6_a5
+                                (f)                                     (t)                                     (f)dummy-left-tl2_observe-table_a4_table4_room6_a5
+                                (f)                                     (t)                                     (f)     goal-achieve-left-tl2_observe-table_a4_table4_room6_a5
+                                (f)                                     (t)                                     (f)             )goal
+                                (f)                                     (t)                                     (t)dummy-right-tl2_observe-table_a4_table4_room6_a5
+                                (f)                                     (t)                                     (t)     act-gr3_joint-lift-table_a4_a5_table4_room6_a5
+                                (f)                                     (t)                                     (t)             act-zdt_joint-move-table_a4_a5_table4_room6_room7_a5
+                                (f)                                     (t)                                     (t)                     act-lzx_joint-drop-table_a4_a5_table4_room7_a5
+                                (f)                                     (t)                                     (t)                             goal-achieve-lzx_joint-drop-table_a4_a5_table4_room7_a5
+                                (f)                                     (t)                                     (t)                                     )goal
+                                (t)dummy-right-vys_observe-table_a5_table3_room6_a5
+                                (t)     move-agent_a5_room6_room5
+                                (t)             move-agent_a5_room5_room4
+                                (t)                     move-agent_a5_room4_room3
+                                (t)                             act-dummy-fbw_observe-table_a2_table1_room3_a5
+                                (t)                                     act-fbw_observe-table_a2_table1_room3_a5
+                                (t)                                             (f)dummy-left-fbw_observe-table_a2_table1_room3_a5
+                                (t)                                             (f)     move-agent_a5_room3_room4
+                                (t)                                             (f)             move-agent_a5_room4_room5
+                                (t)                                             (f)                     move-agent_a5_room5_room6
+                                (t)                                             (f)                             act-dummy-5tm_observe-table_a5_table4_room6_a5
+                                (t)                                             (f)                                     act-5tm_observe-table_a5_table4_room6_a5
+                                (t)                                             (f)                                             (f)dummy-left-5tm_observe-table_a5_table4_room6_a5
+                                (t)                                             (f)                                             (f)     act-tgk_joint-lift-table_a4_a5_table3_room6_a5
+                                (t)                                             (f)                                             (f)             act-u65_joint-move-table_a4_a5_table3_room6_room5_a5
+                                (t)                                             (f)                                             (f)                     act-v5r_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (f)                                             (f)                             goal-achieve-v5r_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (f)                                             (f)                                     )goal
+                                (t)                                             (f)                                             (t)dummy-right-5tm_observe-table_a5_table4_room6_a5
+                                (t)                                             (f)                                             (t)     act-ofd_joint-lift-table_a4_a5_table3_room6_a5
+                                (t)                                             (f)                                             (t)             act-7e5_joint-move-table_a4_a5_table3_room6_room5_a5
+                                (t)                                             (f)                                             (t)                     act-ns9_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (f)                                             (t)                             move-agent_a5_room5_room6
+                                (t)                                             (f)                                             (t)                                     act-a3l_joint-lift-table_a4_a5_table4_room6_a5
+                                (t)                                             (f)                                             (t)                                             act-ycd_joint-move-table_a4_a5_table4_room6_room7_a5
+                                (t)                                             (f)                                             (t)                                                     act-ene_joint-drop-table_a4_a5_table4_room7_a5
+                                (t)                                             (f)                                             (t)                                                             goal-achieve-ene_joint-drop-table_a4_a5_table4_room7_a5
+                                (t)                                             (f)                                             (t)                                                                     )goal
+                                (t)                                             (t)dummy-right-fbw_observe-table_a2_table1_room3_a5
+                                (t)                                             (t)     move-agent_a5_room3_room2
+                                (t)                                             (t)             move-agent_a5_room2_room1
+                                (t)                                             (t)                     act-dummy-jbw_observe-table_a1_table2_room1_a5
+                                (t)                                             (t)                             act-jbw_observe-table_a1_table2_room1_a5
+                                (t)                                             (t)                                     (f)dummy-left-jbw_observe-table_a1_table2_room1_a5
+                                (t)                                             (t)                                     (f)     move-agent_a5_room1_room2
+                                (t)                                             (t)                                     (f)             move-agent_a5_room2_room3
+                                (t)                                             (t)                                     (f)                     move-agent_a5_room3_room4
+                                (t)                                             (t)                                     (f)                             move-agent_a5_room4_room5
+                                (t)                                             (t)                                     (f)                                     move-agent_a5_room5_room6
+                                (t)                                             (t)                                     (f)                                             act-dummy-6s5_observe-table_a5_table4_room6_a5
+                                (t)                                             (t)                                     (f)                                                     act-6s5_observe-table_a5_table4_room6_a5
+                                (t)                                             (t)                                     (f)                                                             (f)dummy-left-6s5_observe-table_a5_table4_room6_a5
+                                (t)                                             (t)                                     (f)                                                             (f)     act-k1b_joint-lift-table_a4_a5_table3_room6_a5
+                                (t)                                             (t)                                     (f)                                                             (f)             act-l9o_joint-move-table_a4_a5_table3_room6_room5_a5
+                                (t)                                             (t)                                     (f)                                                             (f)                     act-7vv_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (t)                                     (f)                                                             (f)                             goal-achieve-7vv_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (t)                                     (f)                                                             (f)                                     )goal
+                                (t)                                             (t)                                     (f)                                                             (t)dummy-right-6s5_observe-table_a5_table4_room6_a5
+                                (t)                                             (t)                                     (f)                                                             (t)     act-mk8_joint-lift-table_a4_a5_table3_room6_a5
+                                (t)                                             (t)                                     (f)                                                             (t)             act-pnu_joint-move-table_a4_a5_table3_room6_room5_a5
+                                (t)                                             (t)                                     (f)                                                             (t)                     act-11t_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (t)                                     (f)                                                             (t)                             move-agent_a5_room5_room6
+                                (t)                                             (t)                                     (f)                                                             (t)                                     act-w40_joint-lift-table_a4_a5_table4_room6_a5
+                                (t)                                             (t)                                     (f)                                                             (t)
+        act-b4e_joint-move-table_a4_a5_table4_room6_room7_a5
+                                (t)                                             (t)                                     (f)                                                             (t)
+                act-gpt_joint-drop-table_a4_a5_table4_room7_a5
+                                (t)                                             (t)                                     (f)                                                             (t)
+                        goal-achieve-gpt_joint-drop-table_a4_a5_table4_room7_a5
+                                (t)                                             (t)                                     (f)                                                             (t)
+                                )goal
+                                (t)                                             (t)                                     (t)dummy-right-jbw_observe-table_a1_table2_room1_a5
+                                (t)                                             (t)                                     (t)     move-agent_a5_room1_room2
+                                (t)                                             (t)                                     (t)             move-agent_a5_room2_room3
+                                (t)                                             (t)                                     (t)                     move-agent_a5_room3_room4
+                                (t)                                             (t)                                     (t)                             move-agent_a5_room4_room5
+                                (t)                                             (t)                                     (t)                                     move-agent_a5_room5_room6
+                                (t)                                             (t)                                     (t)                                             act-1l3_joint-lift-table_a4_a5_table3_room6_a5
+                                (t)                                             (t)                                     (t)                                                     act-4sx_joint-move-table_a4_a5_table3_room6_room5_a5
+                                (t)                                             (t)                                     (t)                                                             act-ixm_joint-drop-table_a4_a5_table3_room5_a5
+                                (t)                                             (t)                                     (t)                                                                     move-agent_a5_room5_room6
+                                (t)                                             (t)                                     (t)                                                                             move-agent_a5_room6_room7
+                                (t)                                             (t)                                     (t)                                                                                     act-dummy-4cs_observe-table_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                             act-4cs_observe-table_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (f)dummy-left-4cs_observe-table_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (f)      move-agent_a5_room7_room6
+                                (t)                                             (t)                                     (t)                                                                                                     (f)              act-vdi_joint-lift-table_a4_a5_table4_room6_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (f)                      act-zm1_joint-move-table_a4_a5_table4_room6_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (f)                              act-ez9_joint-drop-table_a4_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (f)                                      goal-achieve-ez9_joint-drop-table_a4_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (f)                                              )goal
+                                (t)                                             (t)                                     (t)                                                                                                     (t)dummy-right-4cs_observe-table_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (t)      goal-achieve-right-4cs_observe-table_a5_table4_room7_a5
+                                (t)                                             (t)                                     (t)                                                                                                     (t)              )goal
+
+Width: 12
+Height (before balancing): 25
+
+Overall time taken (for the last execution): 9639.1634
+The last backtrack was: 0
+Maximum width = 12
+Maximum height = 32
+
+Total number of backtracks: 0
+
+Overall time taken (including all the backtracks): 9683.6278
+
+Press any key to continue . . .

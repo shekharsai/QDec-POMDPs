@@ -1,0 +1,31 @@
+(define 
+(problem table-2)
+(:domain tablemover-2-a1)
+(:goal (and (done-goal dd)))
+(:init (and 
+	(init-ify_observe-table_a1_table1_room3 dd)
+
+	(connected room1 room2)
+	(connected room2 room1)
+	(connected room3 room2)
+	(connected room2 room3)
+	(connected room3 room4)
+	(connected room4 room3)
+	(in a1 room1)
+	(available a1)
+	(can-observe a1 table1)
+	(not (lifting a1 table1))
+	(not (lifting a1 table2))
+	(not (inroom table1 room1))
+	(not (inroom table1 room2))
+	(not (inroom table2 room1))
+	(not (inroom table2 room2))
+	(not (in a1 room2))
+	(not (in a1 room3))
+	(not (in a1 room4))
+	
+(oneof (inroom table1 room3) (inroom table1 room4))
+	
+(oneof (inroom table2 room3) (inroom table2 room4))
+) )
+)

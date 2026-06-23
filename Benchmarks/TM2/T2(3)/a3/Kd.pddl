@@ -1,0 +1,515 @@
+(define (domain Ktablemover-2-a3)
+(:requirements :strips :typing)
+(:types agent table room dummy TAG_TYPE VALUE_TYPE)
+(:constants
+ table1 - table
+ table2 - table
+ table3 - table
+ a3 - agent
+ room1 - room
+ room2 - room
+ room3 - room
+ room4 - room
+ dd - dummy
+ tag0 - TAG_TYPE ; (inroom table3 room2)
+ tag1 - TAG_TYPE ; (inroom table3 room1)
+ V_TRUE - VALUE_TYPE
+ V_FALSE - VALUE_TYPE
+)
+
+(:predicates
+(lifting ?a - agent ?t - table ?r - room)
+(inroom ?t - table ?r - room)
+(Kinroom ?t - table ?r - room ?V_PARAM - VALUE_TYPE)
+(KGiveninroom ?t - table ?r - room ?TAG_PARAM - TAG_TYPE ?V_PARAM - VALUE_TYPE)
+(in ?a - agent ?r - room)
+(connected ?r1 - room ?r2 - room)
+(available ?a - agent)
+(can-observe ?a - agent ?t - table)
+(init-0do_observe-table_a2_table1_room3 ?dd - dummy)
+(immediate-dummy-0do_observe-table_a2_table1_room3 ?dd - dummy)
+(dummy-left-0do_observe-table_a2_table1_room3 ?dd - dummy)
+(immediate-dummy-gz4_observe-table_a3_table2_room1 ?dd - dummy)
+(dummy-left-gz4_observe-table_a3_table2_room1 ?dd - dummy)
+(immediate-dummy-gz1_observe-table_a3_table3_room1 ?dd - dummy)
+(dummy-left-gz1_observe-table_a3_table3_room1 ?dd - dummy)
+(pre-1pz_joint-lift-table_a2_a3_table2_room2 ?dd - dummy)
+(pre-2za_joint-move-table_a2_a3_table2_room2_room1 ?dd - dummy)
+(pre-x92_joint-drop-table_a2_a3_table2_room1 ?dd - dummy)
+(done-goal ?dd - dummy)
+(dummy-right-gz1_observe-table_a3_table3_room1 ?dd - dummy)
+(pre-9sm_joint-lift-table_a1_a3_table3_room1 ?dd - dummy)
+(pre-lt9_joint-move-table_a1_a3_table3_room1_room2 ?dd - dummy)
+(pre-jpl_joint-drop-table_a1_a3_table3_room2 ?dd - dummy)
+(pre-3v2_joint-lift-table_a1_a3_table2_room2 ?dd - dummy)
+(pre-rtr_joint-move-table_a1_a3_table2_room2_room1 ?dd - dummy)
+(pre-g91_joint-drop-table_a1_a3_table2_room1 ?dd - dummy)
+(dummy-right-gz4_observe-table_a3_table2_room1 ?dd - dummy)
+(dummy-right-0do_observe-table_a2_table1_room3 ?dd - dummy)
+(immediate-dummy-j48_observe-table_a1_table2_room1 ?dd - dummy)
+(dummy-left-j48_observe-table_a1_table2_room1 ?dd - dummy)
+(immediate-dummy-j0n_observe-table_a1_table3_room1 ?dd - dummy)
+(dummy-left-j0n_observe-table_a1_table3_room1 ?dd - dummy)
+(pre-zin_joint-lift-table_a2_a3_table1_room3 ?dd - dummy)
+(pre-98p_joint-move-table_a2_a3_table1_room3_room4 ?dd - dummy)
+(pre-kj5_joint-drop-table_a2_a3_table1_room4 ?dd - dummy)
+(pre-8h3_joint-lift-table_a1_a3_table2_room2 ?dd - dummy)
+(pre-vou_joint-move-table_a1_a3_table2_room2_room1 ?dd - dummy)
+(pre-o7j_joint-drop-table_a1_a3_table2_room1 ?dd - dummy)
+(dummy-right-j0n_observe-table_a1_table3_room1 ?dd - dummy)
+(pre-sne_joint-lift-table_a2_a3_table1_room3 ?dd - dummy)
+(pre-8k6_joint-move-table_a2_a3_table1_room3_room4 ?dd - dummy)
+(pre-iw0_joint-drop-table_a2_a3_table1_room4 ?dd - dummy)
+(pre-jnf_joint-lift-table_a1_a3_table3_room1 ?dd - dummy)
+(pre-401_joint-move-table_a1_a3_table3_room1_room2 ?dd - dummy)
+(pre-8wk_joint-drop-table_a1_a3_table3_room2 ?dd - dummy)
+(pre-wjr_joint-lift-table_a1_a3_table2_room2 ?dd - dummy)
+(pre-5tm_joint-move-table_a1_a3_table2_room2_room1 ?dd - dummy)
+(pre-7sl_joint-drop-table_a1_a3_table2_room1 ?dd - dummy)
+(dummy-right-j48_observe-table_a1_table2_room1 ?dd - dummy)
+(pre-xuu_joint-lift-table_a2_a3_table1_room3 ?dd - dummy)
+(pre-h57_joint-move-table_a2_a3_table1_room3_room4 ?dd - dummy)
+(pre-z0n_joint-drop-table_a2_a3_table1_room4 ?dd - dummy)
+(KNot ?TAG_PARAM - TAG_TYPE)
+)
+
+(:action move-agent
+:parameters ( ?a - agent ?r1 - room ?r2 - room)
+:precondition 
+(and (in ?a ?r1) (connected ?r1 ?r2) (available ?a))
+:effect 
+(and (not (in ?a ?r1)) (in ?a ?r2))
+)
+(:action act-0do_observe-table_a2_table1_room3-T
+:parameters ( ?a - agent)
+:precondition 
+(and (init-0do_observe-table_a2_table1_room3 dd) (immediate-dummy-0do_observe-table_a2_table1_room3 dd) (in a3 room3) (available a3) (inroom table1 room3) (not (Kinroom table1 room3 V_TRUE)) (not (Kinroom table1 room3 V_FALSE)))
+:effect 
+(and (Kinroom table1 room3 V_TRUE))
+)
+(:action act-0do_observe-table_a2_table1_room3-F
+:parameters ( ?a - agent)
+:precondition 
+(and (init-0do_observe-table_a2_table1_room3 dd) (immediate-dummy-0do_observe-table_a2_table1_room3 dd) (in a3 room3) (available a3) (not (inroom table1 room3)) (not (Kinroom table1 room3 V_TRUE)) (not (Kinroom table1 room3 V_FALSE)))
+:effect 
+(and (Kinroom table1 room3 V_FALSE))
+)
+(:action act-dummy-0do_observe-table_a2_table1_room3
+:parameters ( ?a - agent)
+:precondition 
+(and (init-0do_observe-table_a2_table1_room3 dd) (not (dummy-left-0do_observe-table_a2_table1_room3 dd)) (not (dummy-right-0do_observe-table_a2_table1_room3 dd)))
+:effect 
+(and (immediate-dummy-0do_observe-table_a2_table1_room3 dd))
+)
+(:action dummy-left-0do_observe-table_a2_table1_room3
+:parameters ( ?a - agent)
+:precondition 
+(and (init-0do_observe-table_a2_table1_room3 dd) (in a3 room3) (available a3) (not (inroom table1 room3)) (immediate-dummy-0do_observe-table_a2_table1_room3 dd) (Kinroom table1 room3 V_FALSE))
+:effect 
+(and (not (init-0do_observe-table_a2_table1_room3 dd)) (not (immediate-dummy-0do_observe-table_a2_table1_room3 dd)) (dummy-left-0do_observe-table_a2_table1_room3 dd))
+)
+(:action dummy-right-0do_observe-table_a2_table1_room3
+:parameters ( ?a - agent)
+:precondition 
+(and (init-0do_observe-table_a2_table1_room3 dd) (in a3 room3) (available a3) (inroom table1 room3) (immediate-dummy-0do_observe-table_a2_table1_room3 dd) (Kinroom table1 room3 V_TRUE))
+:effect 
+(and (not (init-0do_observe-table_a2_table1_room3 dd)) (not (immediate-dummy-0do_observe-table_a2_table1_room3 dd)) (dummy-right-0do_observe-table_a2_table1_room3 dd))
+)
+(:action act-gz4_observe-table_a3_table2_room1-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-0do_observe-table_a2_table1_room3 dd) (immediate-dummy-gz4_observe-table_a3_table2_room1 dd) (not (inroom table1 room3)) (in a3 room1) (available a3) (Kinroom table1 room3 V_FALSE) (inroom table2 room1) (not (Kinroom table2 room1 V_TRUE)) (not (Kinroom table2 room1 V_FALSE)))
+:effect 
+(and (Kinroom table2 room1 V_TRUE))
+)
+(:action act-gz4_observe-table_a3_table2_room1-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-0do_observe-table_a2_table1_room3 dd) (immediate-dummy-gz4_observe-table_a3_table2_room1 dd) (not (inroom table1 room3)) (in a3 room1) (available a3) (Kinroom table1 room3 V_FALSE) (not (inroom table2 room1)) (not (Kinroom table2 room1 V_TRUE)) (not (Kinroom table2 room1 V_FALSE)))
+:effect 
+(and (Kinroom table2 room1 V_FALSE))
+)
+(:action act-dummy-gz4_observe-table_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-0do_observe-table_a2_table1_room3 dd) (not (inroom table1 room3)) (in a3 room1) (available a3) (not (dummy-left-gz4_observe-table_a3_table2_room1 dd)) (not (dummy-right-gz4_observe-table_a3_table2_room1 dd)) (Kinroom table1 room3 V_FALSE))
+:effect 
+(and (immediate-dummy-gz4_observe-table_a3_table2_room1 dd))
+)
+(:action dummy-left-gz4_observe-table_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-0do_observe-table_a2_table1_room3 dd) (not (inroom table1 room3)) (in a3 room1) (available a3) (not (inroom table2 room1)) (immediate-dummy-gz4_observe-table_a3_table2_room1 dd) (Kinroom table1 room3 V_FALSE) (Kinroom table2 room1 V_FALSE))
+:effect 
+(and (not (immediate-dummy-gz4_observe-table_a3_table2_room1 dd)) (dummy-left-gz4_observe-table_a3_table2_room1 dd))
+)
+(:action dummy-right-gz4_observe-table_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-0do_observe-table_a2_table1_room3 dd) (not (inroom table1 room3)) (in a3 room1) (available a3) (inroom table2 room1) (immediate-dummy-gz4_observe-table_a3_table2_room1 dd) (Kinroom table1 room3 V_FALSE) (Kinroom table2 room1 V_TRUE))
+:effect 
+(and (not (immediate-dummy-gz4_observe-table_a3_table2_room1 dd)) (dummy-right-gz4_observe-table_a3_table2_room1 dd))
+)
+(:action act-gz1_observe-table_a3_table3_room1-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-gz4_observe-table_a3_table2_room1 dd) (immediate-dummy-gz1_observe-table_a3_table3_room1 dd) (not (inroom table2 room1)) (not (inroom table1 room3)) (in a3 room1) (available a3) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE) (inroom table3 room1) (not (Kinroom table3 room1 V_TRUE)) (not (Kinroom table3 room1 V_FALSE)))
+:effect 
+(and (Kinroom table3 room1 V_TRUE))
+)
+(:action act-gz1_observe-table_a3_table3_room1-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-gz4_observe-table_a3_table2_room1 dd) (immediate-dummy-gz1_observe-table_a3_table3_room1 dd) (not (inroom table2 room1)) (not (inroom table1 room3)) (in a3 room1) (available a3) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE) (not (inroom table3 room1)) (not (Kinroom table3 room1 V_TRUE)) (not (Kinroom table3 room1 V_FALSE)))
+:effect 
+(and (Kinroom table3 room1 V_FALSE))
+)
+(:action act-dummy-gz1_observe-table_a3_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-gz4_observe-table_a3_table2_room1 dd) (not (inroom table2 room1)) (not (inroom table1 room3)) (in a3 room1) (available a3) (not (dummy-left-gz1_observe-table_a3_table3_room1 dd)) (not (dummy-right-gz1_observe-table_a3_table3_room1 dd)) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE))
+:effect 
+(and (immediate-dummy-gz1_observe-table_a3_table3_room1 dd))
+)
+(:action dummy-left-gz1_observe-table_a3_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-gz4_observe-table_a3_table2_room1 dd) (not (inroom table2 room1)) (not (inroom table1 room3)) (in a3 room1) (available a3) (not (inroom table3 room1)) (immediate-dummy-gz1_observe-table_a3_table3_room1 dd) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE) (Kinroom table3 room1 V_FALSE))
+:effect 
+(and (not (immediate-dummy-gz1_observe-table_a3_table3_room1 dd)) (dummy-left-gz1_observe-table_a3_table3_room1 dd))
+)
+(:action dummy-right-gz1_observe-table_a3_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-gz4_observe-table_a3_table2_room1 dd) (not (inroom table2 room1)) (not (inroom table1 room3)) (in a3 room1) (available a3) (inroom table3 room1) (immediate-dummy-gz1_observe-table_a3_table3_room1 dd) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE) (Kinroom table3 room1 V_TRUE))
+:effect 
+(and (not (immediate-dummy-gz1_observe-table_a3_table3_room1 dd)) (dummy-right-gz1_observe-table_a3_table3_room1 dd))
+)
+(:action act-1pz_joint-lift-table_a2_a3_table2_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-gz1_observe-table_a3_table3_room1 dd) (not (inroom table3 room1)) (not (inroom table2 room1)) (not (inroom table1 room3)) (available a3) (in a3 room2) (Kinroom table3 room1 V_FALSE) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE))
+:effect 
+(and (pre-1pz_joint-lift-table_a2_a3_table2_room2 dd) (not (available a3)))
+)
+(:action act-2za_joint-move-table_a2_a3_table2_room2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-1pz_joint-lift-table_a2_a3_table2_room2 dd) (in a3 room2))
+:effect 
+(and (pre-2za_joint-move-table_a2_a3_table2_room2_room1 dd) (not (pre-1pz_joint-lift-table_a2_a3_table2_room2 dd)) (not (in a3 room2)) (in a3 room1))
+)
+(:action act-x92_joint-drop-table_a2_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-2za_joint-move-table_a2_a3_table2_room2_room1 dd) (in a3 room1))
+:effect 
+(and (pre-x92_joint-drop-table_a2_a3_table2_room1 dd) (not (pre-2za_joint-move-table_a2_a3_table2_room2_room1 dd)) (available a3))
+)
+(:action goal-achieve-x92_joint-drop-table_a2_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-x92_joint-drop-table_a2_a3_table2_room1 dd))
+:effect 
+(and (done-goal dd) (not (pre-x92_joint-drop-table_a2_a3_table2_room1 dd)))
+)
+(:action act-9sm_joint-lift-table_a1_a3_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-gz1_observe-table_a3_table3_room1 dd) (inroom table3 room1) (not (inroom table2 room1)) (not (inroom table1 room3)) (available a3) (in a3 room1) (Kinroom table3 room1 V_TRUE) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_FALSE))
+:effect 
+(and (pre-9sm_joint-lift-table_a1_a3_table3_room1 dd) (not (available a3)))
+)
+(:action act-lt9_joint-move-table_a1_a3_table3_room1_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-9sm_joint-lift-table_a1_a3_table3_room1 dd) (in a3 room1))
+:effect 
+(and (pre-lt9_joint-move-table_a1_a3_table3_room1_room2 dd) (not (pre-9sm_joint-lift-table_a1_a3_table3_room1 dd)) (not (in a3 room1)) (in a3 room2))
+)
+(:action act-jpl_joint-drop-table_a1_a3_table3_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-lt9_joint-move-table_a1_a3_table3_room1_room2 dd) (in a3 room2))
+:effect 
+(and (pre-jpl_joint-drop-table_a1_a3_table3_room2 dd) (not (pre-lt9_joint-move-table_a1_a3_table3_room1_room2 dd)) (available a3))
+)
+(:action act-3v2_joint-lift-table_a1_a3_table2_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-jpl_joint-drop-table_a1_a3_table3_room2 dd) (available a3) (in a3 room2))
+:effect 
+(and (pre-3v2_joint-lift-table_a1_a3_table2_room2 dd) (not (pre-jpl_joint-drop-table_a1_a3_table3_room2 dd)) (not (available a3)))
+)
+(:action act-rtr_joint-move-table_a1_a3_table2_room2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-3v2_joint-lift-table_a1_a3_table2_room2 dd) (in a3 room2))
+:effect 
+(and (pre-rtr_joint-move-table_a1_a3_table2_room2_room1 dd) (not (pre-3v2_joint-lift-table_a1_a3_table2_room2 dd)) (not (in a3 room2)) (in a3 room1))
+)
+(:action act-g91_joint-drop-table_a1_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-rtr_joint-move-table_a1_a3_table2_room2_room1 dd) (in a3 room1))
+:effect 
+(and (pre-g91_joint-drop-table_a1_a3_table2_room1 dd) (not (pre-rtr_joint-move-table_a1_a3_table2_room2_room1 dd)) (available a3))
+)
+(:action goal-achieve-g91_joint-drop-table_a1_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-g91_joint-drop-table_a1_a3_table2_room1 dd))
+:effect 
+(and (done-goal dd) (not (pre-g91_joint-drop-table_a1_a3_table2_room1 dd)))
+)
+(:action goal-achieve-right-gz4_observe-table_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-gz4_observe-table_a3_table2_room1 dd) (inroom table2 room1) (not (inroom table1 room3)) (Kinroom table2 room1 V_TRUE) (Kinroom table1 room3 V_FALSE))
+:effect 
+(and (done-goal dd) (not (dummy-right-gz4_observe-table_a3_table2_room1 dd)))
+)
+(:action act-j48_observe-table_a1_table2_room1-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-0do_observe-table_a2_table1_room3 dd) (immediate-dummy-j48_observe-table_a1_table2_room1 dd) (inroom table1 room3) (in a3 room1) (available a3) (Kinroom table1 room3 V_TRUE) (inroom table2 room1) (not (Kinroom table2 room1 V_TRUE)) (not (Kinroom table2 room1 V_FALSE)))
+:effect 
+(and (Kinroom table2 room1 V_TRUE))
+)
+(:action act-j48_observe-table_a1_table2_room1-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-0do_observe-table_a2_table1_room3 dd) (immediate-dummy-j48_observe-table_a1_table2_room1 dd) (inroom table1 room3) (in a3 room1) (available a3) (Kinroom table1 room3 V_TRUE) (not (inroom table2 room1)) (not (Kinroom table2 room1 V_TRUE)) (not (Kinroom table2 room1 V_FALSE)))
+:effect 
+(and (Kinroom table2 room1 V_FALSE))
+)
+(:action act-dummy-j48_observe-table_a1_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-0do_observe-table_a2_table1_room3 dd) (inroom table1 room3) (in a3 room1) (available a3) (not (dummy-left-j48_observe-table_a1_table2_room1 dd)) (not (dummy-right-j48_observe-table_a1_table2_room1 dd)) (Kinroom table1 room3 V_TRUE))
+:effect 
+(and (immediate-dummy-j48_observe-table_a1_table2_room1 dd))
+)
+(:action dummy-left-j48_observe-table_a1_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-0do_observe-table_a2_table1_room3 dd) (inroom table1 room3) (in a3 room1) (available a3) (not (inroom table2 room1)) (immediate-dummy-j48_observe-table_a1_table2_room1 dd) (Kinroom table1 room3 V_TRUE) (Kinroom table2 room1 V_FALSE))
+:effect 
+(and (not (immediate-dummy-j48_observe-table_a1_table2_room1 dd)) (dummy-left-j48_observe-table_a1_table2_room1 dd))
+)
+(:action dummy-right-j48_observe-table_a1_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-0do_observe-table_a2_table1_room3 dd) (inroom table1 room3) (in a3 room1) (available a3) (inroom table2 room1) (immediate-dummy-j48_observe-table_a1_table2_room1 dd) (Kinroom table1 room3 V_TRUE) (Kinroom table2 room1 V_TRUE))
+:effect 
+(and (not (immediate-dummy-j48_observe-table_a1_table2_room1 dd)) (dummy-right-j48_observe-table_a1_table2_room1 dd))
+)
+(:action act-j0n_observe-table_a1_table3_room1-T
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-j48_observe-table_a1_table2_room1 dd) (immediate-dummy-j0n_observe-table_a1_table3_room1 dd) (not (inroom table2 room1)) (inroom table1 room3) (in a3 room1) (available a3) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE) (inroom table3 room1) (not (Kinroom table3 room1 V_TRUE)) (not (Kinroom table3 room1 V_FALSE)))
+:effect 
+(and (Kinroom table3 room1 V_TRUE))
+)
+(:action act-j0n_observe-table_a1_table3_room1-F
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-j48_observe-table_a1_table2_room1 dd) (immediate-dummy-j0n_observe-table_a1_table3_room1 dd) (not (inroom table2 room1)) (inroom table1 room3) (in a3 room1) (available a3) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE) (not (inroom table3 room1)) (not (Kinroom table3 room1 V_TRUE)) (not (Kinroom table3 room1 V_FALSE)))
+:effect 
+(and (Kinroom table3 room1 V_FALSE))
+)
+(:action act-dummy-j0n_observe-table_a1_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-j48_observe-table_a1_table2_room1 dd) (not (inroom table2 room1)) (inroom table1 room3) (in a3 room1) (available a3) (not (dummy-left-j0n_observe-table_a1_table3_room1 dd)) (not (dummy-right-j0n_observe-table_a1_table3_room1 dd)) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE))
+:effect 
+(and (immediate-dummy-j0n_observe-table_a1_table3_room1 dd))
+)
+(:action dummy-left-j0n_observe-table_a1_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-j48_observe-table_a1_table2_room1 dd) (not (inroom table2 room1)) (inroom table1 room3) (in a3 room1) (available a3) (not (inroom table3 room1)) (immediate-dummy-j0n_observe-table_a1_table3_room1 dd) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE) (Kinroom table3 room1 V_FALSE))
+:effect 
+(and (not (immediate-dummy-j0n_observe-table_a1_table3_room1 dd)) (dummy-left-j0n_observe-table_a1_table3_room1 dd))
+)
+(:action dummy-right-j0n_observe-table_a1_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-j48_observe-table_a1_table2_room1 dd) (not (inroom table2 room1)) (inroom table1 room3) (in a3 room1) (available a3) (inroom table3 room1) (immediate-dummy-j0n_observe-table_a1_table3_room1 dd) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE) (Kinroom table3 room1 V_TRUE))
+:effect 
+(and (not (immediate-dummy-j0n_observe-table_a1_table3_room1 dd)) (dummy-right-j0n_observe-table_a1_table3_room1 dd))
+)
+(:action act-zin_joint-lift-table_a2_a3_table1_room3
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-left-j0n_observe-table_a1_table3_room1 dd) (not (inroom table3 room1)) (not (inroom table2 room1)) (inroom table1 room3) (available a3) (in a3 room3) (Kinroom table3 room1 V_FALSE) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE))
+:effect 
+(and (pre-zin_joint-lift-table_a2_a3_table1_room3 dd) (not (available a3)))
+)
+(:action act-98p_joint-move-table_a2_a3_table1_room3_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-zin_joint-lift-table_a2_a3_table1_room3 dd) (in a3 room3))
+:effect 
+(and (pre-98p_joint-move-table_a2_a3_table1_room3_room4 dd) (not (pre-zin_joint-lift-table_a2_a3_table1_room3 dd)) (not (in a3 room3)) (in a3 room4))
+)
+(:action act-kj5_joint-drop-table_a2_a3_table1_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-98p_joint-move-table_a2_a3_table1_room3_room4 dd) (in a3 room4))
+:effect 
+(and (pre-kj5_joint-drop-table_a2_a3_table1_room4 dd) (not (pre-98p_joint-move-table_a2_a3_table1_room3_room4 dd)) (available a3))
+)
+(:action act-8h3_joint-lift-table_a1_a3_table2_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-kj5_joint-drop-table_a2_a3_table1_room4 dd) (available a3) (in a3 room2))
+:effect 
+(and (pre-8h3_joint-lift-table_a1_a3_table2_room2 dd) (not (pre-kj5_joint-drop-table_a2_a3_table1_room4 dd)) (not (available a3)))
+)
+(:action act-vou_joint-move-table_a1_a3_table2_room2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-8h3_joint-lift-table_a1_a3_table2_room2 dd) (in a3 room2))
+:effect 
+(and (pre-vou_joint-move-table_a1_a3_table2_room2_room1 dd) (not (pre-8h3_joint-lift-table_a1_a3_table2_room2 dd)) (not (in a3 room2)) (in a3 room1))
+)
+(:action act-o7j_joint-drop-table_a1_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-vou_joint-move-table_a1_a3_table2_room2_room1 dd) (in a3 room1))
+:effect 
+(and (pre-o7j_joint-drop-table_a1_a3_table2_room1 dd) (not (pre-vou_joint-move-table_a1_a3_table2_room2_room1 dd)) (available a3))
+)
+(:action goal-achieve-o7j_joint-drop-table_a1_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-o7j_joint-drop-table_a1_a3_table2_room1 dd))
+:effect 
+(and (done-goal dd) (not (pre-o7j_joint-drop-table_a1_a3_table2_room1 dd)))
+)
+(:action act-sne_joint-lift-table_a2_a3_table1_room3
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-j0n_observe-table_a1_table3_room1 dd) (inroom table3 room1) (not (inroom table2 room1)) (inroom table1 room3) (available a3) (in a3 room3) (Kinroom table3 room1 V_TRUE) (Kinroom table2 room1 V_FALSE) (Kinroom table1 room3 V_TRUE))
+:effect 
+(and (pre-sne_joint-lift-table_a2_a3_table1_room3 dd) (not (available a3)))
+)
+(:action act-8k6_joint-move-table_a2_a3_table1_room3_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-sne_joint-lift-table_a2_a3_table1_room3 dd) (in a3 room3))
+:effect 
+(and (pre-8k6_joint-move-table_a2_a3_table1_room3_room4 dd) (not (pre-sne_joint-lift-table_a2_a3_table1_room3 dd)) (not (in a3 room3)) (in a3 room4))
+)
+(:action act-iw0_joint-drop-table_a2_a3_table1_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-8k6_joint-move-table_a2_a3_table1_room3_room4 dd) (in a3 room4))
+:effect 
+(and (pre-iw0_joint-drop-table_a2_a3_table1_room4 dd) (not (pre-8k6_joint-move-table_a2_a3_table1_room3_room4 dd)) (available a3))
+)
+(:action act-jnf_joint-lift-table_a1_a3_table3_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-iw0_joint-drop-table_a2_a3_table1_room4 dd) (available a3) (in a3 room1))
+:effect 
+(and (pre-jnf_joint-lift-table_a1_a3_table3_room1 dd) (not (pre-iw0_joint-drop-table_a2_a3_table1_room4 dd)) (not (available a3)))
+)
+(:action act-401_joint-move-table_a1_a3_table3_room1_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-jnf_joint-lift-table_a1_a3_table3_room1 dd) (in a3 room1))
+:effect 
+(and (pre-401_joint-move-table_a1_a3_table3_room1_room2 dd) (not (pre-jnf_joint-lift-table_a1_a3_table3_room1 dd)) (not (in a3 room1)) (in a3 room2))
+)
+(:action act-8wk_joint-drop-table_a1_a3_table3_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-401_joint-move-table_a1_a3_table3_room1_room2 dd) (in a3 room2))
+:effect 
+(and (pre-8wk_joint-drop-table_a1_a3_table3_room2 dd) (not (pre-401_joint-move-table_a1_a3_table3_room1_room2 dd)) (available a3))
+)
+(:action act-wjr_joint-lift-table_a1_a3_table2_room2
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-8wk_joint-drop-table_a1_a3_table3_room2 dd) (available a3) (in a3 room2))
+:effect 
+(and (pre-wjr_joint-lift-table_a1_a3_table2_room2 dd) (not (pre-8wk_joint-drop-table_a1_a3_table3_room2 dd)) (not (available a3)))
+)
+(:action act-5tm_joint-move-table_a1_a3_table2_room2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-wjr_joint-lift-table_a1_a3_table2_room2 dd) (in a3 room2))
+:effect 
+(and (pre-5tm_joint-move-table_a1_a3_table2_room2_room1 dd) (not (pre-wjr_joint-lift-table_a1_a3_table2_room2 dd)) (not (in a3 room2)) (in a3 room1))
+)
+(:action act-7sl_joint-drop-table_a1_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-5tm_joint-move-table_a1_a3_table2_room2_room1 dd) (in a3 room1))
+:effect 
+(and (pre-7sl_joint-drop-table_a1_a3_table2_room1 dd) (not (pre-5tm_joint-move-table_a1_a3_table2_room2_room1 dd)) (available a3))
+)
+(:action goal-achieve-7sl_joint-drop-table_a1_a3_table2_room1
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-7sl_joint-drop-table_a1_a3_table2_room1 dd))
+:effect 
+(and (done-goal dd) (not (pre-7sl_joint-drop-table_a1_a3_table2_room1 dd)))
+)
+(:action act-xuu_joint-lift-table_a2_a3_table1_room3
+:parameters ( ?a - agent)
+:precondition 
+(and (dummy-right-j48_observe-table_a1_table2_room1 dd) (inroom table2 room1) (inroom table1 room3) (available a3) (in a3 room3) (Kinroom table2 room1 V_TRUE) (Kinroom table1 room3 V_TRUE))
+:effect 
+(and (pre-xuu_joint-lift-table_a2_a3_table1_room3 dd) (not (available a3)))
+)
+(:action act-h57_joint-move-table_a2_a3_table1_room3_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-xuu_joint-lift-table_a2_a3_table1_room3 dd) (in a3 room3))
+:effect 
+(and (pre-h57_joint-move-table_a2_a3_table1_room3_room4 dd) (not (pre-xuu_joint-lift-table_a2_a3_table1_room3 dd)) (not (in a3 room3)) (in a3 room4))
+)
+(:action act-z0n_joint-drop-table_a2_a3_table1_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-h57_joint-move-table_a2_a3_table1_room3_room4 dd) (in a3 room4))
+:effect 
+(and (pre-z0n_joint-drop-table_a2_a3_table1_room4 dd) (not (pre-h57_joint-move-table_a2_a3_table1_room3_room4 dd)) (available a3))
+)
+(:action goal-achieve-z0n_joint-drop-table_a2_a3_table1_room4
+:parameters ( ?a - agent)
+:precondition 
+(and (pre-z0n_joint-drop-table_a2_a3_table1_room4 dd))
+:effect 
+(and (done-goal dd) (not (pre-z0n_joint-drop-table_a2_a3_table1_room4 dd)))
+)
+(:action Merge-inroom
+:parameters ( ?t - table ?r - room ?V_PARAM - VALUE_TYPE)
+:precondition 
+(and (not (Kinroom ?t ?r ?V_PARAM)) 
+	(or (KGiveninroom ?t ?r tag0 ?V_PARAM) (KNot tag0))
+	(or (KGiveninroom ?t ?r tag1 ?V_PARAM) (KNot tag1)))
+:effect 
+(and (Kinroom ?t ?r ?V_PARAM))
+)
+
+(:action RefuteT-inroom
+:parameters ( ?t - table ?r - room ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGiveninroom ?t ?r ?TAG_PARAM V_TRUE) (Kinroom ?t ?r V_TRUE) (not (inroom ?t ?r)))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+(:action RefuteF-inroom
+:parameters ( ?t - table ?r - room ?TAG_PARAM - TAG_TYPE)
+:precondition 
+(and (not (KNot ?TAG_PARAM)) (KGiveninroom ?t ?r ?TAG_PARAM V_FALSE) (Kinroom ?t ?r V_TRUE) (inroom ?t ?r))
+:effect 
+(and (KNot ?TAG_PARAM))
+)
+
+)
