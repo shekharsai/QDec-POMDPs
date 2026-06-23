@@ -1,0 +1,1146 @@
+0
+Solving the current team problem!
+*
+Planning time: 00:00:02.6653931
+
+The original plan tree!
+
+observe-box_a1_p1-1_b0
+        (f)move_p4-1_p4-2_a4
+        (f)     move_p3-1_p3-2_a3
+        (f)             move_p2-1_p2-2_a2
+        (f)                     observe-box_a4_p4-2_b3
+        (f)                             (f)move_p4-2_p4-1_a4
+        (f)                             (f)     observe-box_a3_p3-2_b2
+        (f)                             (f)             (f)move_p3-2_p3-1_a3
+        (f)                             (f)             (f)     move_p2-2_p2-1_a2
+        (f)                             (f)             (f)             observe-box_a2_p2-1_b1
+        (f)                             (f)             (f)                     (f)one-push_p3-1_p3-2_b2_a3
+        (f)                             (f)             (f)                     (f)     move_p3-1_p4-1_a3
+        (f)                             (f)             (f)                     (f)             joint-push_p4-1_p4-2_b3_a3_a4
+        (f)                             (f)             (f)                     (f)                     )goal
+        (f)                             (f)             (f)                     (t)one-push_p3-1_p3-2_b2_a3
+        (f)                             (f)             (f)                     (t)     move_p3-1_p4-1_a3
+        (f)                             (f)             (f)                     (t)             move_p1-1_p2-1_a1
+        (f)                             (f)             (f)                     (t)                     observe-box_a1_p2-1_b1
+        (f)                             (f)             (f)                     (t)                             (t)observe-box_a3_p4-1_b3
+        (f)                             (f)             (f)                     (t)                             (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)                             (f)             (f)                     (t)                             (t)     (t)     joint-push_p2-1_p2-2_b1_a1_a2
+        (f)                             (f)             (f)                     (t)                             (t)     (t)             )goal
+        (f)                             (f)             (t)move_p3-2_p3-1_a3
+        (f)                             (f)             (t)     move_p3-1_p4-1_a3
+        (f)                             (f)             (t)             observe-box_a3_p4-1_b3
+        (f)                             (f)             (t)                     (t)observe-box_a2_p2-2_b1
+        (f)                             (f)             (t)                     (t)     (f)move_p2-2_p2-1_a2
+        (f)                             (f)             (t)                     (t)     (f)     move_p1-1_p2-1_a1
+        (f)                             (f)             (t)                     (t)     (f)             observe-box_a1_p2-1_b1
+        (f)                             (f)             (t)                     (t)     (f)                     (t)observe-box_a3_p4-1_b3
+        (f)                             (f)             (t)                     (t)     (f)                     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)                             (f)             (t)                     (t)     (f)                     (t)     (t)     joint-push_p2-1_p2-2_b1_a1_a2
+        (f)                             (f)             (t)                     (t)     (f)                     (t)     (t)             )goal
+        (f)                             (f)             (t)                     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)                             (f)             (t)                     (t)     (t)     )goal
+        (f)                             (t)move_p3-2_p3-1_a3
+        (f)                             (t)     observe-box_a3_p3-1_b2
+        (f)                             (t)             (f)observe-box_a2_p2-2_b1
+        (f)                             (t)             (f)     (f)move_p3-1_p2-1_a3
+        (f)                             (t)             (f)     (f)     move_p2-2_p2-1_a2
+        (f)                             (t)             (f)     (f)             joint-push_p2-1_p2-2_b1_a2_a3
+        (f)                             (t)             (f)     (f)                     )goal
+        (f)                             (t)             (f)     (t))goal
+        (f)                             (t)             (t)move_p2-2_p2-1_a2
+        (f)                             (t)             (t)     observe-box_a2_p2-1_b1
+        (f)                             (t)             (t)             (f)one-push_p3-1_p3-2_b2_a3
+        (f)                             (t)             (t)             (f)     )goal
+        (f)                             (t)             (t)             (t)one-push_p3-1_p3-2_b2_a3
+        (f)                             (t)             (t)             (t)     move_p3-1_p2-1_a3
+        (f)                             (t)             (t)             (t)             joint-push_p2-1_p2-2_b1_a2_a3
+        (f)                             (t)             (t)             (t)                     )goal
+        (t)move_p4-1_p4-2_a4
+        (t)     move_p3-1_p3-2_a3
+        (t)             move_p2-1_p2-2_a2
+        (t)                     observe-box_a4_p4-2_b3
+        (t)                             (f)move_p3-2_p3-1_a3
+        (t)                             (f)     observe-box_a3_p3-1_b2
+        (t)                             (f)             (f)move_p4-2_p4-1_a4
+        (t)                             (f)             (f)     move_p3-1_p4-1_a3
+        (t)                             (f)             (f)             move_p2-2_p2-1_a2
+        (t)                             (f)             (f)                     observe-box_a2_p2-1_b1
+        (t)                             (f)             (f)                             (f)one-push_p1-1_p1-2_b0_a1
+        (t)                             (f)             (f)                             (f)     joint-push_p4-1_p4-2_b3_a3_a4
+        (t)                             (f)             (f)                             (f)             )goal
+        (t)                             (f)             (f)                             (t)one-push_p1-1_p1-2_b0_a1
+        (t)                             (f)             (f)                             (t)     move_p1-1_p2-1_a1
+        (t)                             (f)             (f)                             (t)             observe-box_a1_p2-1_b1
+        (t)                             (f)             (f)                             (t)                     (t)observe-box_a3_p4-1_b3
+        (t)                             (f)             (f)                             (t)                     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)                             (f)             (f)                             (t)                     (t)     (t)     joint-push_p2-1_p2-2_b1_a1_a2
+        (t)                             (f)             (f)                             (t)                     (t)     (t)             )goal
+        (t)                             (f)             (t)move_p4-2_p4-1_a4
+        (t)                             (f)             (t)     move_p2-2_p2-1_a2
+        (t)                             (f)             (t)             observe-box_a2_p2-1_b1
+        (t)                             (f)             (t)                     (f)one-push_p3-1_p3-2_b2_a3
+        (t)                             (f)             (t)                     (f)     move_p3-1_p4-1_a3
+        (t)                             (f)             (t)                     (f)             observe-box_a3_p4-1_b3
+        (t)                             (f)             (t)                     (f)                     (t)one-push_p1-1_p1-2_b0_a1
+        (t)                             (f)             (t)                     (f)                     (t)     joint-push_p4-1_p4-2_b3_a3_a4
+        (t)                             (f)             (t)                     (f)                     (t)             )goal
+        (t)                             (f)             (t)                     (t)one-push_p3-1_p3-2_b2_a3
+        (t)                             (f)             (t)                     (t)     one-push_p1-1_p1-2_b0_a1
+        (t)                             (f)             (t)                     (t)             move_p3-1_p4-1_a3
+        (t)                             (f)             (t)                     (t)                     move_p1-1_p2-1_a1
+        (t)                             (f)             (t)                     (t)                             observe-box_a1_p2-1_b1
+        (t)                             (f)             (t)                     (t)                                     (t)observe-box_a3_p4-1_b3
+        (t)                             (f)             (t)                     (t)                                     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)                             (f)             (t)                     (t)                                     (t)     (t)     joint-push_p2-1_p2-2_b1_a1_a2
+        (t)                             (f)             (t)                     (t)                                     (t)     (t)             )goal
+        (t)                             (t)move_p3-2_p3-1_a3
+        (t)                             (t)     observe-box_a3_p3-1_b2
+        (t)                             (t)             (f)move_p3-1_p2-1_a3
+        (t)                             (t)             (f)     move_p2-2_p2-1_a2
+        (t)                             (t)             (f)             observe-box_a3_p2-1_b1
+        (t)                             (t)             (f)                     (f)one-push_p1-1_p1-2_b0_a1
+        (t)                             (t)             (f)                     (f)     )goal
+        (t)                             (t)             (f)                     (t)one-push_p1-1_p1-2_b0_a1
+        (t)                             (t)             (f)                     (t)     joint-push_p2-1_p2-2_b1_a2_a3
+        (t)                             (t)             (f)                     (t)             )goal
+        (t)                             (t)             (t)move_p2-2_p2-1_a2
+        (t)                             (t)             (t)     observe-box_a2_p2-1_b1
+        (t)                             (t)             (t)             (f)one-push_p3-1_p3-2_b2_a3
+        (t)                             (t)             (t)             (f)     one-push_p1-1_p1-2_b0_a1
+        (t)                             (t)             (t)             (f)             )goal
+        (t)                             (t)             (t)             (t)one-push_p3-1_p3-2_b2_a3
+        (t)                             (t)             (t)             (t)     move_p3-1_p2-1_a3
+        (t)                             (t)             (t)             (t)             observe-box_a3_p2-1_b1
+        (t)                             (t)             (t)             (t)                     (t)one-push_p1-1_p1-2_b0_a1
+        (t)                             (t)             (t)             (t)                     (t)     joint-push_p2-1_p2-2_b1_a2_a3
+        (t)                             (t)             (t)             (t)                     (t)             )goal
+
+Team plan width = 16
+Team plan height = 18
+time 00:00:02.7399387
+
+A refined projected plan tree for a1:
+observe-box_a1_p1-1_b0
+        (f)observe-box_a4_p4-2_b3
+        (f)     (f)observe-box_a3_p3-2_b2
+        (f)     (f)     (f)observe-box_a2_p2-1_b1
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (f)     (t)     )goal
+        (f)     (f)     (t)observe-box_a2_p2-2_b1
+        (f)     (f)     (t)     (f)joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (t)     (f)     )goal
+        (f)     (f)     (t)     (t))goal
+        (f)     (t))goal
+        (t)observe-box_a4_p4-2_b3
+        (t)     (f)observe-box_a3_p3-1_b2
+        (t)     (f)     (f)observe-box_a2_p2-1_b1
+        (t)     (f)     (f)     (f)one-push_p1-1_p1-2_b0_a1
+        (t)     (f)     (f)     (f)     )goal
+        (t)     (f)     (f)     (t)one-push_p1-1_p1-2_b0_a1
+        (t)     (f)     (f)     (t)     joint-push_p2-1_p2-2_b1_a1_a2
+        (t)     (f)     (f)     (t)             )goal
+        (t)     (f)     (t)observe-box_a2_p2-1_b1
+        (t)     (f)     (t)     (f)one-push_p1-1_p1-2_b0_a1
+        (t)     (f)     (t)     (f)     )goal
+        (t)     (f)     (t)     (t)one-push_p1-1_p1-2_b0_a1
+        (t)     (f)     (t)     (t)     joint-push_p2-1_p2-2_b1_a1_a2
+        (t)     (f)     (t)     (t)             )goal
+        (t)     (t)observe-box_a3_p3-1_b2
+        (t)     (t)     (f)observe-box_a3_p2-1_b1
+        (t)     (t)     (f)     (f)one-push_p1-1_p1-2_b0_a1
+        (t)     (t)     (f)     (f)     )goal
+        (t)     (t)     (f)     (t)one-push_p1-1_p1-2_b0_a1
+        (t)     (t)     (f)     (t)     )goal
+        (t)     (t)     (t)observe-box_a2_p2-1_b1
+        (t)     (t)     (t)     (f)one-push_p1-1_p1-2_b0_a1
+        (t)     (t)     (t)     (f)     )goal
+        (t)     (t)     (t)     (t)one-push_p1-1_p1-2_b0_a1
+        (t)     (t)     (t)     (t)     )goal
+
+*
+The compressed plan tree for a1:
+atq_observe-box_a1_p1-1_b0
+        (f)zdi_observe-box_a4_p4-2_b3
+        (f)     (f)suq_observe-box_a3_p3-2_b2
+        (f)     (f)     (f)q8w_observe-box_a2_p2-1_b1
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)pe5_joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (f)     (t)     )goal
+        (f)     (f)     (t)8mf_observe-box_a2_p2-2_b1
+        (f)     (f)     (t)     (f)tzi_joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (t)     (f)     )goal
+        (f)     (f)     (t)     (t))goal
+        (f)     (t))goal
+        (t)pjj_observe-box_a4_p4-2_b3
+        (t)     (f)vt5_observe-box_a2_p2-1_b1
+        (t)     (f)     (f)ngi_one-push_p1-1_p1-2_b0_a1
+        (t)     (f)     (f)     )goal
+        (t)     (f)     (t)781_one-push_p1-1_p1-2_b0_a1
+        (t)     (f)     (t)     cph_joint-push_p2-1_p2-2_b1_a1_a2
+        (t)     (f)     (t)             )goal
+        (t)     (t)tvt_one-push_p1-1_p1-2_b0_a1
+        (t)     (t)     )goal
+
+ Child solution         a1
+waiting!
+*
+Planning time: 00:00:01.0548165
+
+Plan tree for a1
+act-dummy-atq_observe-box_a1_p1-1_b0_a1
+        act-atq_observe-box_a1_p1-1_b0_a1
+                (f)dummy-left-atq_observe-box_a1_p1-1_b0_a1
+                (f)     move_p1-1_p2-1_a1
+                (f)             move_p2-1_p3-1_a1
+                (f)                     move_p3-1_p4-1_a1
+                (f)                             move_p4-1_p4-2_a1
+                (f)                                     act-dummy-zdi_observe-box_a4_p4-2_b3_a1
+                (f)                                             act-zdi_observe-box_a4_p4-2_b3_a1
+                (f)                                                     (f)dummy-left-zdi_observe-box_a4_p4-2_b3_a1
+                (f)                                                     (f)     move_p4-2_p4-1_a1
+                (f)                                                     (f)             move_p4-1_p3-1_a1
+                (f)                                                     (f)                     move_p3-1_p3-2_a1
+                (f)                                                     (f)                             act-dummy-suq_observe-box_a3_p3-2_b2_a1
+                (f)                                                     (f)                                     act-suq_observe-box_a3_p3-2_b2_a1
+                (f)                                                     (f)                                             (f)dummy-left-suq_observe-box_a3_p3-2_b2_a1
+                (f)                                                     (f)                                             (f)     move_p3-2_p3-1_a1
+                (f)                                                     (f)                                             (f)             move_p3-1_p2-1_a1
+                (f)                                                     (f)                                             (f)                     act-dummy-q8w_observe-box_a2_p2-1_b1_a1
+                (f)                                                     (f)                                             (f)                             act-q8w_observe-box_a2_p2-1_b1_a1
+                (f)                                                     (f)                                             (f)                                     (f)dummy-left-q8w_observe-box_a2_p2-1_b1_a1
+                (f)                                                     (f)                                             (f)                                     (f)     goal-achieve-left-q8w_observe-box_a2_p2-1_b1_a1
+                (f)                                                     (f)                                             (f)                                     (f)             )goal
+                (f)                                                     (f)                                             (f)                                     (t)dummy-right-q8w_observe-box_a2_p2-1_b1_a1
+                (f)                                                     (f)                                             (f)                                     (t)     act-pe5_joint-push_p2-1_p2-2_b1_a1_a2_a1
+                (f)                                                     (f)                                             (f)                                     (t)             goal-achieve-pe5_joint-push_p2-1_p2-2_b1_a1_a2_a1
+                (f)                                                     (f)                                             (f)                                     (t)                     )goal
+                (f)                                                     (f)                                             (t)dummy-right-suq_observe-box_a3_p3-2_b2_a1
+                (f)                                                     (f)                                             (t)     move_p3-2_p3-1_a1
+                (f)                                                     (f)                                             (t)             move_p3-1_p2-1_a1
+                (f)                                                     (f)                                             (t)                     move_p2-1_p2-2_a1
+                (f)                                                     (f)                                             (t)                             act-dummy-8mf_observe-box_a2_p2-2_b1_a1
+                (f)                                                     (f)                                             (t)                                     act-8mf_observe-box_a2_p2-2_b1_a1
+                (f)                                                     (f)                                             (t)                                             (f)dummy-left-8mf_observe-box_a2_p2-2_b1_a1
+                (f)                                                     (f)                                             (t)                                             (f)     move_p2-2_p2-1_a1
+                (f)                                                     (f)                                             (t)                                             (f)             act-tzi_joint-push_p2-1_p2-2_b1_a1_a2_a1
+                (f)                                                     (f)                                             (t)                                             (f)                     goal-achieve-tzi_joint-push_p2-1_p2-2_b1_a1_a2_a1
+                (f)                                                     (f)                                             (t)                                             (f)
+        )goal
+                (f)                                                     (f)                                             (t)                                             (t)dummy-right-8mf_observe-box_a2_p2-2_b1_a1
+                (f)                                                     (f)                                             (t)                                             (t)     goal-achieve-right-8mf_observe-box_a2_p2-2_b1_a1
+                (f)                                                     (f)                                             (t)                                             (t)             )goal
+                (f)                                                     (t)dummy-right-zdi_observe-box_a4_p4-2_b3_a1
+                (f)                                                     (t)     goal-achieve-right-zdi_observe-box_a4_p4-2_b3_a1
+                (f)                                                     (t)             )goal
+                (t)dummy-right-atq_observe-box_a1_p1-1_b0_a1
+                (t)     move_p1-1_p2-1_a1
+                (t)             move_p2-1_p3-1_a1
+                (t)                     move_p3-1_p4-1_a1
+                (t)                             move_p4-1_p4-2_a1
+                (t)                                     act-dummy-pjj_observe-box_a4_p4-2_b3_a1
+                (t)                                             act-pjj_observe-box_a4_p4-2_b3_a1
+                (t)                                                     (f)dummy-left-pjj_observe-box_a4_p4-2_b3_a1
+                (t)                                                     (f)     move_p4-2_p4-1_a1
+                (t)                                                     (f)             move_p4-1_p3-1_a1
+                (t)                                                     (f)                     move_p3-1_p2-1_a1
+                (t)                                                     (f)                             act-dummy-vt5_observe-box_a2_p2-1_b1_a1
+                (t)                                                     (f)                                     act-vt5_observe-box_a2_p2-1_b1_a1
+                (t)                                                     (f)                                             (f)dummy-left-vt5_observe-box_a2_p2-1_b1_a1
+                (t)                                                     (f)                                             (f)     move_p2-1_p1-1_a1
+                (t)                                                     (f)                                             (f)             act-ngi_one-push_p1-1_p1-2_b0_a1_a1
+                (t)                                                     (f)                                             (f)                     goal-achieve-ngi_one-push_p1-1_p1-2_b0_a1_a1
+                (t)                                                     (f)                                             (f)                             )goal
+                (t)                                                     (f)                                             (t)dummy-right-vt5_observe-box_a2_p2-1_b1_a1
+                (t)                                                     (f)                                             (t)     move_p2-1_p1-1_a1
+                (t)                                                     (f)                                             (t)             act-781_one-push_p1-1_p1-2_b0_a1_a1
+                (t)                                                     (f)                                             (t)                     move_p1-1_p2-1_a1
+                (t)                                                     (f)                                             (t)                             act-cph_joint-push_p2-1_p2-2_b1_a1_a2_a1
+                (t)                                                     (f)                                             (t)                                     goal-achieve-cph_joint-push_p2-1_p2-2_b1_a1_a2_a1
+                (t)                                                     (f)                                             (t)                                             )goal
+                (t)                                                     (t)dummy-right-pjj_observe-box_a4_p4-2_b3_a1
+                (t)                                                     (t)     move_p4-2_p4-1_a1
+                (t)                                                     (t)             move_p4-1_p3-1_a1
+                (t)                                                     (t)                     move_p3-1_p2-1_a1
+                (t)                                                     (t)                             move_p2-1_p1-1_a1
+                (t)                                                     (t)                                     act-tvt_one-push_p1-1_p1-2_b0_a1_a1
+                (t)                                                     (t)                                             goal-achieve-tvt_one-push_p1-1_p1-2_b0_a1_a1
+                (t)                                                     (t)                                                     )goal
+
+Width: 8
+Height (before balancing): 16
+
+A refined projected plan tree for a2:
+observe-box_a1_p1-1_b0
+        (f)observe-box_a4_p4-2_b3
+        (f)     (f)observe-box_a3_p3-2_b2
+        (f)     (f)     (f)observe-box_a2_p2-1_b1
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (f)     (t)     )goal
+        (f)     (f)     (t)observe-box_a2_p2-2_b1
+        (f)     (f)     (t)     (f)joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (t)     (f)     )goal
+        (f)     (f)     (t)     (t))goal
+        (f)     (t)observe-box_a3_p3-1_b2
+        (f)     (t)     (f)observe-box_a2_p2-2_b1
+        (f)     (t)     (f)     (f)joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (f)     (f)     )goal
+        (f)     (t)     (f)     (t))goal
+        (f)     (t)     (t)observe-box_a2_p2-1_b1
+        (f)     (t)     (t)     (f))goal
+        (f)     (t)     (t)     (t)joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (t)     (t)     )goal
+        (t)observe-box_a4_p4-2_b3
+        (t)     (f)observe-box_a3_p3-1_b2
+        (t)     (f)     (f)observe-box_a2_p2-1_b1
+        (t)     (f)     (f)     (f))goal
+        (t)     (f)     (f)     (t)joint-push_p2-1_p2-2_b1_a1_a2
+        (t)     (f)     (f)     (t)     )goal
+        (t)     (f)     (t)observe-box_a2_p2-1_b1
+        (t)     (f)     (t)     (f))goal
+        (t)     (f)     (t)     (t)joint-push_p2-1_p2-2_b1_a1_a2
+        (t)     (f)     (t)     (t)     )goal
+        (t)     (t)observe-box_a3_p3-1_b2
+        (t)     (t)     (f)observe-box_a3_p2-1_b1
+        (t)     (t)     (f)     (f))goal
+        (t)     (t)     (f)     (t)joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     (f)     (t)     )goal
+        (t)     (t)     (t)observe-box_a2_p2-1_b1
+        (t)     (t)     (t)     (f))goal
+        (t)     (t)     (t)     (t)joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     (t)     (t)     )goal
+
+
+The compressed plan tree for a2:
+xcf_observe-box_a1_p1-1_b0
+        (f)knu_observe-box_a4_p4-2_b3
+        (f)     (f)ret_observe-box_a3_p3-2_b2
+        (f)     (f)     (f)51f_observe-box_a2_p2-1_b1
+        (f)     (f)     (f)     (f))goal
+        (f)     (f)     (f)     (t)01k_joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (f)     (t)     )goal
+        (f)     (f)     (t)iuk_observe-box_a2_p2-2_b1
+        (f)     (f)     (t)     (f)hdt_joint-push_p2-1_p2-2_b1_a1_a2
+        (f)     (f)     (t)     (f)     )goal
+        (f)     (f)     (t)     (t))goal
+        (f)     (t)mfn_observe-box_a3_p3-1_b2
+        (f)     (t)     (f)ita_observe-box_a2_p2-2_b1
+        (f)     (t)     (f)     (f)5ny_joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (f)     (f)     )goal
+        (f)     (t)     (f)     (t))goal
+        (f)     (t)     (t)xp0_observe-box_a2_p2-1_b1
+        (f)     (t)     (t)     (f))goal
+        (f)     (t)     (t)     (t)w6w_joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (t)     (t)     )goal
+        (t)cf5_observe-box_a2_p2-1_b1
+        (t)     (f))goal
+        (t)     (t)ydo_joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     )goal
+
+ Child solution         a2
+waiting!
+*
+Planning time: 00:00:01.2128692
+
+Plan tree for a2
+act-dummy-xcf_observe-box_a1_p1-1_b0_a2
+        move_p2-1_p1-1_a2
+                act-xcf_observe-box_a1_p1-1_b0_a2
+                        (f)dummy-left-xcf_observe-box_a1_p1-1_b0_a2
+                        (f)     move_p1-1_p2-1_a2
+                        (f)             move_p2-1_p3-1_a2
+                        (f)                     move_p3-1_p4-1_a2
+                        (f)                             move_p4-1_p4-2_a2
+                        (f)                                     act-dummy-knu_observe-box_a4_p4-2_b3_a2
+                        (f)                                             act-knu_observe-box_a4_p4-2_b3_a2
+                        (f)                                                     (f)dummy-left-knu_observe-box_a4_p4-2_b3_a2
+                        (f)                                                     (f)     move_p4-2_p4-1_a2
+                        (f)                                                     (f)             move_p4-1_p3-1_a2
+                        (f)                                                     (f)                     move_p3-1_p3-2_a2
+                        (f)                                                     (f)                             act-dummy-ret_observe-box_a3_p3-2_b2_a2
+                        (f)                                                     (f)                                     act-ret_observe-box_a3_p3-2_b2_a2
+                        (f)                                                     (f)                                             (f)dummy-left-ret_observe-box_a3_p3-2_b2_a2
+                        (f)                                                     (f)                                             (f)     move_p3-2_p3-1_a2
+                        (f)                                                     (f)                                             (f)             move_p3-1_p2-1_a2
+                        (f)                                                     (f)                                             (f)                     act-dummy-51f_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (f)                                             (f)                             act-51f_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (f)                                             (f)                                     (f)dummy-left-51f_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (f)                                             (f)                                     (f)     goal-achieve-left-51f_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (f)                                             (f)                                     (f)             )goal
+                        (f)                                                     (f)                                             (f)                                     (t)dummy-right-51f_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (f)                                             (f)                                     (t)     act-01k_joint-push_p2-1_p2-2_b1_a1_a2_a2
+                        (f)                                                     (f)                                             (f)                                     (t)             goal-achieve-01k_joint-push_p2-1_p2-2_b1_a1_a2_a2
+                        (f)                                                     (f)                                             (f)                                     (t)                     )goal
+                        (f)                                                     (f)                                             (t)dummy-right-ret_observe-box_a3_p3-2_b2_a2
+                        (f)                                                     (f)                                             (t)     move_p3-2_p3-1_a2
+                        (f)                                                     (f)                                             (t)             move_p3-1_p2-1_a2
+                        (f)                                                     (f)                                             (t)                     move_p2-1_p2-2_a2
+                        (f)                                                     (f)                                             (t)                             act-dummy-iuk_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (f)                                             (t)                                     act-iuk_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (f)                                             (t)                                             (f)dummy-left-iuk_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (f)                                             (t)                                             (f)     move_p2-2_p2-1_a2
+                        (f)                                                     (f)                                             (t)                                             (f)             act-hdt_joint-push_p2-1_p2-2_b1_a1_a2_a2
+                        (f)                                                     (f)                                             (t)                                             (f)
+        goal-achieve-hdt_joint-push_p2-1_p2-2_b1_a1_a2_a2
+                        (f)                                                     (f)                                             (t)                                             (f)
+                )goal
+                        (f)                                                     (f)                                             (t)                                             (t)dummy-right-iuk_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (f)                                             (t)                                             (t)     goal-achieve-right-iuk_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (f)                                             (t)                                             (t)             )goal
+                        (f)                                                     (t)dummy-right-knu_observe-box_a4_p4-2_b3_a2
+                        (f)                                                     (t)     move_p4-2_p4-1_a2
+                        (f)                                                     (t)             move_p4-1_p3-1_a2
+                        (f)                                                     (t)                     act-dummy-mfn_observe-box_a3_p3-1_b2_a2
+                        (f)                                                     (t)                             act-mfn_observe-box_a3_p3-1_b2_a2
+                        (f)                                                     (t)                                     (f)dummy-left-mfn_observe-box_a3_p3-1_b2_a2
+                        (f)                                                     (t)                                     (f)     move_p3-1_p2-1_a2
+                        (f)                                                     (t)                                     (f)             move_p2-1_p2-2_a2
+                        (f)                                                     (t)                                     (f)                     act-dummy-ita_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (t)                                     (f)                             act-ita_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (t)                                     (f)                                     (f)dummy-left-ita_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (t)                                     (f)                                     (f)     move_p2-2_p2-1_a2
+                        (f)                                                     (t)                                     (f)                                     (f)             act-5ny_joint-push_p2-1_p2-2_b1_a2_a3_a2
+                        (f)                                                     (t)                                     (f)                                     (f)                     goal-achieve-5ny_joint-push_p2-1_p2-2_b1_a2_a3_a2
+                        (f)                                                     (t)                                     (f)                                     (f)                             )goal
+                        (f)                                                     (t)                                     (f)                                     (t)dummy-right-ita_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (t)                                     (f)                                     (t)     goal-achieve-right-ita_observe-box_a2_p2-2_b1_a2
+                        (f)                                                     (t)                                     (f)                                     (t)             )goal
+                        (f)                                                     (t)                                     (t)dummy-right-mfn_observe-box_a3_p3-1_b2_a2
+                        (f)                                                     (t)                                     (t)     move_p3-1_p2-1_a2
+                        (f)                                                     (t)                                     (t)             act-dummy-xp0_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (t)                                     (t)                     act-xp0_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (t)                                     (t)                             (f)dummy-left-xp0_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (t)                                     (t)                             (f)     goal-achieve-left-xp0_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (t)                                     (t)                             (f)             )goal
+                        (f)                                                     (t)                                     (t)                             (t)dummy-right-xp0_observe-box_a2_p2-1_b1_a2
+                        (f)                                                     (t)                                     (t)                             (t)     act-w6w_joint-push_p2-1_p2-2_b1_a2_a3_a2
+                        (f)                                                     (t)                                     (t)                             (t)             goal-achieve-w6w_joint-push_p2-1_p2-2_b1_a2_a3_a2
+                        (f)                                                     (t)                                     (t)                             (t)                     )goal
+                        (t)dummy-right-xcf_observe-box_a1_p1-1_b0_a2
+                        (t)     move_p1-1_p2-1_a2
+                        (t)             act-dummy-cf5_observe-box_a2_p2-1_b1_a2
+                        (t)                     act-cf5_observe-box_a2_p2-1_b1_a2
+                        (t)                             (f)dummy-left-cf5_observe-box_a2_p2-1_b1_a2
+                        (t)                             (f)     goal-achieve-left-cf5_observe-box_a2_p2-1_b1_a2
+                        (t)                             (f)             )goal
+                        (t)                             (t)dummy-right-cf5_observe-box_a2_p2-1_b1_a2
+                        (t)                             (t)     act-ydo_joint-push_p2-1_p2-2_b1_a2_a3_a2
+                        (t)                             (t)             goal-achieve-ydo_joint-push_p2-1_p2-2_b1_a2_a3_a2
+                        (t)                             (t)                     )goal
+
+Width: 10
+Height (before balancing): 17
+
+A refined projected plan tree for a3:
+observe-box_a1_p1-1_b0
+        (f)observe-box_a4_p4-2_b3
+        (f)     (f)observe-box_a3_p3-2_b2
+        (f)     (f)     (f)observe-box_a2_p2-1_b1
+        (f)     (f)     (f)     (f)one-push_p3-1_p3-2_b2_a3
+        (f)     (f)     (f)     (f)     joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (f)     (f)             )goal
+        (f)     (f)     (f)     (t)one-push_p3-1_p3-2_b2_a3
+        (f)     (f)     (f)     (t)     joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (f)     (t)             )goal
+        (f)     (f)     (t)observe-box_a2_p2-2_b1
+        (f)     (f)     (t)     (f)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (t)     (f)     )goal
+        (f)     (f)     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (t)     (t)     )goal
+        (f)     (t)observe-box_a3_p3-1_b2
+        (f)     (t)     (f)observe-box_a2_p2-2_b1
+        (f)     (t)     (f)     (f)joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (f)     (f)     )goal
+        (f)     (t)     (f)     (t))goal
+        (f)     (t)     (t)observe-box_a2_p2-1_b1
+        (f)     (t)     (t)     (f)one-push_p3-1_p3-2_b2_a3
+        (f)     (t)     (t)     (f)     )goal
+        (f)     (t)     (t)     (t)one-push_p3-1_p3-2_b2_a3
+        (f)     (t)     (t)     (t)     joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (t)     (t)             )goal
+        (t)observe-box_a4_p4-2_b3
+        (t)     (f)observe-box_a3_p3-1_b2
+        (t)     (f)     (f)observe-box_a2_p2-1_b1
+        (t)     (f)     (f)     (f)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (f)     (f)     )goal
+        (t)     (f)     (f)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (f)     (t)     )goal
+        (t)     (f)     (t)observe-box_a2_p2-1_b1
+        (t)     (f)     (t)     (f)one-push_p3-1_p3-2_b2_a3
+        (t)     (f)     (t)     (f)     joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (t)     (f)             )goal
+        (t)     (f)     (t)     (t)one-push_p3-1_p3-2_b2_a3
+        (t)     (f)     (t)     (t)     joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (t)     (t)             )goal
+        (t)     (t)observe-box_a3_p3-1_b2
+        (t)     (t)     (f)observe-box_a3_p2-1_b1
+        (t)     (t)     (f)     (f))goal
+        (t)     (t)     (f)     (t)joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     (f)     (t)     )goal
+        (t)     (t)     (t)observe-box_a2_p2-1_b1
+        (t)     (t)     (t)     (f)one-push_p3-1_p3-2_b2_a3
+        (t)     (t)     (t)     (f)     )goal
+        (t)     (t)     (t)     (t)one-push_p3-1_p3-2_b2_a3
+        (t)     (t)     (t)     (t)     joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     (t)     (t)             )goal
+
+
+The compressed plan tree for a3:
+lsp_observe-box_a1_p1-1_b0
+        (f)cgh_observe-box_a4_p4-2_b3
+        (f)     (f)q34_observe-box_a3_p3-2_b2
+        (f)     (f)     (f)7ms_one-push_p3-1_p3-2_b2_a3
+        (f)     (f)     (f)     9k7_joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (f)             )goal
+        (f)     (f)     (t)2c4_joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (t)     )goal
+        (f)     (t)uw1_observe-box_a3_p3-1_b2
+        (f)     (t)     (f)5hm_observe-box_a2_p2-2_b1
+        (f)     (t)     (f)     (f)oe4_joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (f)     (f)     )goal
+        (f)     (t)     (f)     (t))goal
+        (f)     (t)     (t)xgp_observe-box_a2_p2-1_b1
+        (f)     (t)     (t)     (f)os9_one-push_p3-1_p3-2_b2_a3
+        (f)     (t)     (t)     (f)     )goal
+        (f)     (t)     (t)     (t)ebw_one-push_p3-1_p3-2_b2_a3
+        (f)     (t)     (t)     (t)     7fn_joint-push_p2-1_p2-2_b1_a2_a3
+        (f)     (t)     (t)     (t)             )goal
+        (t)3pt_observe-box_a4_p4-2_b3
+        (t)     (f)40c_observe-box_a3_p3-1_b2
+        (t)     (f)     (f)iwv_joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (f)     )goal
+        (t)     (f)     (t)zkc_one-push_p3-1_p3-2_b2_a3
+        (t)     (f)     (t)     ber_joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (t)             )goal
+        (t)     (t)xpl_observe-box_a3_p3-1_b2
+        (t)     (t)     (f)dxc_observe-box_a3_p2-1_b1
+        (t)     (t)     (f)     (f))goal
+        (t)     (t)     (f)     (t)m2w_joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     (f)     (t)     )goal
+        (t)     (t)     (t)os3_observe-box_a2_p2-1_b1
+        (t)     (t)     (t)     (f)s4i_one-push_p3-1_p3-2_b2_a3
+        (t)     (t)     (t)     (f)     )goal
+        (t)     (t)     (t)     (t)k46_one-push_p3-1_p3-2_b2_a3
+        (t)     (t)     (t)     (t)     r1h_joint-push_p2-1_p2-2_b1_a2_a3
+        (t)     (t)     (t)     (t)             )goal
+
+ Child solution         a3
+waiting!
+*
+Planning time: 00:00:01.6819934
+
+Plan tree for a3
+act-dummy-lsp_observe-box_a1_p1-1_b0_a3
+        move_p3-1_p2-1_a3
+                move_p2-1_p1-1_a3
+                        act-lsp_observe-box_a1_p1-1_b0_a3
+                                (f)dummy-left-lsp_observe-box_a1_p1-1_b0_a3
+                                (f)     move_p1-1_p2-1_a3
+                                (f)             move_p2-1_p3-1_a3
+                                (f)                     move_p3-1_p4-1_a3
+                                (f)                             move_p4-1_p4-2_a3
+                                (f)                                     act-dummy-cgh_observe-box_a4_p4-2_b3_a3
+                                (f)                                             act-cgh_observe-box_a4_p4-2_b3_a3
+                                (f)                                                     (f)dummy-left-cgh_observe-box_a4_p4-2_b3_a3
+                                (f)                                                     (f)     move_p4-2_p4-1_a3
+                                (f)                                                     (f)             move_p4-1_p3-1_a3
+                                (f)                                                     (f)                     move_p3-1_p3-2_a3
+                                (f)                                                     (f)                             act-dummy-q34_observe-box_a3_p3-2_b2_a3
+                                (f)                                                     (f)                                     act-q34_observe-box_a3_p3-2_b2_a3
+                                (f)                                                     (f)                                             (f)dummy-left-q34_observe-box_a3_p3-2_b2_a3
+                                (f)                                                     (f)                                             (f)     move_p3-2_p3-1_a3
+                                (f)                                                     (f)                                             (f)             act-7ms_one-push_p3-1_p3-2_b2_a3_a3
+                                (f)                                                     (f)                                             (f)                     move_p3-1_p4-1_a3
+                                (f)                                                     (f)                                             (f)                             act-9k7_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (f)                                                     (f)                                             (f)                                     goal-achieve-9k7_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (f)                                                     (f)                                             (f)                                             )goal
+                                (f)                                                     (f)                                             (t)dummy-right-q34_observe-box_a3_p3-2_b2_a3
+                                (f)                                                     (f)                                             (t)     move_p3-2_p3-1_a3
+                                (f)                                                     (f)                                             (t)             move_p3-1_p4-1_a3
+                                (f)                                                     (f)                                             (t)                     act-2c4_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (f)                                                     (f)                                             (t)                             goal-achieve-2c4_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (f)                                                     (f)                                             (t)                                     )goal
+                                (f)                                                     (t)dummy-right-cgh_observe-box_a4_p4-2_b3_a3
+                                (f)                                                     (t)     move_p4-2_p4-1_a3
+                                (f)                                                     (t)             move_p4-1_p3-1_a3
+                                (f)                                                     (t)                     act-dummy-uw1_observe-box_a3_p3-1_b2_a3
+                                (f)                                                     (t)                             act-uw1_observe-box_a3_p3-1_b2_a3
+                                (f)                                                     (t)                                     (f)dummy-left-uw1_observe-box_a3_p3-1_b2_a3
+                                (f)                                                     (t)                                     (f)     move_p3-1_p2-1_a3
+                                (f)                                                     (t)                                     (f)             move_p2-1_p2-2_a3
+                                (f)                                                     (t)                                     (f)                     act-dummy-5hm_observe-box_a2_p2-2_b1_a3
+                                (f)                                                     (t)                                     (f)                             act-5hm_observe-box_a2_p2-2_b1_a3
+                                (f)                                                     (t)                                     (f)                                     (f)dummy-left-5hm_observe-box_a2_p2-2_b1_a3
+                                (f)                                                     (t)                                     (f)                                     (f)     move_p2-2_p2-1_a3
+                                (f)                                                     (t)                                     (f)                                     (f)             act-oe4_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (f)                                                     (t)                                     (f)                                     (f)                     goal-achieve-oe4_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (f)                                                     (t)                                     (f)                                     (f)
+        )goal
+                                (f)                                                     (t)                                     (f)                                     (t)dummy-right-5hm_observe-box_a2_p2-2_b1_a3
+                                (f)                                                     (t)                                     (f)                                     (t)     goal-achieve-right-5hm_observe-box_a2_p2-2_b1_a3
+                                (f)                                                     (t)                                     (f)                                     (t)             )goal
+                                (f)                                                     (t)                                     (t)dummy-right-uw1_observe-box_a3_p3-1_b2_a3
+                                (f)                                                     (t)                                     (t)     move_p3-1_p2-1_a3
+                                (f)                                                     (t)                                     (t)             act-dummy-xgp_observe-box_a2_p2-1_b1_a3
+                                (f)                                                     (t)                                     (t)                     act-xgp_observe-box_a2_p2-1_b1_a3
+                                (f)                                                     (t)                                     (t)                             (f)dummy-left-xgp_observe-box_a2_p2-1_b1_a3
+                                (f)                                                     (t)                                     (t)                             (f)     move_p2-1_p3-1_a3
+                                (f)                                                     (t)                                     (t)                             (f)             act-os9_one-push_p3-1_p3-2_b2_a3_a3
+                                (f)                                                     (t)                                     (t)                             (f)                     goal-achieve-os9_one-push_p3-1_p3-2_b2_a3_a3
+                                (f)                                                     (t)                                     (t)                             (f)                             )goal
+                                (f)                                                     (t)                                     (t)                             (t)dummy-right-xgp_observe-box_a2_p2-1_b1_a3
+                                (f)                                                     (t)                                     (t)                             (t)     move_p2-1_p3-1_a3
+                                (f)                                                     (t)                                     (t)                             (t)             act-ebw_one-push_p3-1_p3-2_b2_a3_a3
+                                (f)                                                     (t)                                     (t)                             (t)                     move_p3-1_p2-1_a3
+                                (f)                                                     (t)                                     (t)                             (t)                             act-7fn_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (f)                                                     (t)                                     (t)                             (t)
+        goal-achieve-7fn_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (f)                                                     (t)                                     (t)                             (t)
+                )goal
+                                (t)dummy-right-lsp_observe-box_a1_p1-1_b0_a3
+                                (t)     move_p1-1_p2-1_a3
+                                (t)             move_p2-1_p3-1_a3
+                                (t)                     move_p3-1_p4-1_a3
+                                (t)                             move_p4-1_p4-2_a3
+                                (t)                                     act-dummy-3pt_observe-box_a4_p4-2_b3_a3
+                                (t)                                             act-3pt_observe-box_a4_p4-2_b3_a3
+                                (t)                                                     (f)dummy-left-3pt_observe-box_a4_p4-2_b3_a3
+                                (t)                                                     (f)     move_p4-2_p4-1_a3
+                                (t)                                                     (f)             move_p4-1_p3-1_a3
+                                (t)                                                     (f)                     act-dummy-40c_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (f)                             act-40c_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (f)                                     (f)dummy-left-40c_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (f)                                     (f)     move_p3-1_p4-1_a3
+                                (t)                                                     (f)                                     (f)             act-iwv_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (t)                                                     (f)                                     (f)                     goal-achieve-iwv_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (t)                                                     (f)                                     (f)                             )goal
+                                (t)                                                     (f)                                     (t)dummy-right-40c_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (f)                                     (t)     act-zkc_one-push_p3-1_p3-2_b2_a3_a3
+                                (t)                                                     (f)                                     (t)             move_p3-1_p4-1_a3
+                                (t)                                                     (f)                                     (t)                     act-ber_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (t)                                                     (f)                                     (t)                             goal-achieve-ber_joint-push_p4-1_p4-2_b3_a3_a4_a3
+                                (t)                                                     (f)                                     (t)                                     )goal
+                                (t)                                                     (t)dummy-right-3pt_observe-box_a4_p4-2_b3_a3
+                                (t)                                                     (t)     move_p4-2_p4-1_a3
+                                (t)                                                     (t)             move_p4-1_p3-1_a3
+                                (t)                                                     (t)                     act-dummy-xpl_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (t)                             act-xpl_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (t)                                     (f)dummy-left-xpl_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (t)                                     (f)     move_p3-1_p2-1_a3
+                                (t)                                                     (t)                                     (f)             act-dummy-dxc_observe-box_a3_p2-1_b1_a3
+                                (t)                                                     (t)                                     (f)                     act-dxc_observe-box_a3_p2-1_b1_a3
+                                (t)                                                     (t)                                     (f)                             (f)dummy-left-dxc_observe-box_a3_p2-1_b1_a3
+                                (t)                                                     (t)                                     (f)                             (f)     goal-achieve-left-dxc_observe-box_a3_p2-1_b1_a3
+                                (t)                                                     (t)                                     (f)                             (f)             )goal
+                                (t)                                                     (t)                                     (f)                             (t)dummy-right-dxc_observe-box_a3_p2-1_b1_a3
+                                (t)                                                     (t)                                     (f)                             (t)     act-m2w_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (t)                                                     (t)                                     (f)                             (t)             goal-achieve-m2w_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (t)                                                     (t)                                     (f)                             (t)                     )goal
+                                (t)                                                     (t)                                     (t)dummy-right-xpl_observe-box_a3_p3-1_b2_a3
+                                (t)                                                     (t)                                     (t)     move_p3-1_p2-1_a3
+                                (t)                                                     (t)                                     (t)             act-dummy-os3_observe-box_a2_p2-1_b1_a3
+                                (t)                                                     (t)                                     (t)                     act-os3_observe-box_a2_p2-1_b1_a3
+                                (t)                                                     (t)                                     (t)                             (f)dummy-left-os3_observe-box_a2_p2-1_b1_a3
+                                (t)                                                     (t)                                     (t)                             (f)     move_p2-1_p3-1_a3
+                                (t)                                                     (t)                                     (t)                             (f)             act-s4i_one-push_p3-1_p3-2_b2_a3_a3
+                                (t)                                                     (t)                                     (t)                             (f)                     goal-achieve-s4i_one-push_p3-1_p3-2_b2_a3_a3
+                                (t)                                                     (t)                                     (t)                             (f)                             )goal
+                                (t)                                                     (t)                                     (t)                             (t)dummy-right-os3_observe-box_a2_p2-1_b1_a3
+                                (t)                                                     (t)                                     (t)                             (t)     move_p2-1_p3-1_a3
+                                (t)                                                     (t)                                     (t)                             (t)             act-k46_one-push_p3-1_p3-2_b2_a3_a3
+                                (t)                                                     (t)                                     (t)                             (t)                     move_p3-1_p2-1_a3
+                                (t)                                                     (t)                                     (t)                             (t)                             act-r1h_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (t)                                                     (t)                                     (t)                             (t)
+        goal-achieve-r1h_joint-push_p2-1_p2-2_b1_a2_a3_a3
+                                (t)                                                     (t)                                     (t)                             (t)
+                )goal
+
+Width: 12
+Height (before balancing): 17
+
+A refined projected plan tree for a4:
+observe-box_a1_p1-1_b0
+        (f)observe-box_a4_p4-2_b3
+        (f)     (f)observe-box_a3_p3-2_b2
+        (f)     (f)     (f)observe-box_a2_p2-1_b1
+        (f)     (f)     (f)     (f)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (f)     (f)     )goal
+        (f)     (f)     (f)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (f)     (t)     )goal
+        (f)     (f)     (t)observe-box_a2_p2-2_b1
+        (f)     (f)     (t)     (f)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (t)     (f)     )goal
+        (f)     (f)     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     (f)     (t)     (t)     )goal
+        (f)     (t))goal
+        (t)observe-box_a4_p4-2_b3
+        (t)     (f)observe-box_a3_p3-1_b2
+        (t)     (f)     (f)observe-box_a2_p2-1_b1
+        (t)     (f)     (f)     (f)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (f)     (f)     )goal
+        (t)     (f)     (f)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (f)     (t)     )goal
+        (t)     (f)     (t)observe-box_a2_p2-1_b1
+        (t)     (f)     (t)     (f)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (t)     (f)     )goal
+        (t)     (f)     (t)     (t)joint-push_p4-1_p4-2_b3_a3_a4
+        (t)     (f)     (t)     (t)     )goal
+        (t)     (t))goal
+
+
+The compressed plan tree for a4:
+haq_observe-box_a4_p4-2_b3
+        (f)jgr_joint-push_p4-1_p4-2_b3_a3_a4
+        (f)     )goal
+        (t))goal
+
+ Child solution         a4
+waiting!
+
+Planning time: 00:00:00.2186595
+
+Plan tree for a4
+act-dummy-haq_observe-box_a4_p4-2_b3_a4
+        move_p4-1_p4-2_a4
+                act-haq_observe-box_a4_p4-2_b3_a4
+                        (f)dummy-left-haq_observe-box_a4_p4-2_b3_a4
+                        (f)     move_p4-2_p4-1_a4
+                        (f)             act-jgr_joint-push_p4-1_p4-2_b3_a3_a4_a4
+                        (f)                     goal-achieve-jgr_joint-push_p4-1_p4-2_b3_a3_a4_a4
+                        (f)                             )goal
+                        (t)dummy-right-haq_observe-box_a4_p4-2_b3_a4
+                        (t)     goal-achieve-right-haq_observe-box_a4_p4-2_b3_a4
+                        (t)             )goal
+
+Width: 2
+Height (before balancing): 4
+
+Overall time taken (for the last execution): 8256.5128
+The last backtrack was: 0
+Maximum width = 12
+Maximum height = 17
+
+
+Now transforming projected trees to solution trees!
+
+Before balancing, the plan tree for agent - a1
+observe-box_a1_p1-1_b0_a1
+        (f)move_p1-1_p2-1_a1
+        (f)     move_p2-1_p3-1_a1
+        (f)             move_p3-1_p4-1_a1
+        (f)                     move_p4-1_p4-2_a1
+        (f)                             observe-box_a4_p4-2_b3_a1
+        (f)                                     (f)move_p4-2_p4-1_a1
+        (f)                                     (f)     move_p4-1_p3-1_a1
+        (f)                                     (f)             move_p3-1_p3-2_a1
+        (f)                                     (f)                     observe-box_a3_p3-2_b2_a1
+        (f)                                     (f)                             (f)move_p3-2_p3-1_a1
+        (f)                                     (f)                             (f)     move_p3-1_p2-1_a1
+        (f)                                     (f)                             (f)             observe-box_a2_p2-1_b1_a1
+        (f)                                     (f)                             (f)                     (f))goal
+        (f)                                     (f)                             (f)                     (t)joint-push_p2-1_p2-2_b1_a1_a2_a1
+        (f)                                     (f)                             (f)                     (t)     )goal
+        (f)                                     (f)                             (t)move_p3-2_p3-1_a1
+        (f)                                     (f)                             (t)     move_p3-1_p2-1_a1
+        (f)                                     (f)                             (t)             move_p2-1_p2-2_a1
+        (f)                                     (f)                             (t)                     observe-box_a2_p2-2_b1_a1
+        (f)                                     (f)                             (t)                             (f)move_p2-2_p2-1_a1
+        (f)                                     (f)                             (t)                             (f)     joint-push_p2-1_p2-2_b1_a1_a2_a1
+        (f)                                     (f)                             (t)                             (f)             )goal
+        (f)                                     (f)                             (t)                             (t))goal
+        (f)                                     (t))goal
+        (t)move_p1-1_p2-1_a1
+        (t)     move_p2-1_p3-1_a1
+        (t)             move_p3-1_p4-1_a1
+        (t)                     move_p4-1_p4-2_a1
+        (t)                             observe-box_a4_p4-2_b3_a1
+        (t)                                     (f)move_p4-2_p4-1_a1
+        (t)                                     (f)     move_p4-1_p3-1_a1
+        (t)                                     (f)             move_p3-1_p2-1_a1
+        (t)                                     (f)                     observe-box_a2_p2-1_b1_a1
+        (t)                                     (f)                             (f)move_p2-1_p1-1_a1
+        (t)                                     (f)                             (f)     one-push_p1-1_p1-2_b0_a1_a1
+        (t)                                     (f)                             (f)             )goal
+        (t)                                     (f)                             (t)move_p2-1_p1-1_a1
+        (t)                                     (f)                             (t)     one-push_p1-1_p1-2_b0_a1_a1
+        (t)                                     (f)                             (t)             move_p1-1_p2-1_a1
+        (t)                                     (f)                             (t)                     joint-push_p2-1_p2-2_b1_a1_a2_a1
+        (t)                                     (f)                             (t)                             )goal
+        (t)                                     (t)move_p4-2_p4-1_a1
+        (t)                                     (t)     move_p4-1_p3-1_a1
+        (t)                                     (t)             move_p3-1_p2-1_a1
+        (t)                                     (t)                     move_p2-1_p1-1_a1
+        (t)                                     (t)                             one-push_p1-1_p1-2_b0_a1_a1
+        (t)                                     (t)                                     )goal
+
+Before balancing, the plan tree for agent - a2
+move_p2-1_p1-1_a2
+        observe-box_a1_p1-1_b0_a2
+                (f)move_p1-1_p2-1_a2
+                (f)     move_p2-1_p3-1_a2
+                (f)             move_p3-1_p4-1_a2
+                (f)                     move_p4-1_p4-2_a2
+                (f)                             observe-box_a4_p4-2_b3_a2
+                (f)                                     (f)move_p4-2_p4-1_a2
+                (f)                                     (f)     move_p4-1_p3-1_a2
+                (f)                                     (f)             move_p3-1_p3-2_a2
+                (f)                                     (f)                     observe-box_a3_p3-2_b2_a2
+                (f)                                     (f)                             (f)move_p3-2_p3-1_a2
+                (f)                                     (f)                             (f)     move_p3-1_p2-1_a2
+                (f)                                     (f)                             (f)             observe-box_a2_p2-1_b1_a2
+                (f)                                     (f)                             (f)                     (f))goal
+                (f)                                     (f)                             (f)                     (t)joint-push_p2-1_p2-2_b1_a1_a2_a2
+                (f)                                     (f)                             (f)                     (t)     )goal
+                (f)                                     (f)                             (t)move_p3-2_p3-1_a2
+                (f)                                     (f)                             (t)     move_p3-1_p2-1_a2
+                (f)                                     (f)                             (t)             move_p2-1_p2-2_a2
+                (f)                                     (f)                             (t)                     observe-box_a2_p2-2_b1_a2
+                (f)                                     (f)                             (t)                             (f)move_p2-2_p2-1_a2
+                (f)                                     (f)                             (t)                             (f)     joint-push_p2-1_p2-2_b1_a1_a2_a2
+                (f)                                     (f)                             (t)                             (f)             )goal
+                (f)                                     (f)                             (t)                             (t))goal
+                (f)                                     (t)move_p4-2_p4-1_a2
+                (f)                                     (t)     move_p4-1_p3-1_a2
+                (f)                                     (t)             observe-box_a3_p3-1_b2_a2
+                (f)                                     (t)                     (f)move_p3-1_p2-1_a2
+                (f)                                     (t)                     (f)     move_p2-1_p2-2_a2
+                (f)                                     (t)                     (f)             observe-box_a2_p2-2_b1_a2
+                (f)                                     (t)                     (f)                     (f)move_p2-2_p2-1_a2
+                (f)                                     (t)                     (f)                     (f)     joint-push_p2-1_p2-2_b1_a2_a3_a2
+                (f)                                     (t)                     (f)                     (f)             )goal
+                (f)                                     (t)                     (f)                     (t))goal
+                (f)                                     (t)                     (t)move_p3-1_p2-1_a2
+                (f)                                     (t)                     (t)     observe-box_a2_p2-1_b1_a2
+                (f)                                     (t)                     (t)             (f))goal
+                (f)                                     (t)                     (t)             (t)joint-push_p2-1_p2-2_b1_a2_a3_a2
+                (f)                                     (t)                     (t)             (t)     )goal
+                (t)move_p1-1_p2-1_a2
+                (t)     observe-box_a2_p2-1_b1_a2
+                (t)             (f))goal
+                (t)             (t)joint-push_p2-1_p2-2_b1_a2_a3_a2
+                (t)             (t)     )goal
+
+Before balancing, the plan tree for agent - a3
+move_p3-1_p2-1_a3
+        move_p2-1_p1-1_a3
+                observe-box_a1_p1-1_b0_a3
+                        (f)move_p1-1_p2-1_a3
+                        (f)     move_p2-1_p3-1_a3
+                        (f)             move_p3-1_p4-1_a3
+                        (f)                     move_p4-1_p4-2_a3
+                        (f)                             observe-box_a4_p4-2_b3_a3
+                        (f)                                     (f)move_p4-2_p4-1_a3
+                        (f)                                     (f)     move_p4-1_p3-1_a3
+                        (f)                                     (f)             move_p3-1_p3-2_a3
+                        (f)                                     (f)                     observe-box_a3_p3-2_b2_a3
+                        (f)                                     (f)                             (f)move_p3-2_p3-1_a3
+                        (f)                                     (f)                             (f)     one-push_p3-1_p3-2_b2_a3_a3
+                        (f)                                     (f)                             (f)             move_p3-1_p4-1_a3
+                        (f)                                     (f)                             (f)                     joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (f)                                     (f)                             (f)                             )goal
+                        (f)                                     (f)                             (t)move_p3-2_p3-1_a3
+                        (f)                                     (f)                             (t)     move_p3-1_p4-1_a3
+                        (f)                                     (f)                             (t)             joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (f)                                     (f)                             (t)                     )goal
+                        (f)                                     (t)move_p4-2_p4-1_a3
+                        (f)                                     (t)     move_p4-1_p3-1_a3
+                        (f)                                     (t)             observe-box_a3_p3-1_b2_a3
+                        (f)                                     (t)                     (f)move_p3-1_p2-1_a3
+                        (f)                                     (t)                     (f)     move_p2-1_p2-2_a3
+                        (f)                                     (t)                     (f)             observe-box_a2_p2-2_b1_a3
+                        (f)                                     (t)                     (f)                     (f)move_p2-2_p2-1_a3
+                        (f)                                     (t)                     (f)                     (f)     joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (f)                                     (t)                     (f)                     (f)             )goal
+                        (f)                                     (t)                     (f)                     (t))goal
+                        (f)                                     (t)                     (t)move_p3-1_p2-1_a3
+                        (f)                                     (t)                     (t)     observe-box_a2_p2-1_b1_a3
+                        (f)                                     (t)                     (t)             (f)move_p2-1_p3-1_a3
+                        (f)                                     (t)                     (t)             (f)     one-push_p3-1_p3-2_b2_a3_a3
+                        (f)                                     (t)                     (t)             (f)             )goal
+                        (f)                                     (t)                     (t)             (t)move_p2-1_p3-1_a3
+                        (f)                                     (t)                     (t)             (t)     one-push_p3-1_p3-2_b2_a3_a3
+                        (f)                                     (t)                     (t)             (t)             move_p3-1_p2-1_a3
+                        (f)                                     (t)                     (t)             (t)                     joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (f)                                     (t)                     (t)             (t)                             )goal
+                        (t)move_p1-1_p2-1_a3
+                        (t)     move_p2-1_p3-1_a3
+                        (t)             move_p3-1_p4-1_a3
+                        (t)                     move_p4-1_p4-2_a3
+                        (t)                             observe-box_a4_p4-2_b3_a3
+                        (t)                                     (f)move_p4-2_p4-1_a3
+                        (t)                                     (f)     move_p4-1_p3-1_a3
+                        (t)                                     (f)             observe-box_a3_p3-1_b2_a3
+                        (t)                                     (f)                     (f)move_p3-1_p4-1_a3
+                        (t)                                     (f)                     (f)     joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (t)                                     (f)                     (f)             )goal
+                        (t)                                     (f)                     (t)one-push_p3-1_p3-2_b2_a3_a3
+                        (t)                                     (f)                     (t)     move_p3-1_p4-1_a3
+                        (t)                                     (f)                     (t)             joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (t)                                     (f)                     (t)                     )goal
+                        (t)                                     (t)move_p4-2_p4-1_a3
+                        (t)                                     (t)     move_p4-1_p3-1_a3
+                        (t)                                     (t)             observe-box_a3_p3-1_b2_a3
+                        (t)                                     (t)                     (f)move_p3-1_p2-1_a3
+                        (t)                                     (t)                     (f)     observe-box_a3_p2-1_b1_a3
+                        (t)                                     (t)                     (f)             (f))goal
+                        (t)                                     (t)                     (f)             (t)joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (t)                                     (t)                     (f)             (t)     )goal
+                        (t)                                     (t)                     (t)move_p3-1_p2-1_a3
+                        (t)                                     (t)                     (t)     observe-box_a2_p2-1_b1_a3
+                        (t)                                     (t)                     (t)             (f)move_p2-1_p3-1_a3
+                        (t)                                     (t)                     (t)             (f)     one-push_p3-1_p3-2_b2_a3_a3
+                        (t)                                     (t)                     (t)             (f)             )goal
+                        (t)                                     (t)                     (t)             (t)move_p2-1_p3-1_a3
+                        (t)                                     (t)                     (t)             (t)     one-push_p3-1_p3-2_b2_a3_a3
+                        (t)                                     (t)                     (t)             (t)             move_p3-1_p2-1_a3
+                        (t)                                     (t)                     (t)             (t)                     joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (t)                                     (t)                     (t)             (t)                             )goal
+
+Before balancing, the plan tree for agent - a4
+move_p4-1_p4-2_a4
+        observe-box_a4_p4-2_b3_a4
+                (f)move_p4-2_p4-1_a4
+                (f)     joint-push_p4-1_p4-2_b3_a3_a4_a4
+                (f)             )goal
+                (t))goal
+
+
+Executable Plan Tree for a1
+observe-box_a1_p1-1_b0_a1
+        (f)move_p1-1_p2-1_a1
+        (f)     move_p2-1_p3-1_a1
+        (f)             move_p3-1_p4-1_a1
+        (f)                     move_p4-1_p4-2_a1
+        (f)                             observe-box_a4_p4-2_b3_a1
+        (f)                                     (f)move_p4-2_p4-1_a1
+        (f)                                     (f)     move_p4-1_p3-1_a1
+        (f)                                     (f)             move_p3-1_p3-2_a1
+        (f)                                     (f)                     observe-box_a3_p3-2_b2_a1
+        (f)                                     (f)                             (f)move_p3-2_p3-1_a1
+        (f)                                     (f)                             (f)     move_p3-1_p2-1_a1
+        (f)                                     (f)                             (f)             observe-box_a2_p2-1_b1_a1
+        (f)                                     (f)                             (f)                     (f))goal
+        (f)                                     (f)                             (f)                     (t)no-operation
+        (f)                                     (f)                             (f)                     (t)     no-operation
+        (f)                                     (f)                             (f)                     (t)             no-operation
+        (f)                                     (f)                             (f)                     (t)                     joint-push_p2-1_p2-2_b1_a1_a2_a1
+        (f)                                     (f)                             (f)                     (t)                             )goal
+        (f)                                     (f)                             (t)move_p3-2_p3-1_a1
+        (f)                                     (f)                             (t)     move_p3-1_p2-1_a1
+        (f)                                     (f)                             (t)             move_p2-1_p2-2_a1
+        (f)                                     (f)                             (t)                     observe-box_a2_p2-2_b1_a1
+        (f)                                     (f)                             (t)                             (f)move_p2-2_p2-1_a1
+        (f)                                     (f)                             (t)                             (f)     no-operation
+        (f)                                     (f)                             (t)                             (f)             joint-push_p2-1_p2-2_b1_a1_a2_a1
+        (f)                                     (f)                             (t)                             (f)                     )goal
+        (f)                                     (f)                             (t)                             (t))goal
+        (f)                                     (t))goal
+        (t)move_p1-1_p2-1_a1
+        (t)     move_p2-1_p3-1_a1
+        (t)             move_p3-1_p4-1_a1
+        (t)                     move_p4-1_p4-2_a1
+        (t)                             observe-box_a4_p4-2_b3_a1
+        (t)                                     (f)move_p4-2_p4-1_a1
+        (t)                                     (f)     move_p4-1_p3-1_a1
+        (t)                                     (f)             move_p3-1_p2-1_a1
+        (t)                                     (f)                     observe-box_a2_p2-1_b1_a1
+        (t)                                     (f)                             (f)move_p2-1_p1-1_a1
+        (t)                                     (f)                             (f)     one-push_p1-1_p1-2_b0_a1_a1
+        (t)                                     (f)                             (f)             )goal
+        (t)                                     (f)                             (t)move_p2-1_p1-1_a1
+        (t)                                     (f)                             (t)     one-push_p1-1_p1-2_b0_a1_a1
+        (t)                                     (f)                             (t)             move_p1-1_p2-1_a1
+        (t)                                     (f)                             (t)                     no-operation
+        (t)                                     (f)                             (t)                             no-operation
+        (t)                                     (f)                             (t)                                     no-operation
+        (t)                                     (f)                             (t)                                             joint-push_p2-1_p2-2_b1_a1_a2_a1
+        (t)                                     (f)                             (t)                                                     )goal
+        (t)                                     (t)move_p4-2_p4-1_a1
+        (t)                                     (t)     move_p4-1_p3-1_a1
+        (t)                                     (t)             move_p3-1_p2-1_a1
+        (t)                                     (t)                     move_p2-1_p1-1_a1
+        (t)                                     (t)                             one-push_p1-1_p1-2_b0_a1_a1
+        (t)                                     (t)                                     )goal
+
+Executable Plan Tree for a2
+move_p2-1_p1-1_a2
+        observe-box_a1_p1-1_b0_a2
+                (f)move_p1-1_p2-1_a2
+                (f)     move_p2-1_p3-1_a2
+                (f)             move_p3-1_p4-1_a2
+                (f)                     move_p4-1_p4-2_a2
+                (f)                             observe-box_a4_p4-2_b3_a2
+                (f)                                     (f)move_p4-2_p4-1_a2
+                (f)                                     (f)     move_p4-1_p3-1_a2
+                (f)                                     (f)             move_p3-1_p3-2_a2
+                (f)                                     (f)                     observe-box_a3_p3-2_b2_a2
+                (f)                                     (f)                             (f)move_p3-2_p3-1_a2
+                (f)                                     (f)                             (f)     move_p3-1_p2-1_a2
+                (f)                                     (f)                             (f)             observe-box_a2_p2-1_b1_a2
+                (f)                                     (f)                             (f)                     (f))goal
+                (f)                                     (f)                             (f)                     (t)no-operation
+                (f)                                     (f)                             (f)                     (t)     no-operation
+                (f)                                     (f)                             (f)                     (t)             joint-push_p2-1_p2-2_b1_a1_a2_a2
+                (f)                                     (f)                             (f)                     (t)                     )goal
+                (f)                                     (f)                             (t)move_p3-2_p3-1_a2
+                (f)                                     (f)                             (t)     move_p3-1_p2-1_a2
+                (f)                                     (f)                             (t)             move_p2-1_p2-2_a2
+                (f)                                     (f)                             (t)                     observe-box_a2_p2-2_b1_a2
+                (f)                                     (f)                             (t)                             (f)move_p2-2_p2-1_a2
+                (f)                                     (f)                             (t)                             (f)     joint-push_p2-1_p2-2_b1_a1_a2_a2
+                (f)                                     (f)                             (t)                             (f)             )goal
+                (f)                                     (f)                             (t)                             (t))goal
+                (f)                                     (t)move_p4-2_p4-1_a2
+                (f)                                     (t)     move_p4-1_p3-1_a2
+                (f)                                     (t)             observe-box_a3_p3-1_b2_a2
+                (f)                                     (t)                     (f)move_p3-1_p2-1_a2
+                (f)                                     (t)                     (f)     move_p2-1_p2-2_a2
+                (f)                                     (t)                     (f)             observe-box_a2_p2-2_b1_a2
+                (f)                                     (t)                     (f)                     (f)move_p2-2_p2-1_a2
+                (f)                                     (t)                     (f)                     (f)     no-operation
+                (f)                                     (t)                     (f)                     (f)             no-operation
+                (f)                                     (t)                     (f)                     (f)                     joint-push_p2-1_p2-2_b1_a2_a3_a2
+                (f)                                     (t)                     (f)                     (f)                             )goal
+                (f)                                     (t)                     (f)                     (t))goal
+                (f)                                     (t)                     (t)move_p3-1_p2-1_a2
+                (f)                                     (t)                     (t)     observe-box_a2_p2-1_b1_a2
+                (f)                                     (t)                     (t)             (f))goal
+                (f)                                     (t)                     (t)             (t)no-operation
+                (f)                                     (t)                     (t)             (t)     no-operation
+                (f)                                     (t)                     (t)             (t)             no-operation
+                (f)                                     (t)                     (t)             (t)                     no-operation
+                (f)                                     (t)                     (t)             (t)                             joint-push_p2-1_p2-2_b1_a2_a3_a2
+                (f)                                     (t)                     (t)             (t)                                     )goal
+                (t)move_p1-1_p2-1_a2
+                (t)     observe-box_a2_p2-1_b1_a2
+                (t)             (f))goal
+                (t)             (t)no-operation
+                (t)             (t)     no-operation
+                (t)             (t)             no-operation
+                (t)             (t)                     no-operation
+                (t)             (t)                             no-operation
+                (t)             (t)                                     no-operation
+                (t)             (t)                                             no-operation
+                (t)             (t)                                                     no-operation
+                (t)             (t)                                                             no-operation
+                (t)             (t)                                                                     no-operation
+                (t)             (t)                                                                             no-operation
+                (t)             (t)                                                                                     no-operation
+                (t)             (t)                                                                                             joint-push_p2-1_p2-2_b1_a2_a3_a2
+                (t)             (t)                                                                                                     )goal
+
+Executable Plan Tree for a3
+move_p3-1_p2-1_a3
+        move_p2-1_p1-1_a3
+                observe-box_a1_p1-1_b0_a3
+                        (f)move_p1-1_p2-1_a3
+                        (f)     move_p2-1_p3-1_a3
+                        (f)             move_p3-1_p4-1_a3
+                        (f)                     move_p4-1_p4-2_a3
+                        (f)                             observe-box_a4_p4-2_b3_a3
+                        (f)                                     (f)move_p4-2_p4-1_a3
+                        (f)                                     (f)     move_p4-1_p3-1_a3
+                        (f)                                     (f)             move_p3-1_p3-2_a3
+                        (f)                                     (f)                     observe-box_a3_p3-2_b2_a3
+                        (f)                                     (f)                             (f)move_p3-2_p3-1_a3
+                        (f)                                     (f)                             (f)     one-push_p3-1_p3-2_b2_a3_a3
+                        (f)                                     (f)                             (f)             move_p3-1_p4-1_a3
+                        (f)                                     (f)                             (f)                     joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (f)                                     (f)                             (f)                             )goal
+                        (f)                                     (f)                             (t)move_p3-2_p3-1_a3
+                        (f)                                     (f)                             (t)     move_p3-1_p4-1_a3
+                        (f)                                     (f)                             (t)             no-operation
+                        (f)                                     (f)                             (t)                     joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (f)                                     (f)                             (t)                             )goal
+                        (f)                                     (t)move_p4-2_p4-1_a3
+                        (f)                                     (t)     move_p4-1_p3-1_a3
+                        (f)                                     (t)             observe-box_a3_p3-1_b2_a3
+                        (f)                                     (t)                     (f)move_p3-1_p2-1_a3
+                        (f)                                     (t)                     (f)     move_p2-1_p2-2_a3
+                        (f)                                     (t)                     (f)             observe-box_a2_p2-2_b1_a3
+                        (f)                                     (t)                     (f)                     (f)move_p2-2_p2-1_a3
+                        (f)                                     (t)                     (f)                     (f)     no-operation
+                        (f)                                     (t)                     (f)                     (f)             joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (f)                                     (t)                     (f)                     (f)                     )goal
+                        (f)                                     (t)                     (f)                     (t))goal
+                        (f)                                     (t)                     (t)move_p3-1_p2-1_a3
+                        (f)                                     (t)                     (t)     observe-box_a2_p2-1_b1_a3
+                        (f)                                     (t)                     (t)             (f)move_p2-1_p3-1_a3
+                        (f)                                     (t)                     (t)             (f)     one-push_p3-1_p3-2_b2_a3_a3
+                        (f)                                     (t)                     (t)             (f)             )goal
+                        (f)                                     (t)                     (t)             (t)move_p2-1_p3-1_a3
+                        (f)                                     (t)                     (t)             (t)     one-push_p3-1_p3-2_b2_a3_a3
+                        (f)                                     (t)                     (t)             (t)             move_p3-1_p2-1_a3
+                        (f)                                     (t)                     (t)             (t)                     joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (f)                                     (t)                     (t)             (t)                             )goal
+                        (t)move_p1-1_p2-1_a3
+                        (t)     move_p2-1_p3-1_a3
+                        (t)             move_p3-1_p4-1_a3
+                        (t)                     move_p4-1_p4-2_a3
+                        (t)                             observe-box_a4_p4-2_b3_a3
+                        (t)                                     (f)move_p4-2_p4-1_a3
+                        (t)                                     (f)     move_p4-1_p3-1_a3
+                        (t)                                     (f)             observe-box_a3_p3-1_b2_a3
+                        (t)                                     (f)                     (f)move_p3-1_p4-1_a3
+                        (t)                                     (f)                     (f)     no-operation
+                        (t)                                     (f)                     (f)             no-operation
+                        (t)                                     (f)                     (f)                     no-operation
+                        (t)                                     (f)                     (f)                             joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (t)                                     (f)                     (f)                                     )goal
+                        (t)                                     (f)                     (t)one-push_p3-1_p3-2_b2_a3_a3
+                        (t)                                     (f)                     (t)     move_p3-1_p4-1_a3
+                        (t)                                     (f)                     (t)             no-operation
+                        (t)                                     (f)                     (t)                     no-operation
+                        (t)                                     (f)                     (t)                             joint-push_p4-1_p4-2_b3_a3_a4_a3
+                        (t)                                     (f)                     (t)                                     )goal
+                        (t)                                     (t)move_p4-2_p4-1_a3
+                        (t)                                     (t)     move_p4-1_p3-1_a3
+                        (t)                                     (t)             observe-box_a3_p3-1_b2_a3
+                        (t)                                     (t)                     (f)move_p3-1_p2-1_a3
+                        (t)                                     (t)                     (f)     observe-box_a3_p2-1_b1_a3
+                        (t)                                     (t)                     (f)             (f))goal
+                        (t)                                     (t)                     (f)             (t)no-operation
+                        (t)                                     (t)                     (f)             (t)     no-operation
+                        (t)                                     (t)                     (f)             (t)             no-operation
+                        (t)                                     (t)                     (f)             (t)                     joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (t)                                     (t)                     (f)             (t)                             )goal
+                        (t)                                     (t)                     (t)move_p3-1_p2-1_a3
+                        (t)                                     (t)                     (t)     observe-box_a2_p2-1_b1_a3
+                        (t)                                     (t)                     (t)             (f)move_p2-1_p3-1_a3
+                        (t)                                     (t)                     (t)             (f)     one-push_p3-1_p3-2_b2_a3_a3
+                        (t)                                     (t)                     (t)             (f)             )goal
+                        (t)                                     (t)                     (t)             (t)move_p2-1_p3-1_a3
+                        (t)                                     (t)                     (t)             (t)     one-push_p3-1_p3-2_b2_a3_a3
+                        (t)                                     (t)                     (t)             (t)             move_p3-1_p2-1_a3
+                        (t)                                     (t)                     (t)             (t)                     joint-push_p2-1_p2-2_b1_a2_a3_a3
+                        (t)                                     (t)                     (t)             (t)                             )goal
+
+Executable Plan Tree for a4
+move_p4-1_p4-2_a4
+        observe-box_a4_p4-2_b3_a4
+                (f)move_p4-2_p4-1_a4
+                (f)     no-operation
+                (f)             no-operation
+                (f)                     no-operation
+                (f)                             no-operation
+                (f)                                     no-operation
+                (f)                                             no-operation
+                (f)                                                     no-operation
+                (f)                                                             no-operation
+                (f)                                                                     no-operation
+                (f)                                                                             no-operation
+                (f)                                                                                     no-operation
+                (f)                                                                                             no-operation
+                (f)                                                                                                     joint-push_p4-1_p4-2_b3_a3_a4_a4
+                (f)                                                                                                             )goal
+                (t))goal
+
+
+Overall Maximum Tree Width: 12
+Overall Maximum Tree Height: 17
+
+Total number of backtracks: 0
+
+Overall time taken (including all the backtracks): 8784.6063

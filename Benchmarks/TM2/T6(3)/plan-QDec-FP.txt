@@ -1,0 +1,1768 @@
+0
+Solving the current team problem!
+
+Planning time: 00:00:00.2181978
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        move-agent_a3_room2_room3
+                observe-table_a3_table1_room3
+                        (f))goal
+                        (t)joint-lift-table_a2_a3_table1_room3
+                        (t)     joint-move-table_a2_a3_table1_room3_room4
+                        (t)             joint-drop-table_a2_a3_table1_room4
+                        (t)                     )goal
+
+Team plan width = 2
+Team plan height = 6
+time 00:00:00.3047384
+
+A refined projected plan tree for a1:
+observe-table_a3_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+)goal
+An empty plan for a1
+
+A refined projected plan tree for a2:
+observe-table_a3_table1_room3
+        (f))goal
+        (t)joint-lift-table_a2_a3_table1_room3
+        (t)     joint-move-table_a2_a3_table1_room3_room4
+        (t)             joint-drop-table_a2_a3_table1_room4
+        (t)                     )goal
+
+
+The compressed plan tree for a2:
+spk_observe-table_a3_table1_room3
+        (f))goal
+        (t)coh_joint-lift-table_a2_a3_table1_room3
+        (t)     3fn_joint-move-table_a2_a3_table1_room3_room4
+        (t)             r22_joint-drop-table_a2_a3_table1_room4
+        (t)                     )goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8069611
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table_a3_table1_room3
+        (f))goal
+        (t)joint-lift-table_a2_a3_table1_room3
+        (t)     joint-move-table_a2_a3_table1_room3_room4
+        (t)             joint-drop-table_a2_a3_table1_room4
+        (t)                     )goal
+
+
+The compressed plan tree for a3:
+yxi_observe-table_a3_table1_room3
+        (f))goal
+        (t)mfq_joint-lift-table_a2_a3_table1_room3
+        (t)     ud2_joint-move-table_a2_a3_table1_room3_room4
+        (t)             y1m_joint-drop-table_a2_a3_table1_room4
+        (t)                     )goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.2061431
+
+Plan tree for a3
+act-dummy-yxi_observe-table_a3_table1_room3_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        act-yxi_observe-table_a3_table1_room3_a3
+                                (f)dummy-left-yxi_observe-table_a3_table1_room3_a3
+                                (f)     goal-achieve-left-yxi_observe-table_a3_table1_room3_a3
+                                (f)             )goal
+                                (t)dummy-right-yxi_observe-table_a3_table1_room3_a3
+                                (t)     act-mfq_joint-lift-table_a2_a3_table1_room3_a3
+                                (t)             act-ud2_joint-move-table_a2_a3_table1_room3_room4_a3
+                                (t)                     act-y1m_joint-drop-table_a2_a3_table1_room4_a3
+                                (t)                             goal-achieve-y1m_joint-drop-table_a2_a3_table1_room4_a3
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1564.1907
+The last backtrack was: 0
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.7913978
+
+The observation a2 cannot make is: spk_observe-table_a3_table1_room3
+If executes, a2 will have to execute r22_joint-drop-table_a2_a3_table1_room4 in each leaf rooted with it
+
+1
+Solving the current team problem!
+
+Planning time: 00:00:00.1355528
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        move-agent_a3_room2_room3
+                move-agent_a3_room3_room4
+                        observe-table_a3_table1_room4
+                                (f)move-agent_a3_room4_room3
+                                (f)     joint-lift-table_a2_a3_table1_room3
+                                (f)             joint-move-table_a2_a3_table1_room3_room4
+                                (f)                     joint-drop-table_a3_a2_table1_room4
+                                (f)                             )goal
+                                (t))goal
+
+Team plan width = 2
+Team plan height = 8
+time 00:00:00.2063910
+
+A refined projected plan tree for a1:
+observe-table_a3_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+)goal
+An empty plan for a1
+
+A refined projected plan tree for a2:
+observe-table_a3_table1_room4
+        (f)joint-lift-table_a2_a3_table1_room3
+        (f)     joint-move-table_a2_a3_table1_room3_room4
+        (f)             joint-drop-table_a3_a2_table1_room4
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+2f3_observe-table_a3_table1_room4
+        (f)fri_joint-lift-table_a2_a3_table1_room3
+        (f)     fhb_joint-move-table_a2_a3_table1_room3_room4
+        (f)             sz3_joint-drop-table_a3_a2_table1_room4
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8551934
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table_a3_table1_room4
+        (f)joint-lift-table_a2_a3_table1_room3
+        (f)     joint-move-table_a2_a3_table1_room3_room4
+        (f)             joint-drop-table_a3_a2_table1_room4
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+qkk_observe-table_a3_table1_room4
+        (f)8dm_joint-lift-table_a2_a3_table1_room3
+        (f)     zwk_joint-move-table_a2_a3_table1_room3_room4
+        (f)             6cc_joint-drop-table_a3_a2_table1_room4
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.1507622
+
+Plan tree for a3
+act-dummy-qkk_observe-table_a3_table1_room4_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        move-agent_a3_room3_room4
+                                act-qkk_observe-table_a3_table1_room4_a3
+                                        (f)dummy-left-qkk_observe-table_a3_table1_room4_a3
+                                        (f)     move-agent_a3_room4_room3
+                                        (f)             act-8dm_joint-lift-table_a2_a3_table1_room3_a3
+                                        (f)                     act-zwk_joint-move-table_a2_a3_table1_room3_room4_a3
+                                        (f)                             act-6cc_joint-drop-table_a3_a2_table1_room4_a3
+                                        (f)                                     goal-achieve-6cc_joint-drop-table_a3_a2_table1_room4_a3
+                                        (f)                                             )goal
+                                        (t)dummy-right-qkk_observe-table_a3_table1_room4_a3
+                                        (t)     goal-achieve-right-qkk_observe-table_a3_table1_room4_a3
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1546.7077
+The last backtrack was: 1
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8401191
+
+The observation a2 cannot make is: 2f3_observe-table_a3_table1_room4
+If executes, a2 will have to execute sz3_joint-drop-table_a3_a2_table1_room4 in each leaf rooted with it
+
+2
+Solving the current team problem!
+
+Planning time: 00:00:00.1372811
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        move-agent_a1_room2_room3
+                observe-table_a1_table1_room3
+                        (f))goal
+                        (t)joint-lift-table_a1_a2_table1_room3
+                        (t)     joint-move-table_a1_a2_table1_room3_room4
+                        (t)             joint-drop-table_a1_a2_table1_room4
+                        (t)                     )goal
+
+Team plan width = 2
+Team plan height = 6
+time 00:00:00.1845871
+
+A refined projected plan tree for a1:
+observe-table_a1_table1_room3
+        (f))goal
+        (t)joint-lift-table_a1_a2_table1_room3
+        (t)     joint-move-table_a1_a2_table1_room3_room4
+        (t)             joint-drop-table_a1_a2_table1_room4
+        (t)                     )goal
+
+*
+The compressed plan tree for a1:
+xwy_observe-table_a1_table1_room3
+        (f))goal
+        (t)u6d_joint-lift-table_a1_a2_table1_room3
+        (t)     a4y_joint-move-table_a1_a2_table1_room3_room4
+        (t)             8ki_joint-drop-table_a1_a2_table1_room4
+        (t)                     )goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.2734627
+
+Plan tree for a1
+act-dummy-xwy_observe-table_a1_table1_room3_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        act-xwy_observe-table_a1_table1_room3_a1
+                                (f)dummy-left-xwy_observe-table_a1_table1_room3_a1
+                                (f)     goal-achieve-left-xwy_observe-table_a1_table1_room3_a1
+                                (f)             )goal
+                                (t)dummy-right-xwy_observe-table_a1_table1_room3_a1
+                                (t)     act-u6d_joint-lift-table_a1_a2_table1_room3_a1
+                                (t)             act-a4y_joint-move-table_a1_a2_table1_room3_room4_a1
+                                (t)                     act-8ki_joint-drop-table_a1_a2_table1_room4_a1
+                                (t)                             goal-achieve-8ki_joint-drop-table_a1_a2_table1_room4_a1
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+A refined projected plan tree for a2:
+observe-table_a1_table1_room3
+        (f))goal
+        (t)joint-lift-table_a1_a2_table1_room3
+        (t)     joint-move-table_a1_a2_table1_room3_room4
+        (t)             joint-drop-table_a1_a2_table1_room4
+        (t)                     )goal
+
+
+The compressed plan tree for a2:
+nxx_observe-table_a1_table1_room3
+        (f))goal
+        (t)fmv_joint-lift-table_a1_a2_table1_room3
+        (t)     0f8_joint-move-table_a1_a2_table1_room3_room4
+        (t)             p64_joint-drop-table_a1_a2_table1_room4
+        (t)                     )goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9731308
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table_a1_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+)goal
+An empty plan for a3
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1703.704
+The last backtrack was: 2
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.7388056
+
+The observation a2 cannot make is: nxx_observe-table_a1_table1_room3
+If executes, a2 will have to execute p64_joint-drop-table_a1_a2_table1_room4 in each leaf rooted with it
+
+3
+Solving the current team problem!
+
+Planning time: 00:00:00.2362886
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        move-agent_a1_room2_room3
+                move-agent_a1_room3_room4
+                        observe-table_a1_table1_room4
+                                (f)move-agent_a1_room4_room3
+                                (f)     joint-lift-table_a1_a2_table1_room3
+                                (f)             joint-move-table_a1_a2_table1_room3_room4
+                                (f)                     joint-drop-table_a2_a1_table1_room4
+                                (f)                             )goal
+                                (t))goal
+
+Team plan width = 2
+Team plan height = 8
+time 00:00:00.3696217
+
+A refined projected plan tree for a1:
+observe-table_a1_table1_room4
+        (f)joint-lift-table_a1_a2_table1_room3
+        (f)     joint-move-table_a1_a2_table1_room3_room4
+        (f)             joint-drop-table_a2_a1_table1_room4
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+fv9_observe-table_a1_table1_room4
+        (f)p8e_joint-lift-table_a1_a2_table1_room3
+        (f)     b6d_joint-move-table_a1_a2_table1_room3_room4
+        (f)             1s5_joint-drop-table_a2_a1_table1_room4
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.1814157
+
+Plan tree for a1
+act-dummy-fv9_observe-table_a1_table1_room4_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        move-agent_a1_room3_room4
+                                act-fv9_observe-table_a1_table1_room4_a1
+                                        (f)dummy-left-fv9_observe-table_a1_table1_room4_a1
+                                        (f)     move-agent_a1_room4_room3
+                                        (f)             act-p8e_joint-lift-table_a1_a2_table1_room3_a1
+                                        (f)                     act-b6d_joint-move-table_a1_a2_table1_room3_room4_a1
+                                        (f)                             act-1s5_joint-drop-table_a2_a1_table1_room4_a1
+                                        (f)                                     goal-achieve-1s5_joint-drop-table_a2_a1_table1_room4_a1
+                                        (f)                                             )goal
+                                        (t)dummy-right-fv9_observe-table_a1_table1_room4_a1
+                                        (t)     goal-achieve-right-fv9_observe-table_a1_table1_room4_a1
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+A refined projected plan tree for a2:
+observe-table_a1_table1_room4
+        (f)joint-lift-table_a1_a2_table1_room3
+        (f)     joint-move-table_a1_a2_table1_room3_room4
+        (f)             joint-drop-table_a2_a1_table1_room4
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+tuk_observe-table_a1_table1_room4
+        (f)8r4_joint-lift-table_a1_a2_table1_room3
+        (f)     esa_joint-move-table_a1_a2_table1_room3_room4
+        (f)             buq_joint-drop-table_a2_a1_table1_room4
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8941982
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table_a1_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+)goal
+An empty plan for a3
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1827.0755
+The last backtrack was: 3
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9814946
+
+The observation a2 cannot make is: tuk_observe-table_a1_table1_room4
+If executes, a2 will have to execute buq_joint-drop-table_a2_a1_table1_room4 in each leaf rooted with it
+
+4
+Solving the current team problem!
+
+Planning time: 00:00:00.1944952
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        move-agent_a1_room2_room3
+                move-agent_a1_room3_room4
+                        obs-nvjzc-a1-a2-a3_a3
+                                observe-table-tuk_a1_table1_room4
+                                        (f)commit-uxmno-a1-a2-a3_a3
+                                        (f)     move-agent_a1_room4_room3
+                                        (f)             joint-lift-table_a1_a2_table1_room3
+                                        (f)                     joint-move-table_a1_a2_table1_room3_room4
+                                        (f)                             joint-drop-table-vzp6_a1_a2_table1_room4_dd
+                                        (f)                                     )goal
+                                        (t))goal
+
+Team plan width = 2
+Team plan height = 10
+time 00:00:00.3995845
+
+A refined projected plan tree for a1:
+observe-table-tuk_a1_table1_room4
+        (f)joint-lift-table_a1_a2_table1_room3
+        (f)     joint-move-table_a1_a2_table1_room3_room4
+        (f)             joint-drop-table-vzp6_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+yuk_observe-table-tuk_a1_table1_room4
+        (f)zf6_joint-lift-table_a1_a2_table1_room3
+        (f)     diz_joint-move-table_a1_a2_table1_room3_room4
+        (f)             4pk_joint-drop-table-vzp6_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.2261256
+
+Plan tree for a1
+act-dummy-yuk_observe-table-tuk_a1_table1_room4_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        move-agent_a1_room3_room4
+                                act-yuk_observe-table-tuk_a1_table1_room4_a1
+                                        (f)dummy-left-yuk_observe-table-tuk_a1_table1_room4_a1
+                                        (f)     move-agent_a1_room4_room3
+                                        (f)             act-zf6_joint-lift-table_a1_a2_table1_room3_a1
+                                        (f)                     act-diz_joint-move-table_a1_a2_table1_room3_room4_a1
+                                        (f)                             act-4pk_joint-drop-table-vzp6_a1_a2_table1_room4_dd_a1
+                                        (f)                                     goal-achieve-4pk_joint-drop-table-vzp6_a1_a2_table1_room4_dd_a1
+                                        (f)                                             )goal
+                                        (t)dummy-right-yuk_observe-table-tuk_a1_table1_room4_a1
+                                        (t)     goal-achieve-right-yuk_observe-table-tuk_a1_table1_room4_a1
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+A refined projected plan tree for a2:
+observe-table-tuk_a1_table1_room4
+        (f)joint-lift-table_a1_a2_table1_room3
+        (f)     joint-move-table_a1_a2_table1_room3_room4
+        (f)             joint-drop-table-vzp6_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+dv6_observe-table-tuk_a1_table1_room4
+        (f)u6n_joint-lift-table_a1_a2_table1_room3
+        (f)     fwf_joint-move-table_a1_a2_table1_room3_room4
+        (f)             2v2_joint-drop-table-vzp6_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8735439
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-tuk_a1_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+)goal
+An empty plan for a3
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 2033.5865
+The last backtrack was: 4
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9969983
+
+The observation a2 cannot make is: dv6_observe-table-tuk_a1_table1_room4
+If executes, a2 will have to execute 2v2_joint-drop-table-vzp6_a1_a2_table1_room4_dd in each leaf rooted with it
+
+5
+Solving the current team problem!
+
+Planning time: 00:00:00.1530712
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        move-agent_a3_room2_room3
+                move-agent_a3_room3_room4
+                        obs-hp0br-a1-a2-a3_a3
+                                observe-table-2f3_a3_table1_room4
+                                        (f)commit-htil9-a1-a2-a3_a3
+                                        (f)     move-agent_a3_room4_room3
+                                        (f)             joint-lift-table_a2_a3_table1_room3
+                                        (f)                     joint-move-table_a2_a3_table1_room3_room4
+                                        (f)                             joint-drop-table-jvoz_a2_a3_table1_room4_dd
+                                        (f)                                     )goal
+                                        (t))goal
+
+Team plan width = 2
+Team plan height = 10
+time 00:00:00.2857940
+
+A refined projected plan tree for a1:
+observe-table-2f3_a3_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+)goal
+An empty plan for a1
+
+A refined projected plan tree for a2:
+observe-table-2f3_a3_table1_room4
+        (f)joint-lift-table_a2_a3_table1_room3
+        (f)     joint-move-table_a2_a3_table1_room3_room4
+        (f)             joint-drop-table-jvoz_a2_a3_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+k2y_observe-table-2f3_a3_table1_room4
+        (f)dko_joint-lift-table_a2_a3_table1_room3
+        (f)     3da_joint-move-table_a2_a3_table1_room3_room4
+        (f)             t0n_joint-drop-table-jvoz_a2_a3_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8555105
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-2f3_a3_table1_room4
+        (f)joint-lift-table_a2_a3_table1_room3
+        (f)     joint-move-table_a2_a3_table1_room3_room4
+        (f)             joint-drop-table-jvoz_a2_a3_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+3m0_observe-table-2f3_a3_table1_room4
+        (f)gxj_joint-lift-table_a2_a3_table1_room3
+        (f)     fzf_joint-move-table_a2_a3_table1_room3_room4
+        (f)             946_joint-drop-table-jvoz_a2_a3_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.1934156
+
+Plan tree for a3
+act-dummy-3m0_observe-table-2f3_a3_table1_room4_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        move-agent_a3_room3_room4
+                                act-3m0_observe-table-2f3_a3_table1_room4_a3
+                                        (f)dummy-left-3m0_observe-table-2f3_a3_table1_room4_a3
+                                        (f)     move-agent_a3_room4_room3
+                                        (f)             act-gxj_joint-lift-table_a2_a3_table1_room3_a3
+                                        (f)                     act-fzf_joint-move-table_a2_a3_table1_room3_room4_a3
+                                        (f)                             act-946_joint-drop-table-jvoz_a2_a3_table1_room4_dd_a3
+                                        (f)                                     goal-achieve-946_joint-drop-table-jvoz_a2_a3_table1_room4_dd_a3
+                                        (f)                                             )goal
+                                        (t)dummy-right-3m0_observe-table-2f3_a3_table1_room4_a3
+                                        (t)     goal-achieve-right-3m0_observe-table-2f3_a3_table1_room4_a3
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1670.9796
+The last backtrack was: 5
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.7588642
+
+The observation a2 cannot make is: k2y_observe-table-2f3_a3_table1_room4
+If executes, a2 will have to execute t0n_joint-drop-table-jvoz_a2_a3_table1_room4_dd in each leaf rooted with it
+
+6
+Solving the current team problem!
+
+Planning time: 00:00:00.1214115
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        move-agent_a1_room2_room3
+                move-agent_a1_room3_room4
+                        obs-nvjzc-a1-a2-a3_a3
+                                obs-ndmki-a1-a2-a3_a3
+                                        observe-table-tuk-dv6_a1_table1_room4
+                                                (f)move-agent_a3_room1_room2
+                                                (f)     move-agent_a3_room2_room3
+                                                (f)             commit-jregp-a1-a2-a3_a3
+                                                (f)                     joint-lift-table_a2_a3_table1_room3
+                                                (f)                             joint-move-table_a2_a3_table1_room3_room4
+                                                (f)                                     joint-drop-table-v9bk_a3_a2_table1_room4_dd
+                                                (f)                                             )goal
+                                                (t))goal
+
+Team plan width = 2
+Team plan height = 12
+time 00:00:00.2330776
+
+A refined projected plan tree for a1:
+observe-table-tuk-dv6_a1_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+)goal
+An empty plan for a1
+
+A refined projected plan tree for a2:
+observe-table-tuk-dv6_a1_table1_room4
+        (f)joint-lift-table_a2_a3_table1_room3
+        (f)     joint-move-table_a2_a3_table1_room3_room4
+        (f)             joint-drop-table-v9bk_a3_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+8uv_observe-table-tuk-dv6_a1_table1_room4
+        (f)w68_joint-lift-table_a2_a3_table1_room3
+        (f)     k69_joint-move-table_a2_a3_table1_room3_room4
+        (f)             rpm_joint-drop-table-v9bk_a3_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.5893250
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-tuk-dv6_a1_table1_room4
+        (f)joint-lift-table_a2_a3_table1_room3
+        (f)     joint-move-table_a2_a3_table1_room3_room4
+        (f)             joint-drop-table-v9bk_a3_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+i97_observe-table-tuk-dv6_a1_table1_room4
+        (f)lal_joint-lift-table_a2_a3_table1_room3
+        (f)     ku4_joint-move-table_a2_a3_table1_room3_room4
+        (f)             t0u_joint-drop-table-v9bk_a3_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.2514359
+
+Plan tree for a3
+act-dummy-i97_observe-table-tuk-dv6_a1_table1_room4_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        move-agent_a3_room3_room4
+                                act-i97_observe-table-tuk-dv6_a1_table1_room4_a3
+                                        (f)dummy-left-i97_observe-table-tuk-dv6_a1_table1_room4_a3
+                                        (f)     move-agent_a3_room4_room3
+                                        (f)             act-lal_joint-lift-table_a2_a3_table1_room3_a3
+                                        (f)                     act-ku4_joint-move-table_a2_a3_table1_room3_room4_a3
+                                        (f)                             act-t0u_joint-drop-table-v9bk_a3_a2_table1_room4_dd_a3
+                                        (f)                                     goal-achieve-t0u_joint-drop-table-v9bk_a3_a2_table1_room4_dd_a3
+                                        (f)                                             )goal
+                                        (t)dummy-right-i97_observe-table-tuk-dv6_a1_table1_room4_a3
+                                        (t)     goal-achieve-right-i97_observe-table-tuk-dv6_a1_table1_room4_a3
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1504.5204
+The last backtrack was: 6
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9318995
+
+The observation a2 cannot make is: 8uv_observe-table-tuk-dv6_a1_table1_room4
+If executes, a2 will have to execute rpm_joint-drop-table-v9bk_a3_a2_table1_room4_dd in each leaf rooted with it
+
+7
+Solving the current team problem!
+
+Planning time: 00:00:00.1423200
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        obs-945ks-a1-a2-a3_a3
+                move-agent_a1_room2_room3
+                        observe-table-nxx_a1_table1_room3
+                                (f))goal
+                                (t)commit-if6cw-a1-a2-a3_a3
+                                (t)     joint-lift-table_a1_a2_table1_room3
+                                (t)             joint-move-table_a1_a2_table1_room3_room4
+                                (t)                     joint-drop-table-hzh5_a2_a1_table1_room4_dd
+                                (t)                             )goal
+
+Team plan width = 2
+Team plan height = 8
+time 00:00:00.2669398
+
+A refined projected plan tree for a1:
+observe-table-nxx_a1_table1_room3
+        (f))goal
+        (t)joint-lift-table_a1_a2_table1_room3
+        (t)     joint-move-table_a1_a2_table1_room3_room4
+        (t)             joint-drop-table-hzh5_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a1:
+x88_observe-table-nxx_a1_table1_room3
+        (f))goal
+        (t)5x5_joint-lift-table_a1_a2_table1_room3
+        (t)     wk7_joint-move-table_a1_a2_table1_room3_room4
+        (t)             2fz_joint-drop-table-hzh5_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.1627141
+
+Plan tree for a1
+act-dummy-x88_observe-table-nxx_a1_table1_room3_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        act-x88_observe-table-nxx_a1_table1_room3_a1
+                                (f)dummy-left-x88_observe-table-nxx_a1_table1_room3_a1
+                                (f)     goal-achieve-left-x88_observe-table-nxx_a1_table1_room3_a1
+                                (f)             )goal
+                                (t)dummy-right-x88_observe-table-nxx_a1_table1_room3_a1
+                                (t)     act-5x5_joint-lift-table_a1_a2_table1_room3_a1
+                                (t)             act-wk7_joint-move-table_a1_a2_table1_room3_room4_a1
+                                (t)                     act-2fz_joint-drop-table-hzh5_a2_a1_table1_room4_dd_a1
+                                (t)                             goal-achieve-2fz_joint-drop-table-hzh5_a2_a1_table1_room4_dd_a1
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+A refined projected plan tree for a2:
+observe-table-nxx_a1_table1_room3
+        (f))goal
+        (t)joint-lift-table_a1_a2_table1_room3
+        (t)     joint-move-table_a1_a2_table1_room3_room4
+        (t)             joint-drop-table-hzh5_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a2:
+2hh_observe-table-nxx_a1_table1_room3
+        (f))goal
+        (t)ci4_joint-lift-table_a1_a2_table1_room3
+        (t)     nm6_joint-move-table_a1_a2_table1_room3_room4
+        (t)             n8y_joint-drop-table-hzh5_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:01.0032564
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-nxx_a1_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+)goal
+An empty plan for a3
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1903.7154
+The last backtrack was: 7
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9605338
+
+The observation a2 cannot make is: 2hh_observe-table-nxx_a1_table1_room3
+If executes, a2 will have to execute n8y_joint-drop-table-hzh5_a2_a1_table1_room4_dd in each leaf rooted with it
+
+8
+Solving the current team problem!
+
+Planning time: 00:00:00.1697435
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        move-agent_a3_room2_room3
+                move-agent_a3_room3_room4
+                        obs-hp0br-a1-a2-a3_a3
+                                obs-ur6vs-a1-a2-a3_a3
+                                        observe-table-2f3-k2y_a3_table1_room4
+                                                (f)move-agent_a1_room1_room2
+                                                (f)     move-agent_a3_room4_room3
+                                                (f)             move-agent_a1_room2_room3
+                                                (f)                     joint-lift-table_a1_a2_table1_room3
+                                                (f)                             commit-uxmno-a1-a2-a3_a3
+                                                (f)                                     commit-r0zj3-a1-a2-a3_a3
+                                                (f)                                             joint-move-table_a1_a2_table1_room3_room4
+                                                (f)                                                     joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd
+                                                (f)                                                             )goal
+                                                (t))goal
+
+Team plan width = 2
+Team plan height = 14
+time 00:00:00.3287339
+
+A refined projected plan tree for a1:
+observe-table-2f3-k2y_a3_table1_room4
+        (f)joint-lift-table_a1_a2_table1_room3
+        (f)     joint-move-table_a1_a2_table1_room3_room4
+        (f)             joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+m3y_observe-table-2f3-k2y_a3_table1_room4
+        (f)4zk_joint-lift-table_a1_a2_table1_room3
+        (f)     bo4_joint-move-table_a1_a2_table1_room3_room4
+        (f)             a97_joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.3136701
+
+Plan tree for a1
+act-dummy-m3y_observe-table-2f3-k2y_a3_table1_room4_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        move-agent_a1_room3_room4
+                                act-m3y_observe-table-2f3-k2y_a3_table1_room4_a1
+                                        (f)dummy-left-m3y_observe-table-2f3-k2y_a3_table1_room4_a1
+                                        (f)     move-agent_a1_room4_room3
+                                        (f)             act-4zk_joint-lift-table_a1_a2_table1_room3_a1
+                                        (f)                     act-bo4_joint-move-table_a1_a2_table1_room3_room4_a1
+                                        (f)                             act-a97_joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd_a1
+                                        (f)                                     goal-achieve-a97_joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd_a1
+                                        (f)                                             )goal
+                                        (t)dummy-right-m3y_observe-table-2f3-k2y_a3_table1_room4_a1
+                                        (t)     goal-achieve-right-m3y_observe-table-2f3-k2y_a3_table1_room4_a1
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+A refined projected plan tree for a2:
+observe-table-2f3-k2y_a3_table1_room4
+        (f)joint-lift-table_a1_a2_table1_room3
+        (f)     joint-move-table_a1_a2_table1_room3_room4
+        (f)             joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+aoi_observe-table-2f3-k2y_a3_table1_room4
+        (f)d4f_joint-lift-table_a1_a2_table1_room3
+        (f)     pq4_joint-move-table_a1_a2_table1_room3_room4
+        (f)             ht3_joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8440410
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-2f3-k2y_a3_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+)goal
+An empty plan for a3
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1900.729
+The last backtrack was: 8
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:01.0032920
+
+The observation a2 cannot make is: aoi_observe-table-2f3-k2y_a3_table1_room4
+If executes, a2 will have to execute ht3_joint-drop-table-vzp6-ghjr_a1_a2_table1_room4_dd in each leaf rooted with it
+
+9
+Solving the current team problem!
+
+Planning time: 00:00:00.1871263
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        obs-iky9w-a1-a2-a3_a3
+                move-agent_a3_room2_room3
+                        observe-table-spk_a3_table1_room3
+                                (f))goal
+                                (t)commit-jregp-a1-a2-a3_a3
+                                (t)     commit-7jhhz-a1-a2-a3_a3
+                                (t)             joint-lift-table_a2_a3_table1_room3
+                                (t)                     joint-move-table_a2_a3_table1_room3_room4
+                                (t)                             joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd
+                                (t)                                     )goal
+
+Team plan width = 2
+Team plan height = 9
+time 00:00:00.3317603
+
+A refined projected plan tree for a1:
+observe-table-spk_a3_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+)goal
+An empty plan for a1
+
+A refined projected plan tree for a2:
+observe-table-spk_a3_table1_room3
+        (f))goal
+        (t)joint-lift-table_a2_a3_table1_room3
+        (t)     joint-move-table_a2_a3_table1_room3_room4
+        (t)             joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a2:
+ehl_observe-table-spk_a3_table1_room3
+        (f))goal
+        (t)afo_joint-lift-table_a2_a3_table1_room3
+        (t)     yja_joint-move-table_a2_a3_table1_room3_room4
+        (t)             kt4_joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:01.0561435
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-spk_a3_table1_room3
+        (f))goal
+        (t)joint-lift-table_a2_a3_table1_room3
+        (t)     joint-move-table_a2_a3_table1_room3_room4
+        (t)             joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a3:
+h2u_observe-table-spk_a3_table1_room3
+        (f))goal
+        (t)w00_joint-lift-table_a2_a3_table1_room3
+        (t)     51h_joint-move-table_a2_a3_table1_room3_room4
+        (t)             jc3_joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.2286899
+
+Plan tree for a3
+act-dummy-h2u_observe-table-spk_a3_table1_room3_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        act-h2u_observe-table-spk_a3_table1_room3_a3
+                                (f)dummy-left-h2u_observe-table-spk_a3_table1_room3_a3
+                                (f)     goal-achieve-left-h2u_observe-table-spk_a3_table1_room3_a3
+                                (f)             )goal
+                                (t)dummy-right-h2u_observe-table-spk_a3_table1_room3_a3
+                                (t)     act-w00_joint-lift-table_a2_a3_table1_room3_a3
+                                (t)             act-51h_joint-move-table_a2_a3_table1_room3_room4_a3
+                                (t)                     act-jc3_joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd_a3
+                                (t)                             goal-achieve-jc3_joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd_a3
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 2037.3886
+The last backtrack was: 9
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.7988246
+
+The observation a2 cannot make is: ehl_observe-table-spk_a3_table1_room3
+If executes, a2 will have to execute kt4_joint-drop-table-v9bk-cbkk_a3_a2_table1_room4_dd in each leaf rooted with it
+
+10
+Solving the current team problem!
+
+Planning time: 00:00:00.2567938
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        obs-945ks-a1-a2-a3_a3
+                move-agent_a1_room2_room3
+                        commit-if6cw-a1-a2-a3_a3
+                                commit-5yqu7-a1-a2-a3_a3
+                                        obs-icedq-a1-a2-a3_a3
+                                                observe-table-nxx-2hh_a1_table1_room3
+                                                        (f)move-agent_a1_room3_room4
+                                                        (f)     move-agent_a2_room3_room4
+                                                        (f)             joint-lift-table_a1_a2_table1_room4
+                                                        (f)                     joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+                                                        (f)                             )goal
+                                                        (t)joint-lift-table_a1_a2_table1_room3
+                                                        (t)     joint-move-table_a1_a2_table1_room3_room4
+                                                        (t)             joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+                                                        (t)                     )goal
+
+Team plan width = 2
+Team plan height = 11
+time 00:00:00.4303357
+
+A refined projected plan tree for a1:
+observe-table-nxx-2hh_a1_table1_room3
+        (f)joint-lift-table_a1_a2_table1_room4
+        (f)     joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (f)             )goal
+        (t)joint-lift-table_a1_a2_table1_room3
+        (t)     joint-move-table_a1_a2_table1_room3_room4
+        (t)             joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a1:
+wjr_observe-table-nxx-2hh_a1_table1_room3
+        (f)18s_joint-lift-table_a1_a2_table1_room4
+        (f)     4ek_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (f)             )goal
+        (t)5zs_joint-lift-table_a1_a2_table1_room3
+        (t)     9bj_joint-move-table_a1_a2_table1_room3_room4
+        (t)             qm0_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.2182143
+
+Plan tree for a1
+act-dummy-wjr_observe-table-nxx-2hh_a1_table1_room3_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        act-wjr_observe-table-nxx-2hh_a1_table1_room3_a1
+                                (f)dummy-left-wjr_observe-table-nxx-2hh_a1_table1_room3_a1
+                                (f)     move-agent_a1_room3_room4
+                                (f)             act-18s_joint-lift-table_a1_a2_table1_room4_a1
+                                (f)                     act-4ek_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd_a1
+                                (f)                             goal-achieve-4ek_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd_a1
+                                (f)                                     )goal
+                                (t)dummy-right-wjr_observe-table-nxx-2hh_a1_table1_room3_a1
+                                (t)     act-5zs_joint-lift-table_a1_a2_table1_room3_a1
+                                (t)             act-9bj_joint-move-table_a1_a2_table1_room3_room4_a1
+                                (t)                     act-qm0_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd_a1
+                                (t)                             goal-achieve-qm0_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd_a1
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+A refined projected plan tree for a2:
+observe-table-nxx-2hh_a1_table1_room3
+        (f)joint-lift-table_a1_a2_table1_room4
+        (f)     joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (f)             )goal
+        (t)joint-lift-table_a1_a2_table1_room3
+        (t)     joint-move-table_a1_a2_table1_room3_room4
+        (t)             joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a2:
+705_observe-table-nxx-2hh_a1_table1_room3
+        (f)n6b_joint-lift-table_a1_a2_table1_room4
+        (f)     u2z_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (f)             )goal
+        (t)dm1_joint-lift-table_a1_a2_table1_room3
+        (t)     v4f_joint-move-table_a1_a2_table1_room3_room4
+        (t)             ro5_joint-drop-table-hzh5-6316_a2_a1_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:01.0120959
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-nxx-2hh_a1_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+)goal
+An empty plan for a3
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 2170.3721
+The last backtrack was: 10
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.8418516
+
+The observation a2 cannot make is: 705_observe-table-nxx-2hh_a1_table1_room3
+If executes, a2 will have to execute n6b_joint-lift-table_a1_a2_table1_room4 in each leaf rooted with it
+
+11
+Solving the current team problem!
+
+Planning time: 00:00:00.2653603
+
+The original plan tree!
+
+move-agent_a3_room1_room2
+        obs-vb7bs-a1-a2-a3_a3
+                move-agent_a3_room2_room3
+                        commit-hv9z9-a1-a2-a3_a3
+                                commit-htil9-a1-a2-a3_a3
+                                        obs-iky9w-a1-a2-a3_a3
+                                                observe-table-spk-ehl_a3_table1_room3
+                                                        (f)move-agent_a2_room3_room4
+                                                        (f)     move-agent_a3_room3_room4
+                                                        (f)             joint-lift-table_a2_a3_table1_room4
+                                                        (f)                     joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+                                                        (f)                             )goal
+                                                        (t)joint-lift-table_a2_a3_table1_room3
+                                                        (t)     joint-move-table_a2_a3_table1_room3_room4
+                                                        (t)             joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+                                                        (t)                     )goal
+
+Team plan width = 2
+Team plan height = 11
+time 00:00:00.4013787
+
+A refined projected plan tree for a1:
+observe-table-spk-ehl_a3_table1_room3
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+)goal
+An empty plan for a1
+
+A refined projected plan tree for a2:
+observe-table-spk-ehl_a3_table1_room3
+        (f)joint-lift-table_a2_a3_table1_room4
+        (f)     joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (f)             )goal
+        (t)joint-lift-table_a2_a3_table1_room3
+        (t)     joint-move-table_a2_a3_table1_room3_room4
+        (t)             joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a2:
+76k_observe-table-spk-ehl_a3_table1_room3
+        (f)rqp_joint-lift-table_a2_a3_table1_room4
+        (f)     uld_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (f)             )goal
+        (t)cxz_joint-lift-table_a2_a3_table1_room3
+        (t)     rpo_joint-move-table_a2_a3_table1_room3_room4
+        (t)             qlm_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a2
+waiting!
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9333516
+
+Plan tree for a2
+
+Width: 0
+Height (before balancing): 0
+
+A refined projected plan tree for a3:
+observe-table-spk-ehl_a3_table1_room3
+        (f)joint-lift-table_a2_a3_table1_room4
+        (f)     joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (f)             )goal
+        (t)joint-lift-table_a2_a3_table1_room3
+        (t)     joint-move-table_a2_a3_table1_room3_room4
+        (t)             joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (t)                     )goal
+
+
+The compressed plan tree for a3:
+8in_observe-table-spk-ehl_a3_table1_room3
+        (f)pgf_joint-lift-table_a2_a3_table1_room4
+        (f)     201_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (f)             )goal
+        (t)sk5_joint-lift-table_a2_a3_table1_room3
+        (t)     mrx_joint-move-table_a2_a3_table1_room3_room4
+        (t)             ntq_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd
+        (t)                     )goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.2025058
+
+Plan tree for a3
+act-dummy-8in_observe-table-spk-ehl_a3_table1_room3_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        act-8in_observe-table-spk-ehl_a3_table1_room3_a3
+                                (f)dummy-left-8in_observe-table-spk-ehl_a3_table1_room3_a3
+                                (f)     move-agent_a3_room3_room4
+                                (f)             act-pgf_joint-lift-table_a2_a3_table1_room4_a3
+                                (f)                     act-201_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd_a3
+                                (f)                             goal-achieve-201_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd_a3
+                                (f)                                     )goal
+                                (t)dummy-right-8in_observe-table-spk-ehl_a3_table1_room3_a3
+                                (t)     act-sk5_joint-lift-table_a2_a3_table1_room3_a3
+                                (t)             act-mrx_joint-move-table_a2_a3_table1_room3_room4_a3
+                                (t)                     act-ntq_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd_a3
+                                (t)                             goal-achieve-ntq_joint-drop-table-jvoz-vcqn_a2_a3_table1_room4_dd_a3
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+a2 has failed to plan!
+
+
+Overall time taken (for the last execution): 1772.8277
+The last backtrack was: 11
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+FF failed to meet timeout
+*
+Planning time: 00:00:00.9398652
+
+The observation a2 cannot make is: 76k_observe-table-spk-ehl_a3_table1_room3
+If executes, a2 will have to execute rqp_joint-lift-table_a2_a3_table1_room4 in each leaf rooted with it
+
+12
+Solving the current team problem!
+
+Planning time: 00:00:00.1842441
+
+The original plan tree!
+
+move-agent_a1_room1_room2
+        move-agent_a1_room2_room3
+                move-agent_a1_room3_room4
+                        obs-nvjzc-a1-a2-a3_a3
+                                obs-ndmki-a1-a2-a3_a3
+                                        obs-mnu37-a1-a2-a3_a3
+                                                observe-table-tuk-dv6-8uv_a1_table1_room4
+                                                        (f)move-agent_a3_room1_room2
+                                                        (f)     move-agent_a1_room4_room3
+                                                        (f)             move-agent_a3_room2_room3
+                                                        (f)                     joint-lift-table_a1_a3_table1_room3
+                                                        (f)                             joint-move-table_a1_a3_table1_room3_room4
+                                                        (f)                                     joint-drop-table_a1_a3_table1_room4
+                                                        (f)                                             )goal
+                                                        (t))goal
+
+Team plan width = 2
+Team plan height = 13
+time 00:00:00.3322342
+
+A refined projected plan tree for a1:
+observe-table-tuk-dv6-8uv_a1_table1_room4
+        (f)joint-lift-table_a1_a3_table1_room3
+        (f)     joint-move-table_a1_a3_table1_room3_room4
+        (f)             joint-drop-table_a1_a3_table1_room4
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a1:
+ppj_observe-table-tuk-dv6-8uv_a1_table1_room4
+        (f)p3v_joint-lift-table_a1_a3_table1_room3
+        (f)     8se_joint-move-table_a1_a3_table1_room3_room4
+        (f)             aw7_joint-drop-table_a1_a3_table1_room4
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a1
+waiting!
+
+Planning time: 00:00:00.1752487
+
+Plan tree for a1
+act-dummy-ppj_observe-table-tuk-dv6-8uv_a1_table1_room4_a1
+        move-agent_a1_room1_room2
+                move-agent_a1_room2_room3
+                        move-agent_a1_room3_room4
+                                act-ppj_observe-table-tuk-dv6-8uv_a1_table1_room4_a1
+                                        (f)dummy-left-ppj_observe-table-tuk-dv6-8uv_a1_table1_room4_a1
+                                        (f)     move-agent_a1_room4_room3
+                                        (f)             act-p3v_joint-lift-table_a1_a3_table1_room3_a1
+                                        (f)                     act-8se_joint-move-table_a1_a3_table1_room3_room4_a1
+                                        (f)                             act-aw7_joint-drop-table_a1_a3_table1_room4_a1
+                                        (f)                                     goal-achieve-aw7_joint-drop-table_a1_a3_table1_room4_a1
+                                        (f)                                             )goal
+                                        (t)dummy-right-ppj_observe-table-tuk-dv6-8uv_a1_table1_room4_a1
+                                        (t)     goal-achieve-right-ppj_observe-table-tuk-dv6-8uv_a1_table1_room4_a1
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+A refined projected plan tree for a2:
+observe-table-tuk-dv6-8uv_a1_table1_room4
+        (f))goal
+        (t))goal
+
+
+The compressed plan tree for a2:
+)goal
+An empty plan for a2
+
+A refined projected plan tree for a3:
+observe-table-tuk-dv6-8uv_a1_table1_room4
+        (f)joint-lift-table_a1_a3_table1_room3
+        (f)     joint-move-table_a1_a3_table1_room3_room4
+        (f)             joint-drop-table_a1_a3_table1_room4
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for a3:
+met_observe-table-tuk-dv6-8uv_a1_table1_room4
+        (f)3sf_joint-lift-table_a1_a3_table1_room3
+        (f)     ssz_joint-move-table_a1_a3_table1_room3_room4
+        (f)             ezz_joint-drop-table_a1_a3_table1_room4
+        (f)                     )goal
+        (t))goal
+
+ Child solution         a3
+waiting!
+
+Planning time: 00:00:00.1541327
+
+Plan tree for a3
+act-dummy-met_observe-table-tuk-dv6-8uv_a1_table1_room4_a3
+        move-agent_a3_room1_room2
+                move-agent_a3_room2_room3
+                        move-agent_a3_room3_room4
+                                act-met_observe-table-tuk-dv6-8uv_a1_table1_room4_a3
+                                        (f)dummy-left-met_observe-table-tuk-dv6-8uv_a1_table1_room4_a3
+                                        (f)     move-agent_a3_room4_room3
+                                        (f)             act-3sf_joint-lift-table_a1_a3_table1_room3_a3
+                                        (f)                     act-ssz_joint-move-table_a1_a3_table1_room3_room4_a3
+                                        (f)                             act-ezz_joint-drop-table_a1_a3_table1_room4_a3
+                                        (f)                                     goal-achieve-ezz_joint-drop-table_a1_a3_table1_room4_a3
+                                        (f)                                             )goal
+                                        (t)dummy-right-met_observe-table-tuk-dv6-8uv_a1_table1_room4_a3
+                                        (t)     goal-achieve-right-met_observe-table-tuk-dv6-8uv_a1_table1_room4_a3
+                                        (t)             )goal
+
+Width: 2
+Height (before balancing): 8
+
+Overall time taken (for the last execution): 1027.5818
+The last backtrack was: 12
+
+
+Maximum width = 2
+Maximum height = 8

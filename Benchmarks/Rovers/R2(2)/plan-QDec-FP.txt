@@ -1,0 +1,144 @@
+0
+Solving the current team problem!
+
+Planning time: 00:00:01.7167478
+
+The original plan tree!
+
+navigate_agent1_waypoint3_waypoint0_camera0_objective1
+        calibrate_agent1_camera1_objective1_waypoint0
+                observe-vis_agent1_objective1_waypoint0
+                        (f)navigate_agent0_waypoint3_waypoint1_camera1_objective1
+                        (f)     calibrate_agent0_camera0_objective1_waypoint1
+                        (f)             take-image_agent0_waypoint1_objective1_camera0_high-res
+                        (f)                     communicate-image-data_agent0_general_objective1_high-res_waypoint1_waypoint0
+                        (f)                             )goal
+                        (t)take-image_agent1_waypoint0_objective1_camera1_high-res
+                        (t)     navigate_agent1_waypoint0_waypoint3_camera0_objective1
+                        (t)             communicate-image-data_agent1_general_objective1_high-res_waypoint3_waypoint0
+                        (t)                     )goal
+
+Team plan width = 2
+Team plan height = 7
+time 00:00:01.7848204
+
+A refined projected plan tree for agent0:
+observe-vis_agent1_objective1_waypoint0
+        (f)calibrate_agent0_camera0_objective1_waypoint1
+        (f)     take-image_agent0_waypoint1_objective1_camera0_high-res
+        (f)             communicate-image-data_agent0_general_objective1_high-res_waypoint1_waypoint0
+        (f)                     )goal
+        (t))goal
+
+
+The compressed plan tree for agent0:
+iqv_observe-vis_agent1_objective1_waypoint0
+        (f)j7a_calibrate_agent0_camera0_objective1_waypoint1
+        (f)     c8t_take-image_agent0_waypoint1_objective1_camera0_high-res
+        (f)             p6i_communicate-image-data_agent0_general_objective1_high-res_waypoint1_waypoint0
+        (f)                     )goal
+        (t))goal
+
+ Child solution         agent0
+waiting!
+
+Planning time: 00:00:01.7226634
+
+Plan tree for agent0
+act-dummy-iqv_observe-vis_agent1_objective1_waypoint0_agent0
+        navigate_agent0_waypoint3_waypoint0_camera0_objective1
+                act-iqv_observe-vis_agent1_objective1_waypoint0_agent0
+                        (f)dummy-left-iqv_observe-vis_agent1_objective1_waypoint0_agent0
+                        (f)     navigate_agent0_waypoint0_waypoint3_camera0_objective1
+                        (f)             navigate_agent0_waypoint3_waypoint1_camera1_objective1
+                        (f)                     act-j7a_calibrate_agent0_camera0_objective1_waypoint1_agent0
+                        (f)                             act-c8t_take-image_agent0_waypoint1_objective1_camera0_high-res_agent0
+                        (f)                                     act-p6i_communicate-image-data_agent0_general_objective1_high-res_waypoint1_waypoint0_agent0
+                        (f)                                             goal-achieve-p6i_communicate-image-data_agent0_general_objective1_high-res_waypoint1_waypoint0_agent0
+                        (f)                                                     )goal
+                        (t)dummy-right-iqv_observe-vis_agent1_objective1_waypoint0_agent0
+                        (t)     goal-achieve-right-iqv_observe-vis_agent1_objective1_waypoint0_agent0
+                        (t)             )goal
+
+Width: 2
+Height (before balancing): 7
+
+A refined projected plan tree for agent1:
+calibrate_agent1_camera1_objective1_waypoint0
+        observe-vis_agent1_objective1_waypoint0
+                (f))goal
+                (t)take-image_agent1_waypoint0_objective1_camera1_high-res
+                (t)     communicate-image-data_agent1_general_objective1_high-res_waypoint3_waypoint0
+                (t)             )goal
+
+
+The compressed plan tree for agent1:
+xyk_calibrate_agent1_camera1_objective1_waypoint0
+        29y_observe-vis_agent1_objective1_waypoint0
+                (f))goal
+                (t)26n_take-image_agent1_waypoint0_objective1_camera1_high-res
+                (t)     55m_communicate-image-data_agent1_general_objective1_high-res_waypoint3_waypoint0
+                (t)             )goal
+
+ Child solution         agent1
+waiting!
+
+Planning time: 00:00:01.7300471
+
+Plan tree for agent1
+navigate_agent1_waypoint3_waypoint0_camera0_objective1
+        act-xyk_calibrate_agent1_camera1_objective1_waypoint0_agent1
+                act-dummy-29y_observe-vis_agent1_objective1_waypoint0_agent1
+                        act-29y_observe-vis_agent1_objective1_waypoint0_agent1
+                                (f)dummy-left-29y_observe-vis_agent1_objective1_waypoint0_agent1
+                                (f)     goal-achieve-left-29y_observe-vis_agent1_objective1_waypoint0_agent1
+                                (f)             )goal
+                                (t)dummy-right-29y_observe-vis_agent1_objective1_waypoint0_agent1
+                                (t)     act-26n_take-image_agent1_waypoint0_objective1_camera1_high-res_agent1
+                                (t)             navigate_agent1_waypoint0_waypoint3_camera0_objective1
+                                (t)                     act-55m_communicate-image-data_agent1_general_objective1_high-res_waypoint3_waypoint0_agent1
+                                (t)                             goal-achieve-55m_communicate-image-data_agent1_general_objective1_high-res_waypoint3_waypoint0_agent1
+                                (t)                                     )goal
+
+Width: 2
+Height (before balancing): 6
+
+Overall time taken (for the last execution): 5524.0192
+The last backtrack was: 0
+
+
+Maximum width = 2
+Maximum height = 7
+
+
+Now transforming projected trees to solution trees!
+
+
+Executable Plan Tree for agent0
+navigate_agent0_waypoint3_waypoint0_camera0_objective1
+        observe-vis_agent1_objective1_waypoint0_agent0
+                (f)navigate_agent0_waypoint0_waypoint3_camera0_objective1
+                (f)     navigate_agent0_waypoint3_waypoint1_camera1_objective1
+                (f)             calibrate_agent0_camera0_objective1_waypoint1_agent0
+                (f)                     take-image_agent0_waypoint1_objective1_camera0_high-res_agent0
+                (f)                             communicate-image-data_agent0_general_objective1_high-res_waypoint1_waypoint0_agent0
+                (f)                                     )goal
+                (t))goal
+
+Executable Plan Tree for agent1
+navigate_agent1_waypoint3_waypoint0_camera0_objective1
+        calibrate_agent1_camera1_objective1_waypoint0_agent1
+                observe-vis_agent1_objective1_waypoint0_agent1
+                        (f))goal
+                        (t)take-image_agent1_waypoint0_objective1_camera1_high-res_agent1
+                        (t)     navigate_agent1_waypoint0_waypoint3_camera0_objective1
+                        (t)             communicate-image-data_agent1_general_objective1_high-res_waypoint3_waypoint0_agent1
+                        (t)                     )goal
+
+
+Overall Maximum Tree Width: 2
+Overall Maximum Tree Height: 7
+
+Total number of backtracks: 0
+
+Overall time taken (including all the backtracks): 5616.8996

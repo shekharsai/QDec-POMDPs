@@ -1,0 +1,30 @@
+In SDRPlanner.cs: 
+
+public static bool UseFilesForPlanners = false;
+
+In program.cs:
+
+
+string problemName = "B1 (3)";
+
+bool multiAgentTeamPlan = true;
+bool icaps2019 = false;
+
+// either of them depending on we want to run FP or FPS                        
+// for Qdec-FPS
+multiAgentTeamPlan = true; 
+icaps2019 = false;
+//----
+// for Qdec-FPS
+multiAgentTeamPlan = false; 
+icaps2019 = true;
+//---
+aSignalingMacro = false;    // always false
+
+
+;;Since the requirement of seed was mentioned by aaai lot after the experiments were performed,
+;;I am less sure that it would show exact values shown in the paper, especially number of backtracks 
+;;But anyway, as I see now, it would be better than shown for QDec-FP and worst than what is shown for QDec-FPS. 
+;;Another thing is that, for QDec-FP with some backtracks, the height balancing is done manually for some cases. I am updating the code, it would take some time.
+
+;I have added some sample plan just to show that the parameters may vary
