@@ -1,5 +1,0 @@
-D:\Dropbox\SDR\Offline\CPOR\CPOR\bin\Debug\PDDL.exe.config
-D:\Dropbox\SDR\Offline\CPOR\CPOR\bin\Debug\PDDL.exe
-D:\Dropbox\SDR\Offline\CPOR\CPOR\bin\Debug\PDDL.pdb
-D:\Dropbox\SDR\Offline\CPOR\CPOR\obj\x86\Debug\PDDL.exe
-D:\Dropbox\SDR\Offline\CPOR\CPOR\obj\x86\Debug\PDDL.pdb
