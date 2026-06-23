@@ -1,6 +1,7 @@
 bdd/
 obj/
 Properties/
+.gitignore
 CPOR-MA.csproj.user
 Program (dorins shmar's conflicted copy 2016-11-06).cs
 Program (dorins shmar's conflicted copy 2016-11-15 (1)).cs
