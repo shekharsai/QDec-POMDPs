@@ -1,0 +1,6 @@
+D:\Dropbox\SDR\Offline\CPOR\CPOR\bin\Release\PDDL.exe.config
+D:\Dropbox\SDR\Offline\CPOR\CPOR\bin\Release\PDDL.exe
+D:\Dropbox\SDR\Offline\CPOR\CPOR\bin\Release\PDDL.pdb
+D:\Dropbox\SDR\Offline\CPOR\CPOR\obj\x86\Release\PDDL.exe
+D:\Dropbox\SDR\Offline\CPOR\CPOR\obj\x86\Release\PDDL.pdb
+D:\Dropbox\SDR\Offline\CPOR\CPOR\obj\x86\Release\CPOR.csprojResolveAssemblyReference.cache
